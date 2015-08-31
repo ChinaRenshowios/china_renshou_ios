@@ -38,8 +38,10 @@
 		596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9411B818C7A0043E62D /* MessageMainViewController.m */; };
 		596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9441B818C8C0043E62D /* UserMainViewController.m */; };
 		596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9491B818D770043E62D /* WBNavigationController.m */; };
-		CE5A39CA1B947089004B1CA7 /* ZG_NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */; };
 		CE5A39CC1B94728F004B1CA7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE5A39CB1B94728F004B1CA7 /* Podfile */; };
+		CE5A39D21B94815E004B1CA7 /* ALNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A39D11B94815E004B1CA7 /* ALNetWorkApi.m */; };
+		CE5A39D91B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A39D61B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m */; };
+		CE5A39DA1B9481A0004B1CA7 /* ZG_NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A39D81B9481A0004B1CA7 /* ZG_NetWorkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,9 +105,13 @@
 		596EB9491B818D770043E62D /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
 		6BF244FB3DCC7D69ED1465EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F170695FBDD4EF42D6DB86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		CE5A39C81B947089004B1CA7 /* ZG_NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkManager.h; sourceTree = "<group>"; };
-		CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkManager.m; sourceTree = "<group>"; };
 		CE5A39CB1B94728F004B1CA7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		CE5A39D01B94815E004B1CA7 /* ALNetWorkApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNetWorkApi.h; sourceTree = "<group>"; };
+		CE5A39D11B94815E004B1CA7 /* ALNetWorkApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNetWorkApi.m; sourceTree = "<group>"; };
+		CE5A39D51B9481A0004B1CA7 /* ZG_NetWorkBaseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkBaseApi.h; sourceTree = "<group>"; };
+		CE5A39D61B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkBaseApi.m; sourceTree = "<group>"; };
+		CE5A39D71B9481A0004B1CA7 /* ZG_NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkManager.h; sourceTree = "<group>"; };
+		CE5A39D81B9481A0004B1CA7 /* ZG_NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkManager.m; sourceTree = "<group>"; };
 		DA924F57E128BDEDA65C5633 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -391,10 +397,22 @@
 		CE5A39C71B946F45004B1CA7 /* AlumusNet */ = {
 			isa = PBXGroup;
 			children = (
-				CE5A39C81B947089004B1CA7 /* ZG_NetWorkManager.h */,
-				CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */,
+				CE5A39D41B9481A0004B1CA7 /* ZG_NetWork */,
+				CE5A39D01B94815E004B1CA7 /* ALNetWorkApi.h */,
+				CE5A39D11B94815E004B1CA7 /* ALNetWorkApi.m */,
 			);
 			path = AlumusNet;
+			sourceTree = "<group>";
+		};
+		CE5A39D41B9481A0004B1CA7 /* ZG_NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A39D51B9481A0004B1CA7 /* ZG_NetWorkBaseApi.h */,
+				CE5A39D61B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m */,
+				CE5A39D71B9481A0004B1CA7 /* ZG_NetWorkManager.h */,
+				CE5A39D81B9481A0004B1CA7 /* ZG_NetWorkManager.m */,
+			);
+			path = ZG_NetWork;
 			sourceTree = "<group>";
 		};
 		E9C5AEC8F06023B11C0AEE76 /* Frameworks */ = {
@@ -557,6 +575,7 @@
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
 				596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */,
+				CE5A39DA1B9481A0004B1CA7 /* ZG_NetWorkManager.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
 				596EB93F1B818C590043E62D /* HomepageMainViewController.m in Sources */,
@@ -564,10 +583,11 @@
 				596EB9341B8188CC0043E62D /* ZCImageButton.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
+				CE5A39D21B94815E004B1CA7 /* ALNetWorkApi.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
+				CE5A39D91B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
-				CE5A39CA1B947089004B1CA7 /* ZG_NetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

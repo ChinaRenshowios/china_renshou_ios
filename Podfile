@@ -1,6 +1,6 @@
 platform :ios, '6.0'
 pod 'pop'
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 2.5.4'
 pod 'SDWebImage', '~> 3.7.1'
 pod 'TMCache', '~> 1.2.3'
 pod 'FMDB', '~> 2.4'
