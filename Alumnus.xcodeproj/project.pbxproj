@@ -37,6 +37,8 @@
 		596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9411B818C7A0043E62D /* MessageMainViewController.m */; };
 		596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9441B818C8C0043E62D /* UserMainViewController.m */; };
 		596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB9491B818D770043E62D /* WBNavigationController.m */; };
+		CE5A39CA1B947089004B1CA7 /* ZG_NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */; };
+		CE5A39CC1B94728F004B1CA7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE5A39CB1B94728F004B1CA7 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		596EB9441B818C8C0043E62D /* UserMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMainViewController.m; sourceTree = "<group>"; };
 		596EB9481B818D770043E62D /* WBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
 		596EB9491B818D770043E62D /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
+		CE5A39C81B947089004B1CA7 /* ZG_NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkManager.h; sourceTree = "<group>"; };
+		CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkManager.m; sourceTree = "<group>"; };
+		CE5A39CB1B94728F004B1CA7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +162,8 @@
 		596EB8F71B8176280043E62D /* Alumnus */ = {
 			isa = PBXGroup;
 			children = (
+				CE5A39CB1B94728F004B1CA7 /* Podfile */,
+				CE5A39C51B946E8B004B1CA7 /* AlumnusBase */,
 				2850E6081B84A97F00EAE87C /* knowledgecenter */,
 				2850E6041B84A92200EAE87C /* systemsetting */,
 				596EB9461B818CAC0043E62D /* models */,
@@ -349,6 +356,31 @@
 			path = user;
 			sourceTree = "<group>";
 		};
+		CE5A39C51B946E8B004B1CA7 /* AlumnusBase */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A39C61B946F45004B1CA7 /* AlumusModel */,
+				CE5A39C71B946F45004B1CA7 /* AlumusNet */,
+			);
+			path = AlumnusBase;
+			sourceTree = "<group>";
+		};
+		CE5A39C61B946F45004B1CA7 /* AlumusModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlumusModel;
+			sourceTree = "<group>";
+		};
+		CE5A39C71B946F45004B1CA7 /* AlumusNet */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A39C81B947089004B1CA7 /* ZG_NetWorkManager.h */,
+				CE5A39C91B947089004B1CA7 /* ZG_NetWorkManager.m */,
+			);
+			path = AlumusNet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5A39CC1B94728F004B1CA7 /* Podfile in Resources */,
 				2850E6001B84A7D300EAE87C /* i6.png in Resources */,
 				2850E6011B84A7D300EAE87C /* i7.png in Resources */,
 				2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */,
@@ -475,6 +508,7 @@
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
+				CE5A39CA1B947089004B1CA7 /* ZG_NetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/ksy/Documents/Alumnus/Alumnus/Alumnus.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Alumnus/Alumnus.pch";
 				INFOPLIST_FILE = Alumnus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,7 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/ksy/Documents/Alumnus/Alumnus/Alumnus.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Alumnus/Alumnus.pch";
 				INFOPLIST_FILE = Alumnus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
