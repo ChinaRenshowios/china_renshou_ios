@@ -24,6 +24,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    
     [super viewDidLoad];
     
     // 1.初始化所有的子控制器
