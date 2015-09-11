@@ -10,4 +10,14 @@
 
 @interface ZG_NetWorkManager : NSObject
 
+/**
+ *  网络层管理单例
+ */
++ (instancetype)sharedInstance;
+
+
+
+
+
+
 @end

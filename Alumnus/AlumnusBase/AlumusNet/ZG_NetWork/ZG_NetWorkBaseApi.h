@@ -4,11 +4,10 @@
 //
 //  Created by user on 15/8/31.
 //  Copyright (c) 2015年 wiipu. All rights reserved.
-//
+//  网络层的抽象层,抽离基础属性和基类方法(部分基类方法是抽象方法,需实现累重写)
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
-#import "AFDownloadRequestOperation.h"
 
 typedef NS_ENUM(NSInteger, ZG_RequsetMethod) {
     ZG_RequsetMethodGet = 0,
@@ -43,6 +42,26 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
  todo:后面根据请求可以扩充回包处理的block,比如需要监听进度的请求和富文本的请求
  */
 
+#pragma mark 代理相关
+
+@class ZG_NetWorkBaseApi;
+//请求结果的处理
+@protocol ZG_NetWorkBaseApiDelegate <NSObject>
+- (void)reuqestFinished:(ZG_NetWorkBaseApi *)request;
+- (void)reuqestFailed:(ZG_NetWorkBaseApi *)request;
+
+@optional
+//清除请求
+- (void)clearRequest;
+@end
+//请求过程监听
+@protocol ZG_NetWorkBaseApiAccessory <NSObject>
+- (void)reuqestWillStart:(ZG_NetWorkBaseApi *)request;
+- (void)reuqestWillStop:(ZG_NetWorkBaseApi *)request;
+- (void)reuqestDidStop:(ZG_NetWorkBaseApi *)request;
+
+@end
+
 @interface ZG_NetWorkBaseApi : NSObject
 
 /**
@@ -62,9 +81,44 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
  */
 @property (nonatomic , copy,readonly)NSString *responseMessage;
 /**
- *  <#Description#>
+ *  服务器返回数据
  */
-//@property (nonatomic, strong)AFHTTPRequestOperxation.h *requestOperation;
+@property (nonatomic, strong,readonly)id responseJSONObject;
+/**
+ *  服务器返回响应头
+ */
+@property (nonatomic, strong, readonly)NSDictionary *responseHeaders;
+
+/// 以下方法由子类继承来覆盖默认值
+/**
+ *  请求成功回调
+ */
+- (void)requestSuccessedHandler;
+/**
+ *  请求失败回调
+ */
+- (void)requestFailedHandler;
+/**
+ *  请求方法:post,get...
+ */
+- (ZG_RequsetMethod)requestMethod;
+/**
+ *  请求的baseUrl
+ */
+- (NSString *)requestBaseUrl;
+/**
+ *  请求的url
+ */
+- (NSString *)requestUrl;
+/**
+ *  请求的CdnURL:资源加载优化可能使用到..
+ */
+- (NSString *)cdnUrl;
+/**
+ *  请求参数
+ */
+- (id)requestArgument;
+
 
 
 
