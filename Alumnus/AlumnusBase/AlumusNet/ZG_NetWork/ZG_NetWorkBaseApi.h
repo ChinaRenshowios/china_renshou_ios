@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "ZG_NetWorkHttpRequestOperation.h"
 
 typedef NS_ENUM(NSInteger, ZG_RequsetMethod) {
     ZG_RequsetMethodGet = 0,
@@ -38,6 +39,13 @@ typedef void(^ZG_responseDataBlock)(BOOL success,id responseData,NSString *respo
  */
 typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
 
+/**
+ *  失败处理的block,除非需要做失败处理,一般不会用,扩展功能
+ *  @param success         请求是否成功
+ *  @param responseMessage 服务器返回信息(例如:errorMessage)
+ */
+typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
+
 /*
  todo:后面根据请求可以扩充回包处理的block,比如需要监听进度的请求和富文本的请求
  */
@@ -54,11 +62,11 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
 //清除请求
 - (void)clearRequest;
 @end
-//请求过程监听
+//请求过程监听,aop的意义
 @protocol ZG_NetWorkBaseApiAccessory <NSObject>
-- (void)reuqestWillStart:(ZG_NetWorkBaseApi *)request;
-- (void)reuqestWillStop:(ZG_NetWorkBaseApi *)request;
-- (void)reuqestDidStop:(ZG_NetWorkBaseApi *)request;
+- (void)requestWillStart:(ZG_NetWorkBaseApi *)request;
+- (void)requestWillStop:(ZG_NetWorkBaseApi *)request;
+- (void)requestDidStop:(ZG_NetWorkBaseApi *)request;
 
 @end
 
@@ -68,6 +76,8 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
  *  扩展功能使用,区分标记某条请求...
  */
 @property (nonatomic ,assign)NSInteger tag;
+
+@property (nonatomic, strong) ZG_NetWorkHttpRequestOperation *requestOperation;
 /**
  *  数据传递容器
  */
@@ -88,6 +98,53 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
  *  服务器返回响应头
  */
 @property (nonatomic, strong, readonly)NSDictionary *responseHeaders;
+/**
+ *  完成回调
+ */
+@property (nonatomic, copy)ZG_responseDataBlock completeBlock;
+/**
+ *  成功回调
+ */
+@property (nonatomic, copy)ZG_responseSuccessBlock successBlock;
+/**
+ *  失败回调
+ */
+@property (nonatomic, copy)ZG_responseFailBlock failBlock;
+/**
+ *  需切面处理请求数组
+ */
+@property (nonatomic, strong) NSMutableArray *requestAccessories;
+
+/// append self to request queue
+- (void)start;
+/// remove self from request queue
+- (void)stop;
+
+/**
+ *  是否正在请求,todo:需要request中的operation中的详细配置
+ */
+//- (BOOL)isExecuting;
+
+/**
+ *  有返回数据的请求回调
+ */
+- (void)startWithCompletionBlockWithSuccess:(ZG_responseDataBlock)success;
+/**
+ *  返回结果的请求回调
+ */
+- (void)startWithCompleteBlock:(ZG_responseDataBlock)completeBlock;
+/**
+ *  清除网络回调,避免强引用控制器
+ */
+- (void)clearRequestBlocks;
+/**
+ * 监听请求切面:start,stop
+ */
+- (void)addAccessory:(id<ZG_NetWorkBaseApiAccessory>)accessory;
+
+/*
+ todo:暂时没有必要专门处理失败回调,扩展处理
+ */
 
 /// 以下方法由子类继承来覆盖默认值
 /**
@@ -97,7 +154,7 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
 /**
  *  请求失败回调
  */
-- (void)requestFailedHandler;
+- (void)requestCompeleteHandler;
 /**
  *  请求方法:post,get...
  */
@@ -118,7 +175,22 @@ typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
  *  请求参数
  */
 - (id)requestArgument;
+/**
+ *  请求解析方式
+ */
+- (ZG_RequsetSerializerType)requestSerializerType;
+/**
+ *  http头添加自定义参数
+ */
+- (NSDictionary *)requestHeaderFieldValueDictionary;
+/**
+ *  请求的Server用户名和密码
+ */
+- (NSArray *)requestAuthorizationHeaderFieldArray;
 
+//todo:cache相关的一些
+
+//todo:自定义urlRequest
 
 
 

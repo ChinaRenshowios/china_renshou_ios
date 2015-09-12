@@ -9,6 +9,8 @@
 #import "ZG_NetWorkManager.h"
 
 @implementation ZG_NetWorkManager
+
+#pragma mark - public method
 + (instancetype)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
@@ -17,6 +19,23 @@
     });
     return sharedInstance;
 }
+
+- (void)addRequest:(ZG_NetWorkBaseApi *)request
+{
+
+}
+
+- (void)cancelRequest:(ZG_NetWorkBaseApi *)request
+{
+
+}
+
+- (void)cancelAllRequests
+{
+
+}
+
+#pragma mark - private method
 
 @end
 

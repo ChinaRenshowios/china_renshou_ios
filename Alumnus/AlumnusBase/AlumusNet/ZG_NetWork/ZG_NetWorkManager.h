@@ -7,16 +7,13 @@
 //  网络层管理
 
 #import <Foundation/Foundation.h>
+#import "ZG_NetWorkBaseApi.h"
 
 @interface ZG_NetWorkManager : NSObject
-
 /**
- *  网络层管理单例
+ *  网络层管理中心
  */
 + (instancetype)sharedInstance;
-
-
-
 
 
 

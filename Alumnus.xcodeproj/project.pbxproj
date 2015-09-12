@@ -22,6 +22,11 @@
 		2850E6031B84A7D300EAE87C /* i9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5FA1B84A7D300EAE87C /* i9.png */; };
 		2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */; };
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
+		351E44B31BA4873C00C0A792 /* ZG_NetWorkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */; settings = {ASSET_TAGS = (); }; };
+		351E44C01BA4884400C0A792 /* ZG_FoundationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */; settings = {ASSET_TAGS = (); }; };
+		351E44C31BA4920D00C0A792 /* ZG_NetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C21BA4920D00C0A792 /* ZG_NetWorkAgent.m */; settings = {ASSET_TAGS = (); }; };
+		351E44C61BA4938A00C0A792 /* ZG_NetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C51BA4938A00C0A792 /* ZG_NetWorkConfig.m */; settings = {ASSET_TAGS = (); }; };
+		3574A19B1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3574A19A1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
 		596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FD1B8176280043E62D /* AppDelegate.m */; };
@@ -72,6 +77,16 @@
 		2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSetingViewController.m; sourceTree = "<group>"; };
 		2850E6091B84A99200EAE87C /* KnowledgeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeCenterViewController.h; sourceTree = "<group>"; };
 		2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeCenterViewController.m; sourceTree = "<group>"; };
+		351E44B11BA4873C00C0A792 /* ZG_NetWorkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkPrivate.h; sourceTree = "<group>"; };
+		351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkPrivate.m; sourceTree = "<group>"; };
+		351E44BE1BA4884400C0A792 /* ZG_FoundationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_FoundationConfig.h; sourceTree = "<group>"; };
+		351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_FoundationConfig.m; sourceTree = "<group>"; };
+		351E44C11BA4920D00C0A792 /* ZG_NetWorkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkAgent.h; sourceTree = "<group>"; };
+		351E44C21BA4920D00C0A792 /* ZG_NetWorkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkAgent.m; sourceTree = "<group>"; };
+		351E44C41BA4938A00C0A792 /* ZG_NetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkConfig.h; sourceTree = "<group>"; };
+		351E44C51BA4938A00C0A792 /* ZG_NetWorkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkConfig.m; sourceTree = "<group>"; };
+		3574A1991BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkHttpRequestOperation.h; sourceTree = "<group>"; };
+		3574A19A1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkHttpRequestOperation.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596EB8F91B8176280043E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596EB8FA1B8176280043E62D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +165,22 @@
 				2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */,
 			);
 			path = knowledgecenter;
+			sourceTree = "<group>";
+		};
+		351E44BC1BA4881700C0A792 /* AlumusModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlumusModel;
+			sourceTree = "<group>";
+		};
+		351E44BD1BA4881700C0A792 /* AlumusOther */ = {
+			isa = PBXGroup;
+			children = (
+				351E44BE1BA4884400C0A792 /* ZG_FoundationConfig.h */,
+				351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */,
+			);
+			path = AlumusOther;
 			sourceTree = "<group>";
 		};
 		596EB8EC1B8176280043E62D = {
@@ -381,17 +412,11 @@
 		CE5A39C51B946E8B004B1CA7 /* AlumnusBase */ = {
 			isa = PBXGroup;
 			children = (
-				CE5A39C61B946F45004B1CA7 /* AlumusModel */,
+				351E44BC1BA4881700C0A792 /* AlumusModel */,
+				351E44BD1BA4881700C0A792 /* AlumusOther */,
 				CE5A39C71B946F45004B1CA7 /* AlumusNet */,
 			);
 			path = AlumnusBase;
-			sourceTree = "<group>";
-		};
-		CE5A39C61B946F45004B1CA7 /* AlumusModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AlumusModel;
 			sourceTree = "<group>";
 		};
 		CE5A39C71B946F45004B1CA7 /* AlumusNet */ = {
@@ -407,10 +432,18 @@
 		CE5A39D41B9481A0004B1CA7 /* ZG_NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				351E44B11BA4873C00C0A792 /* ZG_NetWorkPrivate.h */,
+				351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */,
 				CE5A39D51B9481A0004B1CA7 /* ZG_NetWorkBaseApi.h */,
 				CE5A39D61B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m */,
 				CE5A39D71B9481A0004B1CA7 /* ZG_NetWorkManager.h */,
 				CE5A39D81B9481A0004B1CA7 /* ZG_NetWorkManager.m */,
+				351E44C11BA4920D00C0A792 /* ZG_NetWorkAgent.h */,
+				351E44C21BA4920D00C0A792 /* ZG_NetWorkAgent.m */,
+				351E44C41BA4938A00C0A792 /* ZG_NetWorkConfig.h */,
+				351E44C51BA4938A00C0A792 /* ZG_NetWorkConfig.m */,
+				3574A1991BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.h */,
+				3574A19A1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m */,
 			);
 			path = ZG_NetWork;
 			sourceTree = "<group>";
@@ -573,18 +606,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
+				351E44C01BA4884400C0A792 /* ZG_FoundationConfig.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
 				596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */,
 				CE5A39DA1B9481A0004B1CA7 /* ZG_NetWorkManager.m in Sources */,
+				351E44C61BA4938A00C0A792 /* ZG_NetWorkConfig.m in Sources */,
+				351E44B31BA4873C00C0A792 /* ZG_NetWorkPrivate.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
 				596EB93F1B818C590043E62D /* HomepageMainViewController.m in Sources */,
+				3574A19B1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m in Sources */,
 				2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */,
 				596EB9341B8188CC0043E62D /* ZCImageButton.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				CE5A39D21B94815E004B1CA7 /* ALNetWorkApi.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
+				351E44C31BA4920D00C0A792 /* ZG_NetWorkAgent.m in Sources */,
 				CE5A39D91B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
