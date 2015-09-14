@@ -15,6 +15,7 @@
  */
 + (instancetype)sharedInstance;
 
++ (void)sendTicketApiWithBlock:(ZG_responseDataBlock)compelete;
 
 
 @end

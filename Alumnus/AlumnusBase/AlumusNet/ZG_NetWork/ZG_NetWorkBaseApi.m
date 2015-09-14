@@ -7,6 +7,8 @@
 //
 
 #import "ZG_NetWorkBaseApi.h"
+#import "ZG_NetWorkPrivate.h"
+#import "ZG_NetWorkAgent.h"
 
 @interface ZG_NetWorkBaseApi ()
 
@@ -21,38 +23,67 @@
 #pragma mark - public method
 - (void)start
 {
-    
+    [self toggleAccessoriesWillStartCallBack];
+    [[ZG_NetWorkAgent sharedInstance] addRequest:self];
+
 }
 
 - (void)stop
 {
-    
+    [self toggleAccessoriesWillStopCallBack];
+    self.delegate = nil;
+    [[ZG_NetWorkAgent sharedInstance] cancelRequest:self];
+    [self toggleAccessoriesDidStopCallBack];
 }
 
-//- (BOOL)isExecuting
-//{
-//
-//}
-
-- (void)startWithCompletionBlockWithSuccess:(ZG_responseDataBlock)success
+- (BOOL)isExecuting
 {
-    
+    return self.requestOperation.isExecuting;
+}
+
+- (void)startWithSuccessBlock:(ZG_responseDataBlock)success
+{
+    self.successBlock = success;
+    [self start];
 }
 
 - (void)startWithCompleteBlock:(ZG_responseDataBlock)completeBlock
 {
-    
+    self.completeBlock = completeBlock;
+    [self start];
 }
 
 - (void)clearRequestBlocks
 {
-    
+    self.completeBlock = nil;
+    self.successBlock = nil;
+    self.allInfoBlock = nil;
+}
+
+- (id)responseJSONObject {
+    return self.requestOperation.responseObject;
+}
+
+- (NSString *)responseString {
+    return self.requestOperation.responseString;
+}
+
+- (NSInteger)responseStatusCode {
+    return self.requestOperation.response.statusCode;
+}
+
+- (NSDictionary *)responseHeaders {
+    return self.requestOperation.response.allHeaderFields;
 }
 
 /// for subclasses to overwrite
-- (void)requestSuccessedHandler{}
+- (void)requestCompleteFilter{}
 
-- (void)requestCompeleteHandler{}
+- (void)requestFailedFilter{}
+
+- (BOOL)useCDN {
+    return NO;
+}
 
 - (ZG_RequsetMethod)requestMethod
 {
@@ -79,6 +110,11 @@
     return nil;
 }
 
+- (NSTimeInterval)requestTimeoutInterval
+{
+    return 60;
+}
+
 - (ZG_RequsetSerializerType)requestSerializerType
 {
     return 0;
@@ -91,6 +127,29 @@
 }
 
 - (NSArray *)requestAuthorizationHeaderFieldArray
+{
+    return nil;
+}
+
+- (NSURLRequest *)buildCustomUrlRequest {
+    return nil;
+}
+
+- (BOOL)statusCodeValidator
+{
+    NSInteger statusCode = [self responseStatusCode];
+    if (statusCode >= 200 && statusCode <=299) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)useCDN {
+    return NO;
+}
+
+- (id)jsonValidator
 {
     return nil;
 }

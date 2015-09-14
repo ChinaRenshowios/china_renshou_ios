@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZG_NetWorkBaseApi.h"
 
 //todo:文件,缓存地址配置
+
+@protocol ZG_NetWorkUrlFilterProtocol <NSObject>
+
+- (NSString *)filterUrl:(NSString *)originUrl withRequest:(ZG_NetWorkBaseApi *)request;
+
+@end
 
 @interface ZG_NetWorkConfig : NSObject
 

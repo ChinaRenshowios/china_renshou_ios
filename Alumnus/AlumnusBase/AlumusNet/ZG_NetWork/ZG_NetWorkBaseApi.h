@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "ZG_NetWorkHttpRequestOperation.h"
 
+@class ZG_NetWorkBaseApi;
 typedef NS_ENUM(NSInteger, ZG_RequsetMethod) {
     ZG_RequsetMethodGet = 0,
     ZG_RequsetMethodPost,
@@ -38,13 +39,16 @@ typedef void(^ZG_responseDataBlock)(BOOL success,id responseData,NSString *respo
  *  @param responseMessage 服务器返回信息(例如:errorMessage)
  */
 typedef void(^ZG_responseSuccessBlock)(BOOL success,NSString *responseMessage);
+/**
+ *  请求的全部响应信息,具体属性查看ZG_NetWorkBaseApi
+ */
+typedef void(^ZG_responseAllInfoBlock) (ZG_NetWorkBaseApi *);
 
 /**
  *  失败处理的block,除非需要做失败处理,一般不会用,扩展功能
- *  @param success         请求是否成功
- *  @param responseMessage 服务器返回信息(例如:errorMessage)
+ *  @param ZG_NetWorkBaseApi 服务器返回全部信息(例如:errorMessage..)
  */
-typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
+typedef void(^ZG_responseFailBlock)(ZG_NetWorkBaseApi *);
 
 /*
  todo:后面根据请求可以扩充回包处理的block,比如需要监听进度的请求和富文本的请求
@@ -52,7 +56,6 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
 
 #pragma mark 代理相关
 
-@class ZG_NetWorkBaseApi;
 //请求结果的处理
 @protocol ZG_NetWorkBaseApiDelegate <NSObject>
 - (void)reuqestFinished:(ZG_NetWorkBaseApi *)request;
@@ -78,6 +81,8 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
 @property (nonatomic ,assign)NSInteger tag;
 
 @property (nonatomic, strong) ZG_NetWorkHttpRequestOperation *requestOperation;
+
+@property (nonatomic, weak)id<ZG_NetWorkBaseApiDelegate> delegate;
 /**
  *  数据传递容器
  */
@@ -107,6 +112,10 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
  */
 @property (nonatomic, copy)ZG_responseSuccessBlock successBlock;
 /**
+ *  全部信息的回调
+ */
+@property (nonatomic, copy)ZG_responseAllInfoBlock allInfoBlock;
+/**
  *  失败回调
  */
 @property (nonatomic, copy)ZG_responseFailBlock failBlock;
@@ -121,18 +130,23 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
 - (void)stop;
 
 /**
- *  是否正在请求,todo:需要request中的operation中的详细配置
+ *  是否正在请求
  */
-//- (BOOL)isExecuting;
+- (BOOL)isExecuting;
 
 /**
  *  有返回数据的请求回调
  */
-- (void)startWithCompletionBlockWithSuccess:(ZG_responseDataBlock)success;
+- (void)startWithSuccessBlock:(ZG_responseDataBlock)success;
 /**
  *  返回结果的请求回调
  */
 - (void)startWithCompleteBlock:(ZG_responseDataBlock)completeBlock;
+/**
+ *  返回全部信息的请求回调
+ */
+- (void)startWithAllInfoBlock:(ZG_responseAllInfoBlock)allInfoBlock;
+
 /**
  *  清除网络回调,避免强引用控制器
  */
@@ -150,11 +164,11 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
 /**
  *  请求成功回调
  */
-- (void)requestSuccessedHandler;
+- (void)requestCompleteFilter;
 /**
  *  请求失败回调
  */
-- (void)requestCompeleteHandler;
+- (void)requestFailedFilter;
 /**
  *  请求方法:post,get...
  */
@@ -176,6 +190,10 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
  */
 - (id)requestArgument;
 /**
+ *  请求的连接超时时间，默认为60秒
+ */
+- (NSTimeInterval)requestTimeoutInterval;
+/**
  *  请求解析方式
  */
 - (ZG_RequsetSerializerType)requestSerializerType;
@@ -190,8 +208,24 @@ typedef void(^ZG_responseFailBlock)(NSString *responseMessage);
 
 //todo:cache相关的一些
 
-//todo:自定义urlRequest
+//自定义urlRequest
+/**
+ *  若这个方法返回非nil对象，会忽略requestUrl, requestArgument, requestMethod, requestSerializerType
+ */
+- (NSURLRequest *)buildCustomUrlRequest;
+/**
+ *  是否使用CDN的host地址
+ */
+- (BOOL)useCDN;
+/**
+ *  用于检查Status Code是否正常的方法
+ */
+- (BOOL)statusCodeValidator;
 
+/**
+ *  用于检查JSON是否合法的对象
+ */
+- (id)jsonValidator;
 
 
 @end
