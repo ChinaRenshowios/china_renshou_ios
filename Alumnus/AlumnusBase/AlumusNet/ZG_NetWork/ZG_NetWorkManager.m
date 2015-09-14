@@ -8,8 +8,11 @@
 
 #import "ZG_NetWorkManager.h"
 
-@implementation ZG_NetWorkManager
+@interface ZG_NetWorkManager ()
+@property (nonatomic, strong)ZG_NetWorkBaseApi *baseApi;
+@end
 
+@implementation ZG_NetWorkManager
 #pragma mark - public method
 + (instancetype)sharedInstance {
     static id sharedInstance = nil;
@@ -20,22 +23,15 @@
     return sharedInstance;
 }
 
-- (void)addRequest:(ZG_NetWorkBaseApi *)request
++ (void)sendTicketApiWithBlock:(ZG_responseDataBlock)compelete
 {
 
 }
 
-- (void)cancelRequest:(ZG_NetWorkBaseApi *)request
+#pragma mark - property
+- (ZG_NetWorkBaseApi *)baseApi
 {
-
+    
 }
-
-- (void)cancelAllRequests
-{
-
-}
-
-#pragma mark - private method
-
 @end
 
