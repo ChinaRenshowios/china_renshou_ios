@@ -41,7 +41,7 @@
     return self.requestOperation.isExecuting;
 }
 
-- (void)startWithSuccessBlock:(ZG_responseDataBlock)success
+- (void)startWithSuccessBlock:(ZG_responseSuccessBlock)success
 {
     self.successBlock = success;
     [self start];
@@ -143,10 +143,6 @@
     } else {
         return NO;
     }
-}
-
-- (BOOL)useCDN {
-    return NO;
 }
 
 - (id)jsonValidator

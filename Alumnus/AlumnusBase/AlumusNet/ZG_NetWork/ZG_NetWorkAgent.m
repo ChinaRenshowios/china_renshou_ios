@@ -61,8 +61,8 @@
             baseUrl = [_config cdnUrl];
         }
     } else {
-        if ([request baseUrl].length > 0) {
-            baseUrl = [request baseUrl];
+        if ([request requestBaseUrl].length > 0) {
+            baseUrl = [request requestBaseUrl];
         } else {
             baseUrl = [_config baseUrl];
         }
@@ -91,22 +91,22 @@
     
     NSArray *authorizationHeaderFieldArray = [request requestArgument];
     if (authorizationHeaderFieldArray != nil) {
-        [_manager.requestSerializer setAuthorizationHeaderFieldWithUsername:(NSString *)authorizationHeaderFieldArray.firstObject password:(NSString *)authorizationHeaderFieldArray.lastObject]
+        [_manager.requestSerializer setAuthorizationHeaderFieldWithUsername:(NSString *)authorizationHeaderFieldArray.firstObject password:(NSString *)authorizationHeaderFieldArray.lastObject];
     }
     
     //需要配置http头内的信息
     NSDictionary *headerFieldValueDictionary = [request requestHeaderFieldValueDictionary];
-    if (headerFieldValueDictionary != nil) {
+    if (headerFieldValueDictionary != nil) {
         for (id httpHeaderField in headerFieldValueDictionary.allKeys) {
             id value = headerFieldValueDictionary[httpHeaderField];
-            if (httpHeaderField isKindOfClass:[NSString class] && && [va isKindOfClass:[NSString class]]) {
+            if ([httpHeaderField isKindOfClass:[NSString class]] && [value isKindOfClass:[NSString class]]) {
                 [_manager.requestSerializer setValue:(NSString *)value forHTTPHeaderField:(NSString *)httpHeaderField];
             }else{
                 ZGNetLog(@"Error, class of key/value in headerFieldValueDictionary should be NSString.");
             }
         }
-    }
-    
+
+    }    
     //自定义urlrequest
     NSURLRequest *customUrlRequest= [request buildCustomUrlRequest];
     if (customUrlRequest) {
@@ -137,7 +137,7 @@
 {
     NSDictionary *copyRecord = [_requestsRecord copy];
     for (NSString *key in copyRecord) {
-        ZG_NetWorkBaseApi *api = copyRecord[i];
+        ZG_NetWorkBaseApi *api = copyRecord[key];
         [api stop]
         ;
     }
