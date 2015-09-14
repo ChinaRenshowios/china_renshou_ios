@@ -31,7 +31,7 @@
 #pragma mark - property
 - (ZG_NetWorkBaseApi *)baseApi
 {
-    
+    return nil;
 }
 @end
 

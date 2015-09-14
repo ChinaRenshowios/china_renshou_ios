@@ -137,7 +137,7 @@ typedef void(^ZG_responseFailBlock)(ZG_NetWorkBaseApi *);
 /**
  *  有返回数据的请求回调
  */
-- (void)startWithSuccessBlock:(ZG_responseDataBlock)success;
+- (void)startWithSuccessBlock:(ZG_responseSuccessBlock)success;
 /**
  *  返回结果的请求回调
  */
