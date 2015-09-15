@@ -22,6 +22,8 @@
 		2850E6031B84A7D300EAE87C /* i9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5FA1B84A7D300EAE87C /* i9.png */; };
 		2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */; };
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
+		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
+		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
 		351C1FEC1BA5345100454CB2 /* ZG_NetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C1FEB1BA5345100454CB2 /* ZG_NetWorkApi.m */; };
 		351E44B31BA4873C00C0A792 /* ZG_NetWorkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */; };
 		351E44C01BA4884400C0A792 /* ZG_FoundationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */; };
@@ -78,6 +80,10 @@
 		2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSetingViewController.m; sourceTree = "<group>"; };
 		2850E6091B84A99200EAE87C /* KnowledgeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeCenterViewController.h; sourceTree = "<group>"; };
 		2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeCenterViewController.m; sourceTree = "<group>"; };
+		288247BC1BA7EE48007BDAA0 /* KSYCommonNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYCommonNaviViewController.h; sourceTree = "<group>"; };
+		288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYCommonNaviViewController.m; sourceTree = "<group>"; };
+		288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYHomePageButtonView.h; sourceTree = "<group>"; };
+		288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYHomePageButtonView.m; sourceTree = "<group>"; };
 		351C1FEA1BA5345100454CB2 /* ZG_NetWorkApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkApi.h; sourceTree = "<group>"; };
 		351C1FEB1BA5345100454CB2 /* ZG_NetWorkApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZG_NetWorkApi.m; sourceTree = "<group>"; };
 		351E44B11BA4873C00C0A792 /* ZG_NetWorkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZG_NetWorkPrivate.h; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 		288247BB1BA7ED66007BDAA0 /* CommonVC */ = {
 			isa = PBXGroup;
 			children = (
+				288247BC1BA7EE48007BDAA0 /* KSYCommonNaviViewController.h */,
+				288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */,
 			);
 			path = CommonVC;
 			sourceTree = "<group>";
@@ -323,6 +331,8 @@
 				596EB9301B8188CC0043E62D /* ZCCommonButton.m */,
 				596EB9311B8188CC0043E62D /* ZCImageButton.h */,
 				596EB9321B8188CC0043E62D /* ZCImageButton.m */,
+				288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */,
+				288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */,
 			);
 			path = ZCButton;
 			sourceTree = "<group>";
@@ -632,6 +642,7 @@
 				3574A19B1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m in Sources */,
 				2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */,
 				596EB9341B8188CC0043E62D /* ZCImageButton.m in Sources */,
+				288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				CE5A39D21B94815E004B1CA7 /* ALNetWorkApi.m in Sources */,
@@ -640,6 +651,7 @@
 				CE5A39D91B9481A0004B1CA7 /* ZG_NetWorkBaseApi.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
+				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
