@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
-#import "AFDownloadRequestOperation.h"
+//#import "AFDownloadRequestOperation.h"
 
 typedef NS_ENUM(NSInteger, ZG_RequsetMethod) {
     ZG_RequsetMethodGet = 0,
