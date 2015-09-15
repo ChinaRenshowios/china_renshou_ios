@@ -22,8 +22,6 @@
         [self addSubview:_imageView_normal];
         [self addSubview:_imageView_select];
         [self addSubview:_imageButton];
-        
-        
         [self changeSelected:NO];
         
     }
