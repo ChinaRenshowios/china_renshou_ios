@@ -22,12 +22,12 @@
 		2850E6031B84A7D300EAE87C /* i9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5FA1B84A7D300EAE87C /* i9.png */; };
 		2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */; };
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
-		351C1FEC1BA5345100454CB2 /* ZG_NetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C1FEB1BA5345100454CB2 /* ZG_NetWorkApi.m */; settings = {ASSET_TAGS = (); }; };
-		351E44B31BA4873C00C0A792 /* ZG_NetWorkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */; settings = {ASSET_TAGS = (); }; };
-		351E44C01BA4884400C0A792 /* ZG_FoundationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */; settings = {ASSET_TAGS = (); }; };
-		351E44C31BA4920D00C0A792 /* ZG_NetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C21BA4920D00C0A792 /* ZG_NetWorkAgent.m */; settings = {ASSET_TAGS = (); }; };
-		351E44C61BA4938A00C0A792 /* ZG_NetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C51BA4938A00C0A792 /* ZG_NetWorkConfig.m */; settings = {ASSET_TAGS = (); }; };
-		3574A19B1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3574A19A1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
+		351C1FEC1BA5345100454CB2 /* ZG_NetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C1FEB1BA5345100454CB2 /* ZG_NetWorkApi.m */; };
+		351E44B31BA4873C00C0A792 /* ZG_NetWorkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44B21BA4873C00C0A792 /* ZG_NetWorkPrivate.m */; };
+		351E44C01BA4884400C0A792 /* ZG_FoundationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44BF1BA4884400C0A792 /* ZG_FoundationConfig.m */; };
+		351E44C31BA4920D00C0A792 /* ZG_NetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C21BA4920D00C0A792 /* ZG_NetWorkAgent.m */; };
+		351E44C61BA4938A00C0A792 /* ZG_NetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E44C51BA4938A00C0A792 /* ZG_NetWorkConfig.m */; };
+		3574A19B1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3574A19A1BA4995C000E8189 /* ZG_NetWorkHttpRequestOperation.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
 		596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FD1B8176280043E62D /* AppDelegate.m */; };
@@ -170,6 +170,13 @@
 			path = knowledgecenter;
 			sourceTree = "<group>";
 		};
+		288247BB1BA7ED66007BDAA0 /* CommonVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonVC;
+			sourceTree = "<group>";
+		};
 		351E44BC1BA4881700C0A792 /* AlumusModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +297,7 @@
 		596EB9231B8186E70043E62D /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				288247BB1BA7ED66007BDAA0 /* CommonVC */,
 				596EB9471B818D770043E62D /* WBNavigationController */,
 				596EB92E1B8188CC0043E62D /* ZCButton */,
 			);
