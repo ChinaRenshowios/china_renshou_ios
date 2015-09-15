@@ -40,6 +40,7 @@
 {
     // 1.工作平台
     HomepageMainViewController *homepage = [[HomepageMainViewController alloc] init];
+    homepage.titleString = @"工作平台";
     WBNavigationController *nav1 = [[WBNavigationController alloc] initWithRootViewController:homepage];
     [self addChildViewController:nav1];
     

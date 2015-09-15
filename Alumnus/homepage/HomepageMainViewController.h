@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSYCommonNaviViewController.h"
 
-@interface HomepageMainViewController : UIViewController
+@interface HomepageMainViewController : KSYCommonNaviViewController
+@property (strong,nonatomic) NSMutableArray *userModleArray;   //用户模块数组。需要传递参数
 
 @end
