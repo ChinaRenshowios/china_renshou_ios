@@ -42,6 +42,9 @@
 		351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20541BA87C1800454CB2 /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20561BA87C1800454CB2 /* UIWindow+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20691BA87C8100454CB2 /* ALNetWorkApi.m */; settings = {ASSET_TAGS = (); }; };
+		351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */; settings = {ASSET_TAGS = (); }; };
+		351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
+		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
 		596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FD1B8176280043E62D /* AppDelegate.m */; };
@@ -128,6 +131,11 @@
 		351C20561BA87C1800454CB2 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		351C20681BA87C8100454CB2 /* ALNetWorkApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNetWorkApi.h; sourceTree = "<group>"; };
 		351C20691BA87C8100454CB2 /* ALNetWorkApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNetWorkApi.m; sourceTree = "<group>"; };
+		351C206C1BA87DFB00454CB2 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		351C206F1BA87DFB00454CB2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		351C20701BA87DFB00454CB2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596EB8F91B8176280043E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596EB8FA1B8176280043E62D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -301,6 +309,18 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		351C206B1BA87DFB00454CB2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				351C206C1BA87DFB00454CB2 /* MBProgressHUD+MJ.h */,
+				351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */,
+				351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */,
+				351C206F1BA87DFB00454CB2 /* MBProgressHUD.h */,
+				351C20701BA87DFB00454CB2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		596EB8EC1B8176280043E62D = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +425,7 @@
 		596EB9231B8186E70043E62D /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				351C206B1BA87DFB00454CB2 /* MBProgressHUD */,
 				288247BB1BA7ED66007BDAA0 /* CommonVC */,
 				596EB9471B818D770043E62D /* WBNavigationController */,
 				596EB92E1B8188CC0043E62D /* ZCButton */,
@@ -625,6 +646,7 @@
 				2850E6011B84A7D300EAE87C /* i7.png in Resources */,
 				2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */,
 				2850E5FE1B84A7D300EAE87C /* i4.png in Resources */,
+				351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */,
 				596EB9041B8176280043E62D /* Main.storyboard in Resources */,
 				2850E6021B84A7D300EAE87C /* i8.png in Resources */,
 				2850E5FC1B84A7D300EAE87C /* i2.png in Resources */,
@@ -695,6 +717,7 @@
 				351C205A1BA87C1800454CB2 /* NSDate+Utilities.m in Sources */,
 				596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */,
 				351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */,
+				351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
@@ -713,6 +736,7 @@
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
+				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
