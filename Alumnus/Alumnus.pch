@@ -14,5 +14,46 @@
 #import "MyConfig.h"
 #import "ZCImageButton.h"
 
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIWindow+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
+
+#define IOS_VERSION_CODE    [[[UIDevice currentDevice] systemVersion] intValue]
+#define iOS6             (IOS_VERSION_CODE < 7.0)
+#define iOS7             ((IOS_VERSION_CODE >=7.0) && (IOS_VERSION_CODE < 8))
+#define iOS8             (IOS_VERSION_CODE >= 8.0)
+
+
+// 通知中心
+#define ALNotificationCenter [NSNotificationCenter defaultCenter]
+
+#ifdef DEBUG // 处于开发阶段
+#import "ALFoundatuon.h"
+#else // 处于发布阶段
+#define ALLog(...)
+#endif
+
+// RGB颜色
+#define ALColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define ALRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#endif
+
+
+
 
 #endif
+
+

@@ -6,8 +6,14 @@
 //  Copyright (c) 2015年 wiipu. All rights reserved.
 //  人寿Api:统一管理所有接口的网络请求
 
-#import "ZG_NetWorkBaseApi.h"
+#import "ALBaseApi.h"
 
-@interface ALNetWorkApi : ZG_NetWorkBaseApi
+@interface ALNetWorkApi : NSObject
+
+/*
+ 事例接口
+ */
++ (void)startPlaceList:(NSDictionary *)dic withResponse:(responseDataBlock)block;
+
 
 @end
