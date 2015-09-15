@@ -49,7 +49,6 @@
 
 + (void)startPlaceList:(NSDictionary *)dic withResponse:(responseDataBlock)block
 {
-    NSLog(@"测试");
     ALBaseApi *api = [self buildBaseApi];
     api.bodyDic = dic;
     //根据确定请求方式
