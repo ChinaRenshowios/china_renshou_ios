@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
+#import "ALNavViewController.h"
+#import "ALTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -15,13 +17,13 @@
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> master
+//    self.window = [[UIWindow alloc]init];
+//    self.window.frame = [UIScreen mainScreen].bounds;
+//    
+//    ALTabBarController *tabbarVc = [[ALTabBarController alloc]init];
+//    
+//    self.window.rootViewController = tabbarVc;
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
