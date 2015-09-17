@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
+#import "ALNavViewController.h"
+#import "ALTabBarController.h"
 
 @interface AppDelegate ()
 

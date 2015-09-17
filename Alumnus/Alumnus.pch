@@ -28,6 +28,7 @@
 #import "NSString+Extension.h"
 #import "NSString+Emoji.h"
 #import "UITextView+Extension.h"
+#import "UIColor+Extension.h"
 
 #define IOS_VERSION_CODE    [[[UIDevice currentDevice] systemVersion] intValue]
 #define iOS6             (IOS_VERSION_CODE < 7.0)

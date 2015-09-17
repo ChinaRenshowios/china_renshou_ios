@@ -1,0 +1,30 @@
+//
+//  AlumusAccount.m
+//  Alumnus
+//
+//  Created by 王智刚 on 15/9/17.
+//  Copyright © 2015年 wiipu. All rights reserved.
+//
+
+#import "AlumusAccountManger.h"
+
+@implementation AlumusAccountManger
+ZGSingletonM(accountManager)
+#pragma mark - property
+
+#pragma mark - public Api
++ (BOOL)registerAccountWithName:(NSString *)name passWord:(NSString *)password
+{
+    return NO;
+}
+
+#pragma mark - private Api
+
+
+//从本地缓存查询账户是否存在
+- (BOOL)searchAccountFromLocalCache
+{
+    return NO;
+}
+
+@end
