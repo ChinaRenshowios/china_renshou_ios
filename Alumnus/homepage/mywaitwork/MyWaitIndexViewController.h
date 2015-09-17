@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyWaitIndexViewController : UIViewController
+@interface MyWaitIndexViewController : KSYPresentCommonViewController
 
 @end
