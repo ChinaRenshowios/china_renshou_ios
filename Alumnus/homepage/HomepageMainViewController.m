@@ -8,6 +8,7 @@
 
 #import "HomepageMainViewController.h"
 #import "KSYHomePageButtonView.h"
+#import "MyWaitIndexViewController.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -17,6 +18,7 @@
     NSInteger userModelNum;                      //用户模块数量
     UIView *modelView_one;                       //第一模块
     UIView *modelView_two;                       //第二模块
+    MyWaitIndexViewController *myWaitVC;
 }
 
 @end
@@ -86,6 +88,7 @@
             KSYHomePageButtonView *btnView = [[KSYHomePageButtonView alloc] initWithFrame:CGRectMake(modelMargin*2+i%3*((2*modelMargin)+modelSize),i/3*((2*modelMargin)+modelSize),modelSize,modelSize)];
             btnView.imageButton.tag = [modelId integerValue];
             btnView.backgroundColor = DOCK_SELECT_COLOR;
+            [btnView.imageButton addTarget:self action:@selector(didClickModelButton:) forControlEvents:UIControlEventTouchUpInside];
             [self buildOneModel:btnView WithId:modelId];
             [modelView_one addSubview:btnView];
         }
@@ -138,6 +141,34 @@
         NSInteger page = floor((scrollView.contentOffset.x -pageWidth/2)/pageWidth) +1;
         fuctionChangeControl.currentPage = page;
    
+}
+#pragma mark ------------------------------按钮点击------------------------------------------
+-(void)didClickModelButton:(UIButton *)btn{
+    NSInteger tag = btn.tag;
+    switch (tag) {
+        case 1:
+            myWaitVC = [[MyWaitIndexViewController alloc] init];
+            [self presentViewController:myWaitVC animated:YES completion:nil];
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        case 8:
+            break;
+        case 9:
+            break;
+        default:
+            break;
+    }
 }
 
 @end

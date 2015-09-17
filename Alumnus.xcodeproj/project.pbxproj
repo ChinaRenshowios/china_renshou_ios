@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
 		2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EC1B84A7C500EAE87C /* dock_3.png */; };
@@ -24,39 +25,39 @@
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
-		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; settings = {ASSET_TAGS = (); }; };
-		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; settings = {ASSET_TAGS = (); }; };
-		351C205A1BA87C1800454CB2 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20381BA87C1800454CB2 /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
-		351C205B1BA87C1800454CB2 /* SandboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C203A1BA87C1800454CB2 /* SandboxFile.m */; settings = {ASSET_TAGS = (); }; };
-		351C205C1BA87C1800454CB2 /* ALBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C203E1BA87C1800454CB2 /* ALBaseApi.m */; settings = {ASSET_TAGS = (); }; };
-		351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20401BA87C1800454CB2 /* ALHttpTool.m */; settings = {ASSET_TAGS = (); }; };
-		351C205E1BA87C1800454CB2 /* ALConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20441BA87C1800454CB2 /* ALConst.m */; settings = {ASSET_TAGS = (); }; };
-		351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20461BA87C1800454CB2 /* ALFoundatuon.m */; settings = {ASSET_TAGS = (); }; };
-		351C20601BA87C1800454CB2 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20481BA87C1800454CB2 /* Foundation+Log.m */; settings = {ASSET_TAGS = (); }; };
-		351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204A1BA87C1800454CB2 /* NSDate+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204C1BA87C1800454CB2 /* NSString+Emoji.m */; settings = {ASSET_TAGS = (); }; };
-		351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204E1BA87C1800454CB2 /* NSString+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20501BA87C1800454CB2 /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20521BA87C1800454CB2 /* UITextView+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20541BA87C1800454CB2 /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20561BA87C1800454CB2 /* UIWindow+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20691BA87C8100454CB2 /* ALNetWorkApi.m */; settings = {ASSET_TAGS = (); }; };
-		351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */; settings = {ASSET_TAGS = (); }; };
-		351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
-		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; settings = {ASSET_TAGS = (); }; };
-		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
-		35D474D21BA9CA6500F934A1 /* ALBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D11BA9CA6500F934A1 /* ALBaseManager.m */; settings = {ASSET_TAGS = (); }; };
-		35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D41BA9CA7900F934A1 /* ALBaseModel.m */; settings = {ASSET_TAGS = (); }; };
-		35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D71BA9CAA500F934A1 /* AlumusAccountManger */; settings = {ASSET_TAGS = (); }; };
-		35D474DC1BA9D2AB00F934A1 /* ALCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474DB1BA9D2AB00F934A1 /* ALCacheCenter.m */; settings = {ASSET_TAGS = (); }; };
-		35D474DF1BA9D3B400F934A1 /* AlumusAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474DE1BA9D3B400F934A1 /* AlumusAccount.m */; settings = {ASSET_TAGS = (); }; };
-		35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E21BA9D5D700F934A1 /* ALAddressBookViewController.m */; settings = {ASSET_TAGS = (); }; };
-		35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E71BA9D61500F934A1 /* ALAddressBook.m */; settings = {ASSET_TAGS = (); }; };
-		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; settings = {ASSET_TAGS = (); }; };
-		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; settings = {ASSET_TAGS = (); }; };
+		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; };
+		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; };
+		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; };
+		351C205A1BA87C1800454CB2 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20381BA87C1800454CB2 /* NSDate+Utilities.m */; };
+		351C205B1BA87C1800454CB2 /* SandboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C203A1BA87C1800454CB2 /* SandboxFile.m */; };
+		351C205C1BA87C1800454CB2 /* ALBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C203E1BA87C1800454CB2 /* ALBaseApi.m */; };
+		351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20401BA87C1800454CB2 /* ALHttpTool.m */; };
+		351C205E1BA87C1800454CB2 /* ALConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20441BA87C1800454CB2 /* ALConst.m */; };
+		351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20461BA87C1800454CB2 /* ALFoundatuon.m */; };
+		351C20601BA87C1800454CB2 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20481BA87C1800454CB2 /* Foundation+Log.m */; };
+		351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204A1BA87C1800454CB2 /* NSDate+Extension.m */; };
+		351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204C1BA87C1800454CB2 /* NSString+Emoji.m */; };
+		351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C204E1BA87C1800454CB2 /* NSString+Extension.m */; };
+		351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20501BA87C1800454CB2 /* UIBarButtonItem+Extension.m */; };
+		351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20521BA87C1800454CB2 /* UITextView+Extension.m */; };
+		351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20541BA87C1800454CB2 /* UIView+Extension.m */; };
+		351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20561BA87C1800454CB2 /* UIWindow+Extension.m */; };
+		351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20691BA87C8100454CB2 /* ALNetWorkApi.m */; };
+		351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */; };
+		351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */; };
+		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; };
+		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
+		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
+		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
+		35D474D21BA9CA6500F934A1 /* ALBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D11BA9CA6500F934A1 /* ALBaseManager.m */; };
+		35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D41BA9CA7900F934A1 /* ALBaseModel.m */; };
+		35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */ = {isa = PBXBuildFile; fileRef = 35D474D71BA9CAA500F934A1 /* AlumusAccountManger */; };
+		35D474DC1BA9D2AB00F934A1 /* ALCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474DB1BA9D2AB00F934A1 /* ALCacheCenter.m */; };
+		35D474DF1BA9D3B400F934A1 /* AlumusAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474DE1BA9D3B400F934A1 /* AlumusAccount.m */; };
+		35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E21BA9D5D700F934A1 /* ALAddressBookViewController.m */; };
+		35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E71BA9D61500F934A1 /* ALAddressBook.m */; };
+		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; };
+		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
 		596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FD1B8176280043E62D /* AppDelegate.m */; };
@@ -87,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitIndexViewController.h; sourceTree = "<group>"; };
+		281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitIndexViewController.m; sourceTree = "<group>"; };
 		2850E5EA1B84A7C500EAE87C /* dock_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_1.png; sourceTree = "<group>"; };
 		2850E5EB1B84A7C500EAE87C /* dock_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_2.png; sourceTree = "<group>"; };
 		2850E5EC1B84A7C500EAE87C /* dock_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_3.png; sourceTree = "<group>"; };
@@ -229,6 +232,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281963BE1BAA4FE40069EC84 /* mycollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mycollection;
+			sourceTree = "<group>";
+		};
+		281963BF1BAA4FE40069EC84 /* mycommunicate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mycommunicate;
+			sourceTree = "<group>";
+		};
+		281963C01BAA4FE40069EC84 /* mydate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mydate;
+			sourceTree = "<group>";
+		};
+		281963C11BAA4FE40069EC84 /* mymail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mymail;
+			sourceTree = "<group>";
+		};
+		281963C21BAA4FE40069EC84 /* mymeeting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mymeeting;
+			sourceTree = "<group>";
+		};
+		281963C31BAA4FE40069EC84 /* mymission */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mymission;
+			sourceTree = "<group>";
+		};
+		281963C41BAA4FE40069EC84 /* myteamwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = myteamwork;
+			sourceTree = "<group>";
+		};
+		281963C51BAA4FE40069EC84 /* myunforget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = myunforget;
+			sourceTree = "<group>";
+		};
+		281963C61BAA4FE40069EC84 /* mywaitwork */ = {
+			isa = PBXGroup;
+			children = (
+				281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */,
+				281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */,
+			);
+			path = mywaitwork;
+			sourceTree = "<group>";
+		};
 		2850E6041B84A92200EAE87C /* systemsetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +576,15 @@
 		596EB9201B8186BC0043E62D /* homepage */ = {
 			isa = PBXGroup;
 			children = (
+				281963BE1BAA4FE40069EC84 /* mycollection */,
+				281963BF1BAA4FE40069EC84 /* mycommunicate */,
+				281963C01BAA4FE40069EC84 /* mydate */,
+				281963C11BAA4FE40069EC84 /* mymail */,
+				281963C21BAA4FE40069EC84 /* mymeeting */,
+				281963C31BAA4FE40069EC84 /* mymission */,
+				281963C41BAA4FE40069EC84 /* myteamwork */,
+				281963C51BAA4FE40069EC84 /* myunforget */,
+				281963C61BAA4FE40069EC84 /* mywaitwork */,
 				596EB93D1B818C590043E62D /* HomepageMainViewController.h */,
 				596EB93E1B818C590043E62D /* HomepageMainViewController.m */,
 			);
@@ -859,6 +936,7 @@
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
+				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,

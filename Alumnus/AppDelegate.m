@@ -17,6 +17,13 @@
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    self.window = [[UIWindow alloc]init];
+//    self.window.frame = [UIScreen mainScreen].bounds;
+//    
+//    ALTabBarController *tabbarVc = [[ALTabBarController alloc]init];
+//    
+//    self.window.rootViewController = tabbarVc;
+//    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
