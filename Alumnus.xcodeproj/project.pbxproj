@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */; };
+		281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
 		2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EC1B84A7C500EAE87C /* dock_3.png */; };
@@ -90,6 +91,8 @@
 /* Begin PBXFileReference section */
 		281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitIndexViewController.h; sourceTree = "<group>"; };
 		281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitIndexViewController.m; sourceTree = "<group>"; };
+		281963CA1BAA52B00069EC84 /* MydateIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MydateIndexViewController.h; sourceTree = "<group>"; };
+		281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MydateIndexViewController.m; sourceTree = "<group>"; };
 		2850E5EA1B84A7C500EAE87C /* dock_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_1.png; sourceTree = "<group>"; };
 		2850E5EB1B84A7C500EAE87C /* dock_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_2.png; sourceTree = "<group>"; };
 		2850E5EC1B84A7C500EAE87C /* dock_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_3.png; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 		281963C01BAA4FE40069EC84 /* mydate */ = {
 			isa = PBXGroup;
 			children = (
+				281963CA1BAA52B00069EC84 /* MydateIndexViewController.h */,
+				281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */,
 			);
 			path = mydate;
 			sourceTree = "<group>";
@@ -938,6 +943,7 @@
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
 				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
+				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,
