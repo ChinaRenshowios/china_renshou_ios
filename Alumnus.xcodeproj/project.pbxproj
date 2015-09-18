@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */; };
 		281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */; };
+		281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281963CE1BAA57CC0069EC84 /* KSYPresentCommonViewController.m */; };
+		281963D11BAA58E70069EC84 /* rightarow.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D01BAA58E70069EC84 /* rightarow.png */; };
+		281963D31BAA58F90069EC84 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D21BAA58F90069EC84 /* return.png */; };
+		281963D51BAA5A580069EC84 /* returnback.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D41BAA5A580069EC84 /* returnback.png */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
 		2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EC1B84A7C500EAE87C /* dock_3.png */; };
@@ -93,6 +97,11 @@
 		281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitIndexViewController.m; sourceTree = "<group>"; };
 		281963CA1BAA52B00069EC84 /* MydateIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MydateIndexViewController.h; sourceTree = "<group>"; };
 		281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MydateIndexViewController.m; sourceTree = "<group>"; };
+		281963CD1BAA57CC0069EC84 /* KSYPresentCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYPresentCommonViewController.h; sourceTree = "<group>"; };
+		281963CE1BAA57CC0069EC84 /* KSYPresentCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYPresentCommonViewController.m; sourceTree = "<group>"; };
+		281963D01BAA58E70069EC84 /* rightarow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightarow.png; sourceTree = "<group>"; };
+		281963D21BAA58F90069EC84 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
+		281963D41BAA5A580069EC84 /* returnback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = returnback.png; sourceTree = "<group>"; };
 		2850E5EA1B84A7C500EAE87C /* dock_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_1.png; sourceTree = "<group>"; };
 		2850E5EB1B84A7C500EAE87C /* dock_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_2.png; sourceTree = "<group>"; };
 		2850E5EC1B84A7C500EAE87C /* dock_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_3.png; sourceTree = "<group>"; };
@@ -325,6 +334,8 @@
 			children = (
 				288247BC1BA7EE48007BDAA0 /* KSYCommonNaviViewController.h */,
 				288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */,
+				281963CD1BAA57CC0069EC84 /* KSYPresentCommonViewController.h */,
+				281963CE1BAA57CC0069EC84 /* KSYPresentCommonViewController.m */,
 			);
 			path = CommonVC;
 			sourceTree = "<group>";
@@ -669,6 +680,7 @@
 		596EB94B1B8191860043E62D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				281963D41BAA5A580069EC84 /* returnback.png */,
 				596EB94C1B8191860043E62D /* Dock */,
 				596EB94D1B8191860043E62D /* find */,
 				596EB94E1B8191860043E62D /* group */,
@@ -682,6 +694,7 @@
 		596EB94C1B8191860043E62D /* Dock */ = {
 			isa = PBXGroup;
 			children = (
+				281963D21BAA58F90069EC84 /* return.png */,
 				2850E5EA1B84A7C500EAE87C /* dock_1.png */,
 				2850E5EB1B84A7C500EAE87C /* dock_2.png */,
 				2850E5EC1B84A7C500EAE87C /* dock_3.png */,
@@ -707,6 +720,7 @@
 		596EB94F1B8191860043E62D /* homepage */ = {
 			isa = PBXGroup;
 			children = (
+				281963D01BAA58E70069EC84 /* rightarow.png */,
 				2850E5F21B84A7D300EAE87C /* i1.png */,
 				2850E5F31B84A7D300EAE87C /* i2.png */,
 				2850E5F41B84A7D300EAE87C /* i3.png */,
@@ -834,6 +848,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5A39CC1B94728F004B1CA7 /* Podfile in Resources */,
+				281963D51BAA5A580069EC84 /* returnback.png in Resources */,
 				2850E6001B84A7D300EAE87C /* i6.png in Resources */,
 				2850E6011B84A7D300EAE87C /* i7.png in Resources */,
 				2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */,
@@ -842,6 +857,7 @@
 				596EB9041B8176280043E62D /* Main.storyboard in Resources */,
 				2850E6021B84A7D300EAE87C /* i8.png in Resources */,
 				2850E5FC1B84A7D300EAE87C /* i2.png in Resources */,
+				281963D31BAA58F90069EC84 /* return.png in Resources */,
 				596EB9091B8176290043E62D /* LaunchScreen.xib in Resources */,
 				2850E5FB1B84A7D300EAE87C /* i1.png in Resources */,
 				2850E5FD1B84A7D300EAE87C /* i3.png in Resources */,
@@ -851,6 +867,7 @@
 				2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */,
 				596EB9061B8176280043E62D /* Images.xcassets in Resources */,
 				2850E5FF1B84A7D300EAE87C /* i5.png in Resources */,
+				281963D11BAA58E70069EC84 /* rightarow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +966,7 @@
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,
 				35D474D21BA9CA6500F934A1 /* ALBaseManager.m in Sources */,
 				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
+				281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */,
 				351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
