@@ -33,6 +33,7 @@
     
     // 2.初始化DockItems
     [self addDockItems];
+
 }
 
 #pragma mark 初始化所有的子控制器

@@ -58,6 +58,8 @@
 		35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E21BA9D5D700F934A1 /* ALAddressBookViewController.m */; };
 		35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E71BA9D61500F934A1 /* ALAddressBook.m */; };
 		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; };
+		35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E41BAAFFE60029B372 /* ZGSlideModule.m */; settings = {ASSET_TAGS = (); }; };
+		35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */; settings = {ASSET_TAGS = (); }; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -177,6 +179,10 @@
 		35D474E71BA9D61500F934A1 /* ALAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAddressBook.m; sourceTree = "<group>"; };
 		35D474E91BA9D66700F934A1 /* ALAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAddressBookManager.h; sourceTree = "<group>"; };
 		35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAddressBookManager.m; sourceTree = "<group>"; };
+		35E957E31BAAFFE60029B372 /* ZGSlideModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSlideModule.h; sourceTree = "<group>"; };
+		35E957E41BAAFFE60029B372 /* ZGSlideModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSlideModule.m; sourceTree = "<group>"; };
+		35E957E61BAB0E110029B372 /* ZGSlideModuleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSlideModuleManager.h; sourceTree = "<group>"; };
+		35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSlideModuleManager.m; sourceTree = "<group>"; };
 		35EDAF4D1BA9B03E00B3C175 /* ALNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavViewController.h; sourceTree = "<group>"; };
 		35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavViewController.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +338,7 @@
 		351C202E1BA87C1800454CB2 /* AlumnusBase */ = {
 			isa = PBXGroup;
 			children = (
+				35E957E11BAAFF3C0029B372 /* AlumusModule */,
 				35D474E01BA9D5BB00F934A1 /* AlumusAddressBook */,
 				35D474C71BA9C99000F934A1 /* AlumusAccountCenter */,
 				351C202F1BA87C1800454CB2 /* AlumusBaseVc */,
@@ -502,6 +509,25 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		35E957E11BAAFF3C0029B372 /* AlumusModule */ = {
+			isa = PBXGroup;
+			children = (
+				35E957E21BAAFF7C0029B372 /* SlideModule */,
+			);
+			path = AlumusModule;
+			sourceTree = "<group>";
+		};
+		35E957E21BAAFF7C0029B372 /* SlideModule */ = {
+			isa = PBXGroup;
+			children = (
+				35E957E31BAAFFE60029B372 /* ZGSlideModule.h */,
+				35E957E41BAAFFE60029B372 /* ZGSlideModule.m */,
+				35E957E61BAB0E110029B372 /* ZGSlideModuleManager.h */,
+				35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */,
+			);
+			path = SlideModule;
 			sourceTree = "<group>";
 		};
 		596EB8EC1B8176280043E62D = {
@@ -915,6 +941,7 @@
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
+				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */,
@@ -927,6 +954,7 @@
 				351C205E1BA87C1800454CB2 /* ALConst.m in Sources */,
 				596EB93F1B818C590043E62D /* HomepageMainViewController.m in Sources */,
 				2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */,
+				35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */,
 				596EB9341B8188CC0043E62D /* ZCImageButton.m in Sources */,
 				288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */,
 				351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */,
@@ -1011,6 +1039,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1055,6 +1084,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
