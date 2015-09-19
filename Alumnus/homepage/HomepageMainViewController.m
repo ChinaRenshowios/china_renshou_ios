@@ -9,6 +9,7 @@
 #import "HomepageMainViewController.h"
 #import "KSYHomePageButtonView.h"
 #import "MyWaitIndexViewController.h"
+#import "MyMissonIndexViewController.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -18,7 +19,8 @@
     NSInteger userModelNum;                      //用户模块数量
     UIView *modelView_one;                       //第一模块
     UIView *modelView_two;                       //第二模块
-    MyWaitIndexViewController *myWaitVC;
+    MyWaitIndexViewController *myWaitVC;         //待办页面
+    MyMissonIndexViewController *myMissonVC;     //任务页面
 }
 
 @end
@@ -27,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     _userModleArray = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];
     [self addAllSubViews];
     [self changeModelByUserInfo];
@@ -155,6 +158,9 @@
         case 3:
             break;
         case 4:
+            myMissonVC = [[MyMissonIndexViewController alloc] init];
+            myMissonVC.titleString = @"我的任务";
+            [self presentViewController:myMissonVC animated:YES completion:nil];
             break;
         case 5:
             break;

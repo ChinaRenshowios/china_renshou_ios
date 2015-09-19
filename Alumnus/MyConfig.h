@@ -33,6 +33,9 @@
 #define DOCK_BG_COLOR [UIColor colorWithRed:22.0/255.0 green:160.0/255.0 blue:133.0/255.0 alpha:1.0]
 #define DOCK_SELECT_COLOR [UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:1.0]
 
+#define LOGIN_EDGE_COLOR [UIColor colorWithRed:156.0/255.0 green:156.0/255.0 blue:156.0/255.0 alpha:1.0]
+#define COMMON_FONT_COLOR [UIColor blackColor]
+
 #define LEFTEDGE SIZEWIDTH/15
 #define TOPEDGE SIZEHEIGHT/26.6
 

@@ -10,6 +10,8 @@
 //#import "AFNetworking.h"
 #import "ALNavViewController.h"
 #import "ALTabBarController.h"
+#import "LoginViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +27,19 @@
 //    self.window.rootViewController = tabbarVc;
 //    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
+    NSLog(@"1234");
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"login"]){
+        NSLog(@"421412412412");
+        LoginViewController *loginVC = [[LoginViewController alloc] init];
+        self.window.rootViewController = loginVC;
+    }
+    else{
+        ViewController *viewVC = [[ViewController alloc] init];
+        self.window.rootViewController = viewVC;
+    }
+
+    
+    
     return YES;
 }
 
