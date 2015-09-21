@@ -16,4 +16,5 @@
 + (void)startPlaceList:(NSDictionary *)dic withResponse:(responseDataBlock)block;
 
 
+
 @end

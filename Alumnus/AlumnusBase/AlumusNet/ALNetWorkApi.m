@@ -12,10 +12,11 @@
 @implementation ALNetWorkApi
 + (ALBaseApi *)buildBaseApi
 {
+    //@"http://192.168.159.1:8081/mobileClient/PT_ORG_USER_MOBILE.mobileLogin.do"
     ALBaseApi *api = [[ALBaseApi alloc]init];
     //todo:配置api的一些默认配置默认的request是post
     api.requestMeth = ALRequestMethodPost;
-    api.url = @"";
+    api.url = @"http://www.baidu.com";
     api.header = [self header];
     return api;
 }
@@ -52,7 +53,7 @@
     ALBaseApi *api = [self buildBaseApi];
     api.bodyDic = dic;
     //根据确定请求方式
-    api.requestMeth = ALRequestMethodGet;
+    api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
     api.appendUrl = @"";
     [api sendData:^(BOOL success, id responseData, NSString *message) {

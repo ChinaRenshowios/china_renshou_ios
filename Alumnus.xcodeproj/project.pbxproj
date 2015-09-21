@@ -46,6 +46,10 @@
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
+		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
+		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
+		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
+		28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */; };
 		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; };
 		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; };
 		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; };
@@ -78,8 +82,8 @@
 		35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E21BA9D5D700F934A1 /* ALAddressBookViewController.m */; };
 		35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474E71BA9D61500F934A1 /* ALAddressBook.m */; };
 		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; };
-		35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E41BAAFFE60029B372 /* ZGSlideModule.m */; settings = {ASSET_TAGS = (); }; };
-		35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */; settings = {ASSET_TAGS = (); }; };
+		35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E41BAAFFE60029B372 /* ZGSlideModule.m */; };
+		35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -170,6 +174,14 @@
 		288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYCommonNaviViewController.m; sourceTree = "<group>"; };
 		288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYHomePageButtonView.h; sourceTree = "<group>"; };
 		288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYHomePageButtonView.m; sourceTree = "<group>"; };
+		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
+		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
+		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
+		28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLInitSwipePasswordController.m; sourceTree = "<group>"; };
+		28B6357B1BAF977C00CA2D80 /* YLSwipeLockNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSwipeLockNodeView.h; sourceTree = "<group>"; };
+		28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockNodeView.m; sourceTree = "<group>"; };
+		28B6357D1BAF977C00CA2D80 /* YLSwipeLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSwipeLockView.h; sourceTree = "<group>"; };
+		28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockView.m; sourceTree = "<group>"; };
 		351C20301BA87C1800454CB2 /* ALNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNewfeatureViewController.h; sourceTree = "<group>"; };
 		351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNewfeatureViewController.m; sourceTree = "<group>"; };
 		351C20321BA87C1800454CB2 /* ALTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTabBarController.h; sourceTree = "<group>"; };
@@ -437,6 +449,29 @@
 				281963CE1BAA57CC0069EC84 /* KSYPresentCommonViewController.m */,
 			);
 			path = CommonVC;
+			sourceTree = "<group>";
+		};
+		28B635751BAF977C00CA2D80 /* LockVC */ = {
+			isa = PBXGroup;
+			children = (
+				28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */,
+				28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */,
+				28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */,
+				28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */,
+				28B6357A1BAF977C00CA2D80 /* YLSwipeLockView */,
+			);
+			path = LockVC;
+			sourceTree = "<group>";
+		};
+		28B6357A1BAF977C00CA2D80 /* YLSwipeLockView */ = {
+			isa = PBXGroup;
+			children = (
+				28B6357B1BAF977C00CA2D80 /* YLSwipeLockNodeView.h */,
+				28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */,
+				28B6357D1BAF977C00CA2D80 /* YLSwipeLockView.h */,
+				28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */,
+			);
+			path = YLSwipeLockView;
 			sourceTree = "<group>";
 		};
 		351C202E1BA87C1800454CB2 /* AlumnusBase */ = {
@@ -749,6 +784,7 @@
 		596EB9231B8186E70043E62D /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				28B635751BAF977C00CA2D80 /* LockVC */,
 				281040D81BABB13000C43352 /* NJKWebViewProgress */,
 				281040BC1BABAF8B00C43352 /* CommonView */,
 				351C206B1BA87DFB00454CB2 /* MBProgressHUD */,
@@ -1068,6 +1104,7 @@
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
+				28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */,
 				35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */,
 				281040D41BABAF8B00C43352 /* KSYWebWithNoNaviViewController.m in Sources */,
 				351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */,
@@ -1088,6 +1125,7 @@
 				351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
+				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
@@ -1096,12 +1134,14 @@
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
+				28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */,
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
 				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				281040CF1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
+				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,

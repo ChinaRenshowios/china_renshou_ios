@@ -12,6 +12,10 @@
 #import "ALTabBarController.h"
 #import "LoginViewController.h"
 #import "ViewController.h"
+#import "ALNetWorkApi.h"
+#import "YLSwipeLockView.h"
+#import "YLInitSwipePasswordController.h"
+#import "YLCheckToUnlockViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +23,15 @@
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [ALNetWorkApi startPlaceList:nil withResponse:^(BOOL success, id responseData, NSString *message) {
+        if (success) {
+            NSLog(@"responseData - %@ message%@",responseData,message);
+        }else{
+            NSLog(@"responseData - %@ message%@",responseData,message);
+
+        }
+    }];
 //    self.window = [[UIWindow alloc]init];
 //    self.window.frame = [UIScreen mainScreen].bounds;
 //    
@@ -27,15 +40,28 @@
 //    self.window.rootViewController = tabbarVc;
 //    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
-    NSLog(@"1234");
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"login"]){
-        NSLog(@"421412412412");
         LoginViewController *loginVC = [[LoginViewController alloc] init];
         self.window.rootViewController = loginVC;
     }
     else{
-        ViewController *viewVC = [[ViewController alloc] init];
-        self.window.rootViewController = viewVC;
+        //ViewController *viewVC = [[ViewController alloc] init];
+        
+       // self.window.rootViewController = viewVC;
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"gesturePasswordSet"]&&![[NSUserDefaults standardUserDefaults] boolForKey:@"engoreGesturePassword"]) {
+            YLInitSwipePasswordController *controller = [[YLInitSwipePasswordController alloc] init];
+            self.window.rootViewController = controller;
+        }
+        else if([[NSUserDefaults standardUserDefaults] boolForKey:@"engoreGesturePassword"]){
+            ViewController *viewVC = [[ViewController alloc] init];
+            
+            self.window.rootViewController = viewVC;
+        }
+        else{
+            YLCheckToUnlockViewController *controller = [[YLCheckToUnlockViewController alloc] init];
+            self.window.rootViewController = controller;
+        }
+
     }
 
     
