@@ -16,8 +16,9 @@
     {
         self.backgroundColor = COMMON_INNER_BG_COLOR;
         UIImage *Image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:pic ofType:@"png"]];
-        _imageview = [[UIImageView alloc] initWithFrame:CGRectMake(LEFTEDGE/2,frame.size.height/4, frame.size.height/2, frame.size.height/2)];
+        _imageview = [[UIImageView alloc] initWithFrame:CGRectMake(LEFTEDGE/2,frame.size.height/12, frame.size.height*5/6, frame.size.height*5/6)];
         _imageview.image = Image;
+        _imageview.backgroundColor = DOCK_BG_COLOR;
         [self addSubview:_imageview];
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_imageview.frame.origin.x+_imageview.frame.size.width+LEFTEDGE/2,self.frame.size.height/3, self.frame.size.width/2, self.frame.size.height/3)];
         _titleLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -30,7 +31,9 @@
         _arowImageview = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width-LEFTEDGE/2-frame.size.height/6,frame.size.height/3, frame.size.height/6, frame.size.height/3)];
         _arowImageview.image = arowImage;
         [self addSubview:_arowImageview];
-        
+        UIView *downEdgeView = [[UIView alloc] initWithFrame:CGRectMake(_titleLabel.frame.origin.x,frame.size.height-1,SIZEWIDTH, 1)];
+        downEdgeView.backgroundColor = LOGIN_EDGE_COLOR;
+        [self addSubview:downEdgeView];
         
         //[self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }

@@ -58,6 +58,7 @@
     // 4.系统设置
     SystemSetingViewController *systemSet = [[SystemSetingViewController alloc] init];
     WBNavigationController *nav4 = [[WBNavigationController alloc] initWithRootViewController:systemSet];
+    systemSet.titleString = @"系统设置";
     [self addChildViewController:nav4];
     [self dock:nil itemSelectedFrom:2 to:0];
     

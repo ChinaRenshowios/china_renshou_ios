@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSYCommonNaviViewController.h"
 
-@interface SystemSetingViewController : UIViewController
+@interface SystemSetingViewController : KSYCommonNaviViewController
 
 @end

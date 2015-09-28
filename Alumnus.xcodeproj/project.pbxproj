@@ -44,6 +44,10 @@
 		2850E6031B84A7D300EAE87C /* i9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5FA1B84A7D300EAE87C /* i9.png */; };
 		2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */; };
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
+		28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */; };
+		28681E351BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */; };
+		28681E371BB8F85700E092DE /* rightarow.png in Resources */ = {isa = PBXBuildFile; fileRef = 28681E361BB8F85700E092DE /* rightarow.png */; };
+		28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E391BB9002700E092DE /* ZCImagePickerViewController.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
@@ -170,6 +174,13 @@
 		2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSetingViewController.m; sourceTree = "<group>"; };
 		2850E6091B84A99200EAE87C /* KnowledgeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeCenterViewController.h; sourceTree = "<group>"; };
 		2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeCenterViewController.m; sourceTree = "<group>"; };
+		28681E301BB8E9B100E092DE /* MyWaitingCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitingCollectionViewController.h; sourceTree = "<group>"; };
+		28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitingCollectionViewController.m; sourceTree = "<group>"; };
+		28681E331BB8E9EA00E092DE /* MyWaitingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitingCollectionViewCell.h; sourceTree = "<group>"; };
+		28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitingCollectionViewCell.m; sourceTree = "<group>"; };
+		28681E361BB8F85700E092DE /* rightarow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightarow.png; sourceTree = "<group>"; };
+		28681E381BB9002700E092DE /* ZCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCImagePickerViewController.h; sourceTree = "<group>"; };
+		28681E391BB9002700E092DE /* ZCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCImagePickerViewController.m; sourceTree = "<group>"; };
 		288247BC1BA7EE48007BDAA0 /* KSYCommonNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYCommonNaviViewController.h; sourceTree = "<group>"; };
 		288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYCommonNaviViewController.m; sourceTree = "<group>"; };
 		288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYHomePageButtonView.h; sourceTree = "<group>"; };
@@ -310,6 +321,8 @@
 		281040BC1BABAF8B00C43352 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				28681E381BB9002700E092DE /* ZCImagePickerViewController.h */,
+				28681E391BB9002700E092DE /* ZCImagePickerViewController.m */,
 				281040BD1BABAF8B00C43352 /* KSYCommonButtonWithGreen.h */,
 				281040BE1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m */,
 				281040BF1BABAF8B00C43352 /* KSYCommonViewController.h */,
@@ -418,6 +431,10 @@
 			children = (
 				281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */,
 				281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */,
+				28681E301BB8E9B100E092DE /* MyWaitingCollectionViewController.h */,
+				28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */,
+				28681E331BB8E9EA00E092DE /* MyWaitingCollectionViewCell.h */,
+				28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */,
 			);
 			path = mywaitwork;
 			sourceTree = "<group>";
@@ -839,6 +856,7 @@
 		596EB94B1B8191860043E62D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				28681E361BB8F85700E092DE /* rightarow.png */,
 				281040DF1BABB2E600C43352 /* user */,
 				281963D41BAA5A580069EC84 /* returnback.png */,
 				596EB94C1B8191860043E62D /* Dock */,
@@ -1012,6 +1030,7 @@
 				2850E6001B84A7D300EAE87C /* i6.png in Resources */,
 				2850E6011B84A7D300EAE87C /* i7.png in Resources */,
 				2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */,
+				28681E371BB8F85700E092DE /* rightarow.png in Resources */,
 				281040E51BABB2E600C43352 /* user_login_psw.png in Resources */,
 				2850E5FE1B84A7D300EAE87C /* i4.png in Resources */,
 				351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */,
@@ -1126,12 +1145,15 @@
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
 				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
+				28681E351BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
+				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
+				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
 				28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */,
