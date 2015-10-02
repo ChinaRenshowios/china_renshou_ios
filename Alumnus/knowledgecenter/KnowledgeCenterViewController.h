@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSYCommonNaviViewController.h"
 
-@interface KnowledgeCenterViewController : UIViewController
-
+@interface KnowledgeCenterViewController : KSYCommonNaviViewController
+@property (strong,nonatomic) NSMutableArray *datasourse;
 @end

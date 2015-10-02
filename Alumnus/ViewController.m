@@ -52,6 +52,7 @@
     
     // 3.知识中心
     KnowledgeCenterViewController *knowledge = [[KnowledgeCenterViewController alloc] init];
+    knowledge.titleString = @"知识中心";
     WBNavigationController *nav3 = [[WBNavigationController alloc] initWithRootViewController:knowledge];
     [self addChildViewController:nav3];
     

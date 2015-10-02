@@ -10,7 +10,7 @@
 #import "KSYViewWithImageAndButton.h"
 #import "ZCImagePickerViewController.h"
 #import "LoginViewController.h"
-
+#import "ModifyPSWViewController.h"
 
 @interface SystemSetingViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>{
     
@@ -76,7 +76,7 @@
 
 }
 -(void)didClickModifyPSW{
-    KSYPresentCommonViewController *vc = [[KSYPresentCommonViewController alloc] init];
+    ModifyPSWViewController *vc = [[ModifyPSWViewController alloc] init];
     vc.titleString = @"修改密码";
     [self presentViewController:vc animated:YES completion:nil];
 }

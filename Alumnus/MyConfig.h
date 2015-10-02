@@ -37,6 +37,7 @@
 
 #define LOGIN_EDGE_COLOR [UIColor colorWithRed:156.0/255.0 green:156.0/255.0 blue:156.0/255.0 alpha:1.0]
 #define COMMON_FONT_COLOR [UIColor blackColor]
+#define ATTENTION_LABEL_COLOR [UIColor orangeColor]
 
 #define LEFTEDGE SIZEWIDTH/15
 #define TOPEDGE SIZEHEIGHT/26.6
