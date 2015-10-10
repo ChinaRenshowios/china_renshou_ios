@@ -27,7 +27,6 @@
 //    self.window.rootViewController = tabbarVc;
 //    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
-    NSLog(@"1234");
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"login"]){
         NSLog(@"421412412412");
         LoginViewController *loginVC = [[LoginViewController alloc] init];

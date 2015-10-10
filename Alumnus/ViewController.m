@@ -33,6 +33,8 @@
     
     // 2.初始化DockItems
     [self addDockItems];
+    
+
 
 }
 
