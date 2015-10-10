@@ -54,12 +54,14 @@
     
     // 3.知识中心
     KnowledgeCenterViewController *knowledge = [[KnowledgeCenterViewController alloc] init];
+    knowledge.titleString = @"知识中心";
     WBNavigationController *nav3 = [[WBNavigationController alloc] initWithRootViewController:knowledge];
     [self addChildViewController:nav3];
     
     // 4.系统设置
     SystemSetingViewController *systemSet = [[SystemSetingViewController alloc] init];
     WBNavigationController *nav4 = [[WBNavigationController alloc] initWithRootViewController:systemSet];
+    systemSet.titleString = @"系统设置";
     [self addChildViewController:nav4];
     [self dock:nil itemSelectedFrom:2 to:0];
     

@@ -151,7 +151,9 @@
     switch (tag) {
         case 1:
             myWaitVC = [[MyWaitIndexViewController alloc] init];
+            myWaitVC.titleString = @"我的待办";
             [self presentViewController:myWaitVC animated:YES completion:nil];
+            
             break;
         case 2:
             break;

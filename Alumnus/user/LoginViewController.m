@@ -10,6 +10,10 @@
 #import "ZCCommonTextField.h"
 #import "KSYCommonButtonWithGreen.h"
 #import "ViewController.h"
+#import "ALNetWorkApi.h"
+#import "YLSwipeLockView.h"
+#import "YLInitSwipePasswordController.h"
+#import "YLCheckToUnlockViewController.h"
 
 @interface LoginViewController (){
     UILabel *titleLabel;
@@ -105,8 +109,8 @@
     [userDefault setBool:YES forKey:@"login"];
     [userDefault setObject:@"1" forKey:@"uid"];
     [userDefault synchronize];
-    ViewController *viewVC = [[ViewController alloc] init];
-    [[[UIApplication sharedApplication] delegate] window].rootViewController = viewVC;
+    YLInitSwipePasswordController *controller = [[YLInitSwipePasswordController alloc] init];
+    [[[UIApplication sharedApplication] delegate] window].rootViewController = controller;
 }
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     

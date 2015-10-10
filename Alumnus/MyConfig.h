@@ -25,6 +25,8 @@
 #define   SIZEHEIGHT  [[UIScreen mainScreen] bounds].size.height  //高
 
 #define VIEW_BG_COLOR [UIColor whiteColor]
+#define VIEW_BG_COLOR_Light [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0]
+
 #define BUTTON_BG_COLOR [UIColor colorWithRed:242.0/255.0 green:98.0/255.0 blue:2.0/255.0 alpha:1.0]
 #define EDGE_BG_COLOR [UIColor colorWithRed:105.0/255.0 green:105.0/255.0 blue:105.0/255.0 alpha:1.0]
 #define BORDERCOLORREF [[UIColor colorWithRed:105.0/255.0 green:105.0/255.0 blue:105.0/255.0 alpha:1.0] CGColor]
@@ -35,6 +37,7 @@
 
 #define LOGIN_EDGE_COLOR [UIColor colorWithRed:156.0/255.0 green:156.0/255.0 blue:156.0/255.0 alpha:1.0]
 #define COMMON_FONT_COLOR [UIColor blackColor]
+#define ATTENTION_LABEL_COLOR [UIColor orangeColor]
 
 #define LEFTEDGE SIZEWIDTH/15
 #define TOPEDGE SIZEHEIGHT/26.6

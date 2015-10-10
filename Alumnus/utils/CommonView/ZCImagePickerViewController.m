@@ -1,24 +1,29 @@
 //
-//  MessageMainViewController.m
-//  Alumnus
+//  ZCImagePickerViewController.m
+//  AntiquepPie
 //
-//  Created by 张超 on 15/8/17.
-//  Copyright (c) 2015年 wiipu. All rights reserved.
+//  Created by 张超 on 15/6/12.
+//  Copyright (c) 2015年 ksy. All rights reserved.
 //
 
-#import "MessageMainViewController.h"
+#import "ZCImagePickerViewController.h"
 
-@interface MessageMainViewController ()
+@interface ZCImagePickerViewController ()
 
 @end
 
-@implementation MessageMainViewController
+@implementation ZCImagePickerViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = VIEW_BG_COLOR;
     // Do any additional setup after loading the view.
+    
+    //修改背景色为白色
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationBar.barTintColor = [UIColor whiteColor];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
