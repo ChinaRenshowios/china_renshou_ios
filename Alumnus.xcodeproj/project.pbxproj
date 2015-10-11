@@ -101,6 +101,9 @@
 		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; };
 		35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E41BAAFFE60029B372 /* ZGSlideModule.m */; };
 		35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */; };
+		35EC36E61BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E81BCA19040002F4BF /* ALEncrypt.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EB1BCA27B50002F4BF /* testModel.m */; settings = {ASSET_TAGS = (); }; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -292,6 +295,12 @@
 		35E957E41BAAFFE60029B372 /* ZGSlideModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSlideModule.m; sourceTree = "<group>"; };
 		35E957E61BAB0E110029B372 /* ZGSlideModuleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSlideModuleManager.h; sourceTree = "<group>"; };
 		35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSlideModuleManager.m; sourceTree = "<group>"; };
+		35EC36E41BCA139C0002F4BF /* NSString+NetWorkUrlExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NetWorkUrlExtension.h"; sourceTree = "<group>"; };
+		35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NetWorkUrlExtension.m"; sourceTree = "<group>"; };
+		35EC36E71BCA19040002F4BF /* ALEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEncrypt.h; sourceTree = "<group>"; };
+		35EC36E81BCA19040002F4BF /* ALEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEncrypt.m; sourceTree = "<group>"; };
+		35EC36EA1BCA27B50002F4BF /* testModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testModel.h; path = utils/testModel.h; sourceTree = "<group>"; };
+		35EC36EB1BCA27B50002F4BF /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testModel.m; path = utils/testModel.m; sourceTree = "<group>"; };
 		35EDAF4D1BA9B03E00B3C175 /* ALNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavViewController.h; sourceTree = "<group>"; };
 		35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavViewController.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -619,6 +628,10 @@
 				351C203E1BA87C1800454CB2 /* ALBaseApi.m */,
 				351C203F1BA87C1800454CB2 /* ALHttpTool.h */,
 				351C20401BA87C1800454CB2 /* ALHttpTool.m */,
+				35EC36E41BCA139C0002F4BF /* NSString+NetWorkUrlExtension.h */,
+				35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */,
+				35EC36E71BCA19040002F4BF /* ALEncrypt.h */,
+				35EC36E81BCA19040002F4BF /* ALEncrypt.m */,
 			);
 			path = AlumusNet;
 			sourceTree = "<group>";
@@ -786,6 +799,8 @@
 				596EB9231B8186E70043E62D /* utils */,
 				596EB8FC1B8176280043E62D /* AppDelegate.h */,
 				596EB8FD1B8176280043E62D /* AppDelegate.m */,
+				35EC36EA1BCA27B50002F4BF /* testModel.h */,
+				35EC36EB1BCA27B50002F4BF /* testModel.m */,
 				596EB8FF1B8176280043E62D /* ViewController.h */,
 				596EB9001B8176280043E62D /* ViewController.m */,
 				596EB9021B8176280043E62D /* Main.storyboard */,
@@ -1198,6 +1213,7 @@
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
+				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */,
@@ -1224,6 +1240,7 @@
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
 				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
 				28681E351BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m in Sources */,
+				35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
@@ -1252,6 +1269,7 @@
 				281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */,
 				351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */,
 				281040D31BABAF8B00C43352 /* KSYWebViewController.m in Sources */,
+				35EC36E61BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

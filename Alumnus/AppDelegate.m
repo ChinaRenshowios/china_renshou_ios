@@ -16,6 +16,7 @@
 #import "YLSwipeLockView.h"
 #import "YLInitSwipePasswordController.h"
 #import "YLCheckToUnlockViewController.h"
+#import "testModel.h"
 
 @interface AppDelegate ()
 
@@ -23,10 +24,15 @@
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [ALNetWorkApi startPlaceList:nil withResponse:^(BOOL success, id responseData, NSString *message) {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"" forKey:@"userid"];
+    [dict setValue:@"" forKey:@"refundid"];
+    [dict setValue:@"" forKey:@"source"];
+    [dict setValue:@"" forKey:@"vcode"];
+    [ALNetWorkApi startPlaceList:dict withResponse:^(BOOL success, id responseData, NSString *message) {
         if (success) {
-            NSLog(@"responseData - %@ message%@",responseData,message);
+            testModel *test = [testModel getEntityFromDic:(NSDictionary *)responseData];
+            NSLog(@"responseData - %@  %@ message%@",test.status,test.msg,message);
         }else{
             NSLog(@"responseData - %@ message%@",responseData,message);
 

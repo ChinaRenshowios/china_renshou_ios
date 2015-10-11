@@ -11,10 +11,19 @@
 
 @implementation ALHttpTool
 
++ (AFHTTPRequestOperationManager *)initAFHttpManager
+{
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
+    mgr.requestSerializer = [AFHTTPRequestSerializer serializer];
+
+    return mgr;
+}
+
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
 {
     // 1.创建请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestOperationManager *mgr =  [self initAFHttpManager];
     
     // 2.发送请求
     [mgr GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -31,7 +40,7 @@
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
 {
     // 1.创建请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestOperationManager *mgr =  [self initAFHttpManager];
     
     // 2.发送请求
     [mgr POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -44,6 +53,7 @@
         }
     }];
 }
+
 
 
 @end

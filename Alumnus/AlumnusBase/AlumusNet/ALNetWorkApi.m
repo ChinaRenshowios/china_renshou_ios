@@ -16,7 +16,7 @@
     ALBaseApi *api = [[ALBaseApi alloc]init];
     //todo:配置api的一些默认配置默认的request是post
     api.requestMeth = ALRequestMethodPost;
-    api.url = @"http://www.baidu.com";
+    api.url = @"http://101.200.178.170/case_wwp/api";
     api.header = [self header];
     return api;
 }
@@ -55,7 +55,7 @@
     //根据确定请求方式
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
-    api.appendUrl = @"";
+    api.appendUrl = @"/user_refund_do.php";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];

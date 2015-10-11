@@ -43,7 +43,7 @@
     if (![AFNetworkReachabilityManager sharedManager].reachable) {//网络不畅通状态
         [MBProgressHUD showError:@"网络异常,请检查网络设置"];
     }
-
+    
     NSString *serveUrl = [NSString stringWithFormat:@"%@%@",[self baseUrl],[self requestUrl]];
     NSDictionary *param = [self body];
     [self setupHeadForRequest];
@@ -55,9 +55,11 @@
                 NSDictionary *responseJson = (NSDictionary *)json;
                 NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
                 if ([[responseJson valueForKey:@"errorCode"]integerValue] == 0 && [[responseJson valueForKey:@"ErrorCode"]integerValue] == 0) {
-                    block(YES,json,[responseJson valueForKey:@"errorMessage"]);
+                    //                    block(YES,json,[responseJson valueForKey:@"errorMessage"]);
+                    block(YES,json,@"");
                 }else{
-                    block(NO,json,[responseJson valueForKey:@"errorMessage"]?[responseJson valueForKey:@"errorMessage"]:[responseJson valueForKey:@"ErrorMessage"]);
+                    block(NO,json,@"");
+                    //                    block(NO,json,[responseJson valueForKey:@"errorMessage"]?[responseJson valueForKey:@"errorMessage"]:[responseJson valueForKey:@"ErrorMessage"]);
                 }
             } failure:^(NSError *error) {
                 block(NO,nil,@"网络连接失败");
@@ -69,11 +71,12 @@
             [ALHttpTool post:serveUrl params:param success:^(id json) {
                 NSDictionary *responseJson = (NSDictionary *)json;
                 NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
-                block(YES,json,[responseJson valueForKey:@"errorMessage"]);
+                block(YES,json,@"");
+                //                block(YES,json,[responseJson valueForKey:@"errorMessage"]);
             } failure:^(NSError *error) {
                 block(NO,nil,@"网络连接失败");
             }];
-
+            
         }
             break;
             
@@ -95,7 +98,7 @@
             ALLog(@"Error, class of key/value in headerFieldValueDictionary should be NSString.");
         }
     }
-
+    
 }
 
 @end
