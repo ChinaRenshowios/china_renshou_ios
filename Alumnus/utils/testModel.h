@@ -13,5 +13,5 @@
 @property (nonatomic, copy)NSString *status;
 
 @property (nonatomic, copy)NSString *msg;
-
+@property (nonatomic, copy)NSString *_MSG_;
 @end

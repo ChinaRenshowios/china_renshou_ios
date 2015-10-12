@@ -25,19 +25,21 @@
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setValue:@"" forKey:@"userid"];
-    [dict setValue:@"" forKey:@"refundid"];
-    [dict setValue:@"" forKey:@"source"];
-    [dict setValue:@"" forKey:@"vcode"];
+    [dict setValue:@"00000000" forKey:@"loginName"];
+    [dict setValue:@"fb276fb0ed6cdd1639bd678d3ace8614" forKey:@"password"];
+    [dict setValue:@"866769021414134" forKey:@"mobileDeviceId"];
+    [dict setValue:@"true" forKey:@"_IS_DES_"];
     [ALNetWorkApi startPlaceList:dict withResponse:^(BOOL success, id responseData, NSString *message) {
         if (success) {
-            testModel *test = [testModel getEntityFromDic:(NSDictionary *)responseData];
-            NSLog(@"responseData - %@  %@ message%@",test.status,test.msg,message);
+            NSDictionary *dic = responseData;
+            testModel *test = [testModel getEntityFromDic:dic];
+            NSLog(@"responseData - %@",test._MSG_);
         }else{
             NSLog(@"responseData - %@ message%@",responseData,message);
-
+            
         }
     }];
+
 //    self.window = [[UIWindow alloc]init];
 //    self.window.frame = [UIScreen mainScreen].bounds;
 //    
