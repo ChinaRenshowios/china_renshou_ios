@@ -104,6 +104,9 @@
 		35EC36E61BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */; settings = {ASSET_TAGS = (); }; };
 		35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E81BCA19040002F4BF /* ALEncrypt.m */; settings = {ASSET_TAGS = (); }; };
 		35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EB1BCA27B50002F4BF /* testModel.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F21BCEC91A0002F4BF /* topScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F51BCECF380002F4BF /* topScrollBtn.m */; settings = {ASSET_TAGS = (); }; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -301,6 +304,12 @@
 		35EC36E81BCA19040002F4BF /* ALEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEncrypt.m; sourceTree = "<group>"; };
 		35EC36EA1BCA27B50002F4BF /* testModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testModel.h; path = utils/testModel.h; sourceTree = "<group>"; };
 		35EC36EB1BCA27B50002F4BF /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testModel.m; path = utils/testModel.m; sourceTree = "<group>"; };
+		35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMeetingVC.h; path = Alumnus/utils/MyMeetingVC.h; sourceTree = SOURCE_ROOT; };
+		35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMeetingVC.m; path = Alumnus/utils/MyMeetingVC.m; sourceTree = SOURCE_ROOT; };
+		35EC36F11BCEC91A0002F4BF /* topScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollView.h; sourceTree = SOURCE_ROOT; };
+		35EC36F21BCEC91A0002F4BF /* topScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollView.m; sourceTree = SOURCE_ROOT; };
+		35EC36F41BCECF380002F4BF /* topScrollBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollBtn.h; sourceTree = SOURCE_ROOT; };
+		35EC36F51BCECF380002F4BF /* topScrollBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollBtn.m; sourceTree = SOURCE_ROOT; };
 		35EDAF4D1BA9B03E00B3C175 /* ALNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavViewController.h; sourceTree = "<group>"; };
 		35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavViewController.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +449,9 @@
 		281963C21BAA4FE40069EC84 /* mymeeting */ = {
 			isa = PBXGroup;
 			children = (
+				35EC36F01BCEC8BC0002F4BF /* Views */,
+				35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */,
+				35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */,
 			);
 			path = mymeeting;
 			sourceTree = "<group>";
@@ -762,6 +774,17 @@
 				35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */,
 			);
 			path = SlideModule;
+			sourceTree = "<group>";
+		};
+		35EC36F01BCEC8BC0002F4BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35EC36F11BCEC91A0002F4BF /* topScrollView.h */,
+				35EC36F21BCEC91A0002F4BF /* topScrollView.m */,
+				35EC36F41BCECF380002F4BF /* topScrollBtn.h */,
+				35EC36F51BCECF380002F4BF /* topScrollBtn.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		596EB8EC1B8176280043E62D = {
@@ -1212,6 +1235,7 @@
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
+				35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
@@ -1257,6 +1281,7 @@
 				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				281040CF1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m in Sources */,
+				35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
@@ -1265,6 +1290,7 @@
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,
 				35D474D21BA9CA6500F934A1 /* ALBaseManager.m in Sources */,
+				35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */,
 				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
 				281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */,
 				351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */,

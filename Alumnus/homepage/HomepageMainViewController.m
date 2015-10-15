@@ -10,6 +10,7 @@
 #import "KSYHomePageButtonView.h"
 #import "MyWaitIndexViewController.h"
 #import "MyMissonIndexViewController.h"
+#import "MyMeetingVC.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -21,6 +22,7 @@
     UIView *modelView_two;                       //第二模块
     MyWaitIndexViewController *myWaitVC;         //待办页面
     MyMissonIndexViewController *myMissonVC;     //任务页面
+    MyMeetingVC *myMeetingVc; //我的会议
 }
 
 @end
@@ -156,6 +158,8 @@
             
             break;
         case 2:
+            myMeetingVc = [[MyMeetingVC alloc]initWithTitle:@"我的会议"];
+            [self presentViewController:myMeetingVc animated:YES completion:nil];
             break;
         case 3:
             break;
