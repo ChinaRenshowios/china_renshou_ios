@@ -11,6 +11,7 @@
 #import "MyWaitIndexViewController.h"
 #import "MyMissonIndexViewController.h"
 #import "MydateIndexViewController.h"
+#import "MyMeetingVC.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -23,6 +24,7 @@
     MyWaitIndexViewController *myWaitVC;         //待办页面
     MyMissonIndexViewController *myMissonVC;     //任务页面
     MydateIndexViewController *myDataVC;         //日程页面
+    MyMeetingVC *myMeetingVc; //我的会议
 }
 
 @end

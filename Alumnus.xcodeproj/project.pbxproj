@@ -1257,6 +1257,7 @@
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */,
+				35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
