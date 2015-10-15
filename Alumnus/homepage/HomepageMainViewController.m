@@ -158,6 +158,8 @@
             
             break;
         case 2:
+            myMeetingVc = [[MyMeetingVC alloc]initWithTitle:@"我的会议"];
+            [self presentViewController:myMeetingVc animated:YES completion:nil];
             break;
         case 3:
             myDataVC = [[MydateIndexViewController alloc] init];

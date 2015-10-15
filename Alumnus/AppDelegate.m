@@ -29,7 +29,7 @@
     [dict setValue:@"fb276fb0ed6cdd1639bd678d3ace8614" forKey:@"password"];
     [dict setValue:@"866769021414134" forKey:@"mobileDeviceId"];
     [dict setValue:@"true" forKey:@"_IS_DES_"];
-    [ALNetWorkApi startPlaceList:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+    [ALNetWorkApi loginWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
         if (success) {
             NSDictionary *dic = responseData;
             testModel *test = [testModel getEntityFromDic:dic];
