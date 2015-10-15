@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MydateIndexViewController : UIViewController
-
+@interface MydateIndexViewController : KSYPresentCommonViewController
+@property (strong,nonatomic) NSMutableArray *datasource;
 @end

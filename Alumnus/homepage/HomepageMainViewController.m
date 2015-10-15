@@ -10,6 +10,7 @@
 #import "KSYHomePageButtonView.h"
 #import "MyWaitIndexViewController.h"
 #import "MyMissonIndexViewController.h"
+#import "MydateIndexViewController.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -21,6 +22,7 @@
     UIView *modelView_two;                       //第二模块
     MyWaitIndexViewController *myWaitVC;         //待办页面
     MyMissonIndexViewController *myMissonVC;     //任务页面
+    MydateIndexViewController *myDataVC;         //日程页面
 }
 
 @end
@@ -158,6 +160,9 @@
         case 2:
             break;
         case 3:
+            myDataVC = [[MydateIndexViewController alloc] init];
+            myDataVC.titleString = @"我的日程";
+            [self presentViewController:myDataVC animated:YES completion:nil];
             break;
         case 4:
             myMissonVC = [[MyMissonIndexViewController alloc] init];

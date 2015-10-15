@@ -67,6 +67,10 @@
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
 		28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */; };
+		28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED11BCF3BD900217E96 /* CalendarView.m */; settings = {ASSET_TAGS = (); }; };
+		28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */; settings = {ASSET_TAGS = (); }; };
 		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; };
 		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; };
 		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; };
@@ -228,6 +232,14 @@
 		28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockNodeView.m; sourceTree = "<group>"; };
 		28B6357D1BAF977C00CA2D80 /* YLSwipeLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSwipeLockView.h; sourceTree = "<group>"; };
 		28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockView.m; sourceTree = "<group>"; };
+		28CD8ED01BCF3BD900217E96 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		28CD8ED11BCF3BD900217E96 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		28CD8ED31BCF43FF00217E96 /* DataIndexCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataIndexCollectionViewController.h; sourceTree = "<group>"; };
+		28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataIndexCollectionViewController.m; sourceTree = "<group>"; };
+		28CD8ED61BCF441400217E96 /* DataIndexCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataIndexCollectionViewCell.h; sourceTree = "<group>"; };
+		28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataIndexCollectionViewCell.m; sourceTree = "<group>"; };
+		28CD8ED91BCF48C100217E96 /* AddDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDataViewController.h; sourceTree = "<group>"; };
+		28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDataViewController.m; sourceTree = "<group>"; };
 		351C20301BA87C1800454CB2 /* ALNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNewfeatureViewController.h; sourceTree = "<group>"; };
 		351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNewfeatureViewController.m; sourceTree = "<group>"; };
 		351C20321BA87C1800454CB2 /* ALTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTabBarController.h; sourceTree = "<group>"; };
@@ -362,6 +374,8 @@
 		281040BC1BABAF8B00C43352 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				28CD8ED01BCF3BD900217E96 /* CalendarView.h */,
+				28CD8ED11BCF3BD900217E96 /* CalendarView.m */,
 				28681E381BB9002700E092DE /* ZCImagePickerViewController.h */,
 				28681E391BB9002700E092DE /* ZCImagePickerViewController.m */,
 				281040BD1BABAF8B00C43352 /* KSYCommonButtonWithGreen.h */,
@@ -426,6 +440,12 @@
 			children = (
 				281963CA1BAA52B00069EC84 /* MydateIndexViewController.h */,
 				281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */,
+				28CD8ED31BCF43FF00217E96 /* DataIndexCollectionViewController.h */,
+				28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */,
+				28CD8ED61BCF441400217E96 /* DataIndexCollectionViewCell.h */,
+				28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */,
+				28CD8ED91BCF48C100217E96 /* AddDataViewController.h */,
+				28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */,
 			);
 			path = mydate;
 			sourceTree = "<group>";
@@ -1206,12 +1226,14 @@
 				596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */,
 				281040AE1BAA5EE100C43352 /* MyMissonIndexViewController.m in Sources */,
 				351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */,
+				28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */,
 				351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */,
 				281040DE1BABB13000C43352 /* NJKWebViewProgressView.m in Sources */,
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
+				28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
@@ -1247,10 +1269,12 @@
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
 				286F5D651BBB7F4F005A051A /* ZCNSStringUtil.m in Sources */,
+				28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
+				28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
 				28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */,
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
