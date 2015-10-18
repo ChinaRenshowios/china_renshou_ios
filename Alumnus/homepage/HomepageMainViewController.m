@@ -13,6 +13,7 @@
 #import "MydateIndexViewController.h"
 #import "MyMeetingVC.h"
 #import "MyUnforgetIndexViewController.h"
+#import "AddressBookVc.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -27,6 +28,7 @@
     MydateIndexViewController *myDataVC;         //日程页面
     MyMeetingVC *myMeetingVc;                    //我的会议
     MyUnforgetIndexViewController *myUnforgotVC; //我的备忘
+    AddressBookVc *addressBookVc;                //我的通讯录
     
 }
 
@@ -187,6 +189,9 @@
             [self presentViewController:myUnforgotVC animated:YES completion:nil];
             break;
         case 8:
+            addressBookVc = [[AddressBookVc alloc] init];
+            addressBookVc.titleString = @"通讯录";
+            [self presentViewController:addressBookVc animated:YES completion:nil];
             break;
         case 9:
             break;

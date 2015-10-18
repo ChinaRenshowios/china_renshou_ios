@@ -99,6 +99,10 @@
 		3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */; settings = {ASSET_TAGS = (); }; };
 		3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */; settings = {ASSET_TAGS = (); }; };
 		3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7621BD375B800F9A1F8 /* MeetingAdd.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7651BD3770300F9A1F8 /* AddressBookVc.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7681BD3860800F9A1F8 /* AddressSecVc.m */; settings = {ASSET_TAGS = (); }; };
+		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; settings = {ASSET_TAGS = (); }; };
+		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; settings = {ASSET_TAGS = (); }; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -122,7 +126,6 @@
 		35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */; settings = {ASSET_TAGS = (); }; };
 		35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */; settings = {ASSET_TAGS = (); }; };
 		35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37041BCFE7500002F4BF /* MyMeetingModel.m */; settings = {ASSET_TAGS = (); }; };
-		35EC37081BCFFFDB0002F4BF /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37071BCFFFDB0002F4BF /* UIImage+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -310,6 +313,14 @@
 		3573A7601BD3530200F9A1F8 /* ALKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALKit.h; sourceTree = "<group>"; };
 		3573A7611BD375B800F9A1F8 /* MeetingAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingAdd.h; path = Alumnus/AlumnusBase/AlumusBaseKit/MeetingAdd.h; sourceTree = SOURCE_ROOT; };
 		3573A7621BD375B800F9A1F8 /* MeetingAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingAdd.m; path = Alumnus/AlumnusBase/AlumusBaseKit/MeetingAdd.m; sourceTree = SOURCE_ROOT; };
+		3573A7641BD3770300F9A1F8 /* AddressBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressBookVc.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressBookVc.h; sourceTree = SOURCE_ROOT; };
+		3573A7651BD3770300F9A1F8 /* AddressBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressBookVc.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressBookVc.m; sourceTree = SOURCE_ROOT; };
+		3573A7671BD3860800F9A1F8 /* AddressSecVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressSecVc.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressSecVc.h; sourceTree = SOURCE_ROOT; };
+		3573A7681BD3860800F9A1F8 /* AddressSecVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressSecVc.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressSecVc.m; sourceTree = SOURCE_ROOT; };
+		3573A76A1BD3863000F9A1F8 /* AddressPersonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressPersonInfo.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressPersonInfo.h; sourceTree = SOURCE_ROOT; };
+		3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressPersonInfo.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressPersonInfo.m; sourceTree = SOURCE_ROOT; };
+		3573A76D1BD3985D00F9A1F8 /* SwitchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchBtn.h; path = Alumnus/AlumnusBase/AlumusBaseKit/SwitchBtn.h; sourceTree = SOURCE_ROOT; };
+		3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchBtn.m; path = Alumnus/AlumnusBase/AlumusBaseKit/SwitchBtn.m; sourceTree = SOURCE_ROOT; };
 		35D474C11BA9C3D500F934A1 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		35D474C41BA9C87200F934A1 /* ALUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUserDefault.h; sourceTree = "<group>"; };
@@ -477,6 +488,14 @@
 		281963BF1BAA4FE40069EC84 /* mycommunicate */ = {
 			isa = PBXGroup;
 			children = (
+				3573A7641BD3770300F9A1F8 /* AddressBookVc.h */,
+				3573A7651BD3770300F9A1F8 /* AddressBookVc.m */,
+				3573A7671BD3860800F9A1F8 /* AddressSecVc.h */,
+				3573A7681BD3860800F9A1F8 /* AddressSecVc.m */,
+				3573A76A1BD3863000F9A1F8 /* AddressPersonInfo.h */,
+				3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */,
+				3573A76D1BD3985D00F9A1F8 /* SwitchBtn.h */,
+				3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */,
 			);
 			path = mycommunicate;
 			sourceTree = "<group>";
@@ -1366,7 +1385,9 @@
 				282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
+				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
 				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
+				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
 				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
@@ -1388,6 +1409,7 @@
 				35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
+				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
 				286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
@@ -1397,6 +1419,7 @@
 				35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */,
 				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
 				281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */,
+				3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */,
 				282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */,
 				351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */,
 				281040D31BABAF8B00C43352 /* KSYWebViewController.m in Sources */,
