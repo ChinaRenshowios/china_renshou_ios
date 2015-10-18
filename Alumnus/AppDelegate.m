@@ -26,7 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setValue:@"00000000" forKey:@"loginName"];
-    [dict setValue:@"fb276fb0ed6cdd1639bd678d3ace8614" forKey:@"password"];
+    [dict setValue:@"fb276fb0ed6cdd139bd678d3ace8614" forKey:@"password"];
     [dict setValue:@"866769021414134" forKey:@"mobileDeviceId"];
     [dict setValue:@"true" forKey:@"_IS_DES_"];
     [ALNetWorkApi loginWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
