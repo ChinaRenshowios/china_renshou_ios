@@ -18,6 +18,20 @@
 @implementation topScrollView
 
 #pragma mark - lazy
+- (UIScrollView *)topView
+{
+    if (!_topView) {
+        _topView = [[UIScrollView alloc]init];
+        _topView.backgroundColor = [UIColor colorWithRed:234 green:234 blue:234 alpha:1];
+        _topView.backgroundColor = [UIColor redColor];
+        _topView.bounces = NO;
+        _topView.alwaysBounceVertical = NO;
+        _topView.contentSize = CGSizeMake(SIZEWIDTH, 44);
+        [self addSubview:_topView];
+
+    }
+    return _topView;
+}
 
 #pragma mark - lifeCycle
 
@@ -29,7 +43,6 @@
     if (dict.allKeys.count > 0 ) {
         _titleArray = dict.allKeys;
         _titleVcArray = dict.allValues;
-//        [self setup];
     }else{
         ALLog(@"titles或对应的视图数组不存在");
     }
@@ -39,12 +52,12 @@
 
 - (instancetype)initWithTitles:(NSArray *)titles
 {
-    topScrollView *view = [[topScrollView alloc]initWithFrame:CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64)];
-
+    topScrollView *view = [self init];
+    //    self.titleArray = titles;
+    //    self.titles = titles;
+    
     if (titles.count > 0 ) {
-        self.titleArray = titles;
-        self.titles = titles;
-        [self setup];
+        _titleArray = titles;
     }else{
         ALLog(@"titles不存在");
     }
@@ -55,7 +68,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+    [self setup];
     
 }
 
@@ -63,29 +76,19 @@
 //初始化
 - (void)setup
 {
-    self.topView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SIZEWIDTH, 44)];
-    self.topView.backgroundColor = [UIColor colorWithRed:234 green:234 blue:234 alpha:1];
-    self.topView.backgroundColor = [UIColor redColor];
-    self.topView.bounces = NO;
-    self.topView.alwaysBounceVertical = NO;
-    self.topView.contentSize = CGSizeMake(SIZEWIDTH, 44);
-    [self addSubview:self.topView];
+    self.topView.frame = CGRectMake(0, 0, SIZEWIDTH, 44);
+    
+    CGFloat btnWidth;
+    if (self.titleArray.count < 4) {
+        btnWidth = SIZEWIDTH/self.titleArray.count;
+    }else{
+        btnWidth = SIZEWIDTH * 0.25;
+    }
     
     if (self.titleArray.count) {
-        CGFloat btnWidth;
-        if (self.titleArray.count < 4) {
-            btnWidth = SIZEWIDTH/self.titleArray.count;
-        }else{
-            btnWidth = SIZEWIDTH * 0.25;
-        }
         
-            self.topView.contentSize = CGSizeMake(self.titleArray.count * SIZEWIDTH * 0.25, 44);
-            
-            UIView *bottomSlider = [[UIView alloc]initWithFrame:CGRectMake(10, self.topView.height - 1, btnWidth - 20, 1)];
-            
-            bottomSlider.backgroundColor = [UIColor orangeColor];
-            [self.topView addSubview:bottomSlider];
-            self.sliderView = bottomSlider;
+        self.topView.contentSize = CGSizeMake(self.titleArray.count * SIZEWIDTH * 0.25, 44);
+        
         
         for (id title in self.titleArray) {
             if ([title isKindOfClass:[NSString class]]) {
@@ -93,16 +96,22 @@
                 titleBtn.tag = [self.titleArray indexOfObject:title];
                 titleBtn.width = btnWidth;
                 titleBtn.x = titleBtn.tag * titleBtn.width;
-                [titleBtn setBackgroundColor:[UIColor greenColor]];
                 [titleBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
                 [self.topView addSubview:titleBtn];
-
+                
             }
         }
         
     }else{
         ALLog(@"titles不存在");
     }
+    
+    UIView *bottomSlider = [[UIView alloc]initWithFrame:CGRectMake(10, self.topView.height - 1, btnWidth - 20, 1)];
+    
+    bottomSlider.backgroundColor = [UIColor orangeColor];
+    [self.topView addSubview:bottomSlider];
+    self.sliderView = bottomSlider;
+
     
 }
 
@@ -121,7 +130,7 @@
 #pragma mark - action
 - (void)btnClick:(UIButton *)btn
 {
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.sliderView.centerX = btn.centerX;
     }];
     if ([self.delegate respondsToSelector:@selector(topScrollViewDidClickButtonIndex:)]) {
@@ -141,10 +150,12 @@
 - (void)setContent:(UIView *)content
 {
     _content = content;
-    content.x = 0;
-    content.y = 64 + self.topView.height;
-    content.width = SIZEWIDTH;
-    content.height = SIZEHEIGHT - content.y;
+//    content.x = 0;
+//    content.y = 64 +44;
+//    content.width = SIZEWIDTH;
+//    content.height = SIZEHEIGHT - content.y;
+    
+    [self addSubview:content];
 }
 
 @end

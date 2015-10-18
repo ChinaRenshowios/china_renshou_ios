@@ -114,6 +114,11 @@
 		35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */; settings = {ASSET_TAGS = (); }; };
 		35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F21BCEC91A0002F4BF /* topScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F51BCECF380002F4BF /* topScrollBtn.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */; settings = {ASSET_TAGS = (); }; };
+		35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */; settings = {ASSET_TAGS = (); }; };
+		35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37041BCFE7500002F4BF /* MyMeetingModel.m */; settings = {ASSET_TAGS = (); }; };
+		35EC37081BCFFFDB0002F4BF /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37071BCFFFDB0002F4BF /* UIImage+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -331,6 +336,16 @@
 		35EC36F21BCEC91A0002F4BF /* topScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollView.m; sourceTree = SOURCE_ROOT; };
 		35EC36F41BCECF380002F4BF /* topScrollBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollBtn.h; sourceTree = SOURCE_ROOT; };
 		35EC36F51BCECF380002F4BF /* topScrollBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollBtn.m; sourceTree = SOURCE_ROOT; };
+		35EC36F71BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingNoticeCellTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingNoticeCellTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		35EC36FA1BCFD7CE0002F4BF /* MeetingManageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingManageCell.h; sourceTree = SOURCE_ROOT; };
+		35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingManageCell.m; sourceTree = SOURCE_ROOT; };
+		35EC37001BCFE3AA0002F4BF /* MeetingBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingBookVc.h; sourceTree = SOURCE_ROOT; };
+		35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingBookVc.m; sourceTree = SOURCE_ROOT; };
+		35EC37031BCFE7500002F4BF /* MyMeetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingModel.h; sourceTree = SOURCE_ROOT; };
+		35EC37041BCFE7500002F4BF /* MyMeetingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingModel.m; sourceTree = SOURCE_ROOT; };
+		35EC37061BCFFFDB0002F4BF /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		35EC37071BCFFFDB0002F4BF /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		35EDAF4D1BA9B03E00B3C175 /* ALNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavViewController.h; sourceTree = "<group>"; };
 		35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavViewController.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -481,6 +496,8 @@
 				35EC36F01BCEC8BC0002F4BF /* Views */,
 				35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */,
 				35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */,
+				35EC37031BCFE7500002F4BF /* MyMeetingModel.h */,
+				35EC37041BCFE7500002F4BF /* MyMeetingModel.m */,
 			);
 			path = mymeeting;
 			sourceTree = "<group>";
@@ -718,6 +735,8 @@
 				351C20561BA87C1800454CB2 /* UIWindow+Extension.m */,
 				35D474C11BA9C3D500F934A1 /* UIColor+Extension.h */,
 				35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */,
+				35EC37061BCFFFDB0002F4BF /* UIImage+Extension.h */,
+				35EC37071BCFFFDB0002F4BF /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -818,6 +837,12 @@
 				35EC36F21BCEC91A0002F4BF /* topScrollView.m */,
 				35EC36F41BCECF380002F4BF /* topScrollBtn.h */,
 				35EC36F51BCECF380002F4BF /* topScrollBtn.m */,
+				35EC36F71BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.h */,
+				35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */,
+				35EC36FA1BCFD7CE0002F4BF /* MeetingManageCell.h */,
+				35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */,
+				35EC37001BCFE3AA0002F4BF /* MeetingBookVc.h */,
+				35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1254,6 +1279,7 @@
 				286F5D7D1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m in Sources */,
 				35D474DC1BA9D2AB00F934A1 /* ALCacheCenter.m in Sources */,
 				351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */,
+				35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */,
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
 				281040D51BABAF8B00C43352 /* ZCCommonTextField.m in Sources */,
@@ -1296,6 +1322,7 @@
 				281040BB1BABAE6300C43352 /* LoginViewController.m in Sources */,
 				288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */,
 				351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */,
+				35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */,
 				351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
@@ -1305,6 +1332,7 @@
 				282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
+				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
 				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
@@ -1312,6 +1340,7 @@
 				286F5D651BBB7F4F005A051A /* ZCNSStringUtil.m in Sources */,
 				28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
+				35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,

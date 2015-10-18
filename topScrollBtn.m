@@ -42,8 +42,8 @@ CGFloat const btnHeight = 44;
     btn.y = 0;
     btn.height = 44;
     btn.width = SIZEWIDTH * 0.25;
-    [btn setTitleColor:[UIColor colorWithRed:17 green:143 blue:114 alpha:1] forState:UIControlStateNormal];
-//    [btn setBackgroundColor:[UIColor whiteColor]];
+    [btn setTitleColor:ALColor(31.0, 178.0, 138.0) forState:UIControlStateNormal];
+    [btn setBackgroundColor:ALColor(234.0, 234.0, 234.0)];
     [btn setTitle:title forState:UIControlStateNormal];
     
     return btn;

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,contentType) {
+    contentTypeNormal,//普通
+    contentTypeTable,//表格
+    contentTypeCustom//自定义
+};
+
 @protocol topScrollViewDelegate <NSObject>
 
 @optional
@@ -19,7 +25,7 @@
 /**
  *  title数组
  */
-@property (nonatomic, strong)NSArray *titleArray;
+@property (nonatomic, strong,readonly)NSArray *titleArray;
 /**
  *  title对应视图数组
  */
