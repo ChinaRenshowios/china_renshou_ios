@@ -13,6 +13,7 @@
 #import "MeetingManageCell.h"
 #import "ALNetWorkApi.h"
 #import "MyMeetingModel.h"
+#import "MeetingAdd.h"
 
 @interface MyMeetingVC()<topScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)topScrollView *top;
@@ -21,11 +22,55 @@
 @property (nonatomic, strong)MeetingBookVc *bookVc;
 @property (nonatomic, strong)NSArray *data;
 @property (nonatomic, strong)NSArray *manageData;
+@property (nonatomic, strong)UIView *bottom;
+@property (nonatomic, strong)UIButton *search;
 @end
 
 @implementation MyMeetingVC
 
 #pragma lazy
+- (MeetingBookVc *)bookVc
+{
+    if (!_bookVc) {
+        _bookVc = [[MeetingBookVc alloc]init];
+    }
+    
+    return _bookVc;
+}
+
+- (topScrollView *)top
+{
+    if (!_top) {
+        NSArray *arr = @[@"会议通知",@"会议管理",@"会议室预定"];
+        _top = [[topScrollView alloc]initWithTitles:arr];
+//        self.top = top;
+        _top.delegate = self;
+
+    }
+    return _top;
+}
+
+- (UIView *)bottom
+{
+    if (!_bottom) {
+        _bottom = [[UIView alloc]init];
+        _bottom.backgroundColor = ALColor(19, 140, 80);
+        UIButton *search = [UIButton buttonWithType:UIButtonTypeCustom];
+        search.height = 50;
+        search.width = SIZEWIDTH;
+        [search setTitle:@"查看我预定的会议室" forState:UIControlStateNormal];
+        [search setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        search.backgroundColor = [UIColor clearColor];
+        [search addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
+        self.search = search;
+        
+        [_bottom addSubview:search];
+        
+        [self.view addSubview:_bottom];
+    }
+    return _bottom;
+}
+
 - (NSArray *)data
 {
     NSArray *data = @[
@@ -63,6 +108,7 @@
         _manageTabel.delegate = self;
         _manageTabel.dataSource = self;
         _manageTabel.rowHeight = 80;
+        _manageTabel.tableFooterView = [[UIView alloc]init];
     }
     return _manageTabel;
 }
@@ -72,11 +118,22 @@
 {
     MyMeetingVC *vc = [self init];
     vc.titleString = title;
+    
     return vc;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView *addView = [[UIView alloc] initWithFrame:CGRectMake(SIZEWIDTH-50,20,40,40)];
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    addButton.titleLabel.font = [UIFont systemFontOfSize:30];
+    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [addView addSubview:addButton];
+    [addButton addTarget:self action:@selector(didClickAddData:) forControlEvents:UIControlEventTouchUpInside];
+    [self.nav addSubview:addView];
+
     //初始化
     [self setup];
 }
@@ -102,17 +159,19 @@
 //初始化
 - (void)setup
 {
-    NSArray *arr = @[@"会议通知",@"会议管理",@"会议室预定"];
-    topScrollView *top = [[topScrollView alloc]initWithTitles:arr];
-    top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64);
-    self.top = top;
-    top.delegate = self;
+//    NSArray *arr = @[@"会议通知",@"会议管理",@"会议室预定"];
+//    topScrollView *top = [[topScrollView alloc]initWithTitles:arr];
+//    top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64);
+//    self.top = top;
+//    top.delegate = self;
+    self.top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64 - 50);
     
     self.noticeTabel = [[UITableView alloc]init];
+    self.noticeTabel.tableFooterView = [[UIView alloc]init];
     self.noticeTabel.delegate = self;
     self.noticeTabel.dataSource = self;
     self.noticeTabel.rowHeight = 70;
-    [self.view addSubview:top];
+    [self.view addSubview:self.top];
     
     self.top.content = self.noticeTabel;
 
@@ -139,9 +198,11 @@
 //刷新视图
 - (void)resetSubViews
 {
-    self.noticeTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
-    self.manageTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
-    self.bookVc.view.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
+    self.bottom.frame = CGRectMake(0, SIZEHEIGHT - 50, SIZEWIDTH, 50);
+    self.noticeTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44 - 50);
+    self.manageTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44 - 50);
+    
+//    self.bookVc.view.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
 }
 #pragma mark - public api
 
@@ -161,10 +222,12 @@
     if (tableView == self.noticeTabel) {
        MeetingNoticeCellTableViewCell *cell = [MeetingNoticeCellTableViewCell cellWithTabelView:self.noticeTabel];
         cell.data = self.data[indexPath.row];
+         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }else{
         MeetingManageCell *cell = [MeetingManageCell cellWithTabelView:self.manageTabel];
         cell.data = self.manageData[indexPath.row];
+         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
 }
@@ -198,6 +261,20 @@
         default:
             break;
     }
+}
+
+#pragma mark - action
+- (void)search:(UIButton *)btn
+{
+    
+}
+
+- (void)didClickAddData:(UIButton *)btn
+{
+    MeetingAdd *vc = [[MeetingAdd alloc] init];
+    vc.titleString = @"添加会议";
+    [self presentViewController:vc animated:YES completion:nil];
+
 }
 
 #pragma mark - property
