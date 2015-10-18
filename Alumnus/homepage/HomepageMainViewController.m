@@ -12,6 +12,7 @@
 #import "MyMissonIndexViewController.h"
 #import "MydateIndexViewController.h"
 #import "MyMeetingVC.h"
+#import "MyUnforgetIndexViewController.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate>
@@ -24,7 +25,9 @@
     MyWaitIndexViewController *myWaitVC;         //待办页面
     MyMissonIndexViewController *myMissonVC;     //任务页面
     MydateIndexViewController *myDataVC;         //日程页面
-    MyMeetingVC *myMeetingVc; //我的会议
+    MyMeetingVC *myMeetingVc;                    //我的会议
+    MyUnforgetIndexViewController *myUnforgotVC; //我的备忘
+    
 }
 
 @end
@@ -174,10 +177,14 @@
             [self presentViewController:myMissonVC animated:YES completion:nil];
             break;
         case 5:
+            
             break;
         case 6:
             break;
         case 7:
+            myUnforgotVC = [[MyUnforgetIndexViewController alloc] init];
+            myUnforgotVC.titleString = @"备忘录";
+            [self presentViewController:myUnforgotVC animated:YES completion:nil];
             break;
         case 8:
             break;
