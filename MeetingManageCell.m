@@ -138,11 +138,11 @@ static const CGFloat  iconWidthHeight = 30;
     self.meetingSubTitle.y = CGRectGetMaxY(self.title.frame) + 8;
     [self addSubview:self.meetingSubTitle];
     
-    [self.rightIcon sizeToFit];
-    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;
-    self.rightIcon.centerY = self.height * 0.5;
-
-    [self addSubview:self.rightIcon];
+//    [self.rightIcon sizeToFit];
+//    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;
+//    self.rightIcon.centerY = self.height * 0.5;
+//
+//    [self addSubview:self.rightIcon];
     
 }
 

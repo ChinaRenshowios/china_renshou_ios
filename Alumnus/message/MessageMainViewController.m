@@ -7,32 +7,100 @@
 //
 
 #import "MessageMainViewController.h"
+#import "topScrollView.h"
 
-@interface MessageMainViewController ()
+@interface MessageMainViewController ()<topScrollViewDelegate>
+@property (nonatomic, strong)topScrollView *top;
+
 
 @end
 
 @implementation MessageMainViewController
 
+#pragma lazy
+- (topScrollView *)top
+{
+    if (!_top) {
+        NSArray *arr = @[@"信息首页",@"电子刊物",@"IT首页",@"团重门户"];
+        _top = [[topScrollView alloc]initWithTitles:arr];
+        _top.delegate = self;
+        
+        [self.view addSubview:_top];
+    }
+    return _top;
+}
+
+
+#pragma mark - lifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = VIEW_BG_COLOR;
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor redColor];
+    //初始化
+    [self setup];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //获取数据
+    [self loadData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    //刷新视图
+    [self resetSubViews];
 }
-*/
+
+#pragma mark - private api
+//初始化
+- (void)setup
+{
+    
+}
+
+//获取数据
+- (void)loadData
+{
+    
+}
+
+//刷新视图
+- (void)resetSubViews
+{
+    self.top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64 - 50);
+}
+#pragma mark - public api
+
+#pragma mark - appleDelegate
+
+#pragma mark - customDelegate
+- (void)topScrollViewDidClickButtonIndex:(NSUInteger)index
+{
+    switch (index) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+        }
+            break;
+            
+        case 2:
+        {
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark - property
+
 
 @end
