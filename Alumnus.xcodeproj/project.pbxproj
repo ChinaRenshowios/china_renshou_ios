@@ -1331,6 +1331,7 @@
 				35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */,
 				282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
+				35EC37081BCFFFDB0002F4BF /* UIImage+Extension.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
 				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,

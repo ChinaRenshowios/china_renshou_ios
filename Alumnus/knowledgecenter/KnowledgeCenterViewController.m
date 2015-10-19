@@ -10,7 +10,7 @@
 #import "CommonWithHeadFootCollectionViewController.h"
 
 @interface KnowledgeCenterViewController ()<UISearchBarDelegate>{
-    UISearchBar *searchBar;    //搜索
+    UISearchBar *_searchBar;    //搜索
     CommonWithHeadFootCollectionViewController *collectionVC;  //数据
 }
 
@@ -44,10 +44,11 @@
     
 }
 -(void)setupSubviews{
-    searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0,64,SIZEWIDTH,40)];
-    searchBar.placeholder = @"搜索";
-    [self.view addSubview:searchBar];
-    UIView *chooseView = [[UIView alloc] initWithFrame:CGRectMake(0,searchBar.frame.origin.y+searchBar.frame.size.height,SIZEWIDTH,SIZEHEIGHT/9)];
+    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0,64,SIZEWIDTH,40)];
+    _searchBar.placeholder = @"搜索";
+    _searchBar.delegate = self;
+    [self.view addSubview:_searchBar];
+    UIView *chooseView = [[UIView alloc] initWithFrame:CGRectMake(0,_searchBar.frame.origin.y+_searchBar.frame.size.height,SIZEWIDTH,SIZEHEIGHT/9)];
     CGFloat imagesize = chooseView.frame.size.height/2;
 //  问答中心按钮
     ZCImageButton *knowlightView = [[ZCImageButton alloc] initWithFrame:CGRectMake(0, 0, chooseView.frame.size.width/3, chooseView.frame.size.height)];
@@ -127,6 +128,11 @@
     return YES;
 }
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+}
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
     
 }
 
