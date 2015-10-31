@@ -1,19 +1,25 @@
 //
-//  MyWaitingCollectionViewController.m
+//  KSYMyMisCollectionViewController.m
 //  Alumnus
 //
-//  Created by ksy on 15/9/28.
-//  Copyright (c) 2015年 wiipu. All rights reserved.
+//  Created by ksy on 15/10/31.
+//  Copyright © 2015年 wiipu. All rights reserved.
 //
 
-#import "MyWaitingCollectionViewController.h"
+#import "KSYMyMisCollectionViewController.h"
+#import "KSYMyMissonCollectionViewCell.h"
 
-@interface MyWaitingCollectionViewController ()
+@interface KSYMyMisCollectionViewController ()
 
 @end
 
-@implementation MyWaitingCollectionViewController
-
+@implementation KSYMyMisCollectionViewController
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout source:(NSMutableArray *)array
+{
+    self = [super initWithCollectionViewLayout:layout];
+    _dataSource = array;
+    return self;
+}
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -23,7 +29,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[KSYMyMissonCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -46,19 +52,21 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+#warning Incomplete implementation, return the number of sections
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+#warning Incomplete implementation, return the number of items
+    return _dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    KSYMyMissonCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.titleLabel.text = @"执行中";
+    cell.nameLabel.text = @"系统管理员";
+    cell.timeLabel.text = @"2015-09-22 10:38:05";
     // Configure the cell
     
     return cell;

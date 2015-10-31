@@ -47,8 +47,6 @@
 		2850E6031B84A7D300EAE87C /* i9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5FA1B84A7D300EAE87C /* i9.png */; };
 		2850E6071B84A93A00EAE87C /* SystemSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */; };
 		2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */; };
-		28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */; };
-		28681E351BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */; };
 		28681E371BB8F85700E092DE /* rightarow.png in Resources */ = {isa = PBXBuildFile; fileRef = 28681E361BB8F85700E092DE /* rightarow.png */; };
 		28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681E391BB9002700E092DE /* ZCImagePickerViewController.m */; };
 		286F5D611BBB7E7B005A051A /* ModifyPSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D601BBB7E7B005A051A /* ModifyPSWViewController.m */; };
@@ -74,6 +72,10 @@
 		28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */; settings = {ASSET_TAGS = (); }; };
+		28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED11BE47DCA0080EB9A /* KSYWaitCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED41BE47E670080EB9A /* KSYWaitCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED71BE487160080EB9A /* KSYMyMissonCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FEDA1BE487290080EB9A /* KSYMyMisCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; };
 		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; };
 		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; };
@@ -218,10 +220,6 @@
 		2850E6061B84A93A00EAE87C /* SystemSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSetingViewController.m; sourceTree = "<group>"; };
 		2850E6091B84A99200EAE87C /* KnowledgeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeCenterViewController.h; sourceTree = "<group>"; };
 		2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeCenterViewController.m; sourceTree = "<group>"; };
-		28681E301BB8E9B100E092DE /* MyWaitingCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitingCollectionViewController.h; sourceTree = "<group>"; };
-		28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitingCollectionViewController.m; sourceTree = "<group>"; };
-		28681E331BB8E9EA00E092DE /* MyWaitingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitingCollectionViewCell.h; sourceTree = "<group>"; };
-		28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitingCollectionViewCell.m; sourceTree = "<group>"; };
 		28681E361BB8F85700E092DE /* rightarow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightarow.png; sourceTree = "<group>"; };
 		28681E381BB9002700E092DE /* ZCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCImagePickerViewController.h; sourceTree = "<group>"; };
 		28681E391BB9002700E092DE /* ZCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCImagePickerViewController.m; sourceTree = "<group>"; };
@@ -264,6 +262,14 @@
 		28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataIndexCollectionViewCell.m; sourceTree = "<group>"; };
 		28CD8ED91BCF48C100217E96 /* AddDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDataViewController.h; sourceTree = "<group>"; };
 		28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDataViewController.m; sourceTree = "<group>"; };
+		28E7FED01BE47DCA0080EB9A /* KSYWaitCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYWaitCollectionViewController.h; sourceTree = "<group>"; };
+		28E7FED11BE47DCA0080EB9A /* KSYWaitCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYWaitCollectionViewController.m; sourceTree = "<group>"; };
+		28E7FED31BE47E670080EB9A /* KSYWaitCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYWaitCollectionViewCell.h; sourceTree = "<group>"; };
+		28E7FED41BE47E670080EB9A /* KSYWaitCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYWaitCollectionViewCell.m; sourceTree = "<group>"; };
+		28E7FED61BE487160080EB9A /* KSYMyMissonCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYMyMissonCollectionViewCell.h; sourceTree = "<group>"; };
+		28E7FED71BE487160080EB9A /* KSYMyMissonCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYMyMissonCollectionViewCell.m; sourceTree = "<group>"; };
+		28E7FED91BE487290080EB9A /* KSYMyMisCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYMyMisCollectionViewController.h; sourceTree = "<group>"; };
+		28E7FEDA1BE487290080EB9A /* KSYMyMisCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYMyMisCollectionViewController.m; sourceTree = "<group>"; };
 		351C20301BA87C1800454CB2 /* ALNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNewfeatureViewController.h; sourceTree = "<group>"; };
 		351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNewfeatureViewController.m; sourceTree = "<group>"; };
 		351C20321BA87C1800454CB2 /* ALTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTabBarController.h; sourceTree = "<group>"; };
@@ -543,6 +549,10 @@
 			children = (
 				281040AC1BAA5EE100C43352 /* MyMissonIndexViewController.h */,
 				281040AD1BAA5EE100C43352 /* MyMissonIndexViewController.m */,
+				28E7FED61BE487160080EB9A /* KSYMyMissonCollectionViewCell.h */,
+				28E7FED71BE487160080EB9A /* KSYMyMissonCollectionViewCell.m */,
+				28E7FED91BE487290080EB9A /* KSYMyMisCollectionViewController.h */,
+				28E7FEDA1BE487290080EB9A /* KSYMyMisCollectionViewController.m */,
 			);
 			path = mymission;
 			sourceTree = "<group>";
@@ -559,10 +569,10 @@
 			children = (
 				281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */,
 				281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */,
-				28681E301BB8E9B100E092DE /* MyWaitingCollectionViewController.h */,
-				28681E311BB8E9B100E092DE /* MyWaitingCollectionViewController.m */,
-				28681E331BB8E9EA00E092DE /* MyWaitingCollectionViewCell.h */,
-				28681E341BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m */,
+				28E7FED01BE47DCA0080EB9A /* KSYWaitCollectionViewController.h */,
+				28E7FED11BE47DCA0080EB9A /* KSYWaitCollectionViewController.m */,
+				28E7FED31BE47E670080EB9A /* KSYWaitCollectionViewCell.h */,
+				28E7FED41BE47E670080EB9A /* KSYWaitCollectionViewCell.m */,
 			);
 			path = mywaitwork;
 			sourceTree = "<group>";
@@ -1346,6 +1356,7 @@
 				281040DE1BABB13000C43352 /* NJKWebViewProgressView.m in Sources */,
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
+				28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */,
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */,
@@ -1355,9 +1366,11 @@
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */,
+				28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */,
 				28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */,
 				35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */,
 				281040D41BABAF8B00C43352 /* KSYWebWithNoNaviViewController.m in Sources */,
+				28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */,
 				351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */,
 				35D474DF1BA9D3B400F934A1 /* AlumusAccount.m in Sources */,
 				281040D21BABAF8B00C43352 /* KSYViewWithImageAndButton.m in Sources */,
@@ -1380,16 +1393,13 @@
 				3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
 				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
-				28681E351BB8E9EA00E092DE /* MyWaitingCollectionViewCell.m in Sources */,
 				35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */,
 				282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
-				35EC37081BCFFFDB0002F4BF /* UIImage+Extension.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
 				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
 				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
-				28681E321BB8E9B100E092DE /* MyWaitingCollectionViewController.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
@@ -1397,6 +1407,7 @@
 				28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
 				35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */,
+				28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,

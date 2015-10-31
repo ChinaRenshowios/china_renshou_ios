@@ -52,7 +52,7 @@
     titleLabel.font = [UIFont boldSystemFontOfSize:20];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     //titleLabel.textColor = COMMON_FONT_COLOR;
-    titleLabel.text = @"北京大学校友系统";
+    titleLabel.text = @"中国人寿财管理系统";
     [loginView addSubview:titleLabel];
     
     CGFloat width = (loginView.frame.size.width-2*LEFTEDGE)/6;
