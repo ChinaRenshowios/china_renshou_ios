@@ -2,7 +2,7 @@
 //  UIImage+Extension.h
 //  Alumnus
 //
-//  Created by 王智刚 on 15/10/15.
+//  Created by 王智刚 on 15/11/1.
 //  Copyright © 2015年 wiipu. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface UIImage (Extension)
 
-+ (UIImage*)createImageWithColor:(UIColor*)color;
++ (UIImage *)createImageWithColor:(UIColor*)color;
 
 @end
