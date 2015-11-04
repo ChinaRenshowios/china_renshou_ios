@@ -14,9 +14,10 @@
 #import "MyMeetingVC.h"
 #import "MyUnforgetIndexViewController.h"
 #import "AddressBookVc.h"
+#import <MessageUI/MessageUI.h>
 #define modelMargin (LEFTEDGE/2)
 
-@interface HomepageMainViewController ()<UIScrollViewDelegate>
+@interface HomepageMainViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>
 {
     UIScrollView *fuctionModelScrollView;        //可配置模块滑动view
     UIPageControl *fuctionChangeControl;         //控制模块分页
@@ -29,7 +30,7 @@
     MyMeetingVC *myMeetingVc;                    //我的会议
     MyUnforgetIndexViewController *myUnforgotVC; //我的备忘
     AddressBookVc *addressBookVc;                //我的通讯录
-    
+    MFMailComposeViewController *mailVc;          //邮箱
 }
 
 @end
@@ -55,15 +56,15 @@
 -(void)addAllSubViews{
 #pragma mark ------------------------------工作平台模块------------------------------------------
     fuctionModelScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SIZEHEIGHT/5, SIZEWIDTH, SIZEWIDTH)];
- // 隐藏滚动条
+    // 隐藏滚动条
     fuctionModelScrollView.showsVerticalScrollIndicator = FALSE;
     fuctionModelScrollView.showsHorizontalScrollIndicator = FALSE;
-
+    
     fuctionModelScrollView.pagingEnabled = YES;
     
- //代理
+    //代理
     fuctionModelScrollView.delegate = self;
-//添加模块
+    //添加模块
     modelView_one = [[UIView alloc] initWithFrame:CGRectMake(0, -64, SIZEWIDTH,SIZEWIDTH)];
     modelView_two = [[UIView alloc] initWithFrame:CGRectMake(SIZEWIDTH,-64, SIZEWIDTH,SIZEWIDTH)];
     modelView_two.backgroundColor = [UIColor blueColor];
@@ -86,7 +87,7 @@
     fuctionChangeControl.numberOfPages = page;
     fuctionModelScrollView.contentSize = CGSizeMake(SIZEWIDTH*fuctionChangeControl.numberOfPages,0);
     [self addModel];
-
+    
     
     
     
@@ -149,10 +150,10 @@
 #pragma mark ------------------------------scroll delegate------------------------------------------
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-        CGFloat pageWidth = CGRectGetWidth(fuctionModelScrollView.frame);
-        NSInteger page = floor((scrollView.contentOffset.x -pageWidth/2)/pageWidth) +1;
-        fuctionChangeControl.currentPage = page;
-   
+    CGFloat pageWidth = CGRectGetWidth(fuctionModelScrollView.frame);
+    NSInteger page = floor((scrollView.contentOffset.x -pageWidth/2)/pageWidth) +1;
+    fuctionChangeControl.currentPage = page;
+    
 }
 #pragma mark ------------------------------按钮点击------------------------------------------
 -(void)didClickModelButton:(UIButton *)btn{
@@ -182,6 +183,9 @@
             
             break;
         case 6:
+            mailVc = [[MFMailComposeViewController alloc] init];
+            mailVc.delegate = self;
+            [self presentViewController:mailVc animated:YES completion:nil];
             break;
         case 7:
             myUnforgotVC = [[MyUnforgetIndexViewController alloc] init];
@@ -199,5 +203,27 @@
             break;
     }
 }
+
+#pragma mark - mailDelegate
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    // 关闭邮件界面
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+    if (result == MFMailComposeResultCancelled) {
+        
+        NSLog(@"取消发送");
+        
+    } else if (result == MFMailComposeResultSent) {
+        
+        NSLog(@"已经发出");
+        
+    } else {
+        
+        NSLog(@"发送失败");
+        
+    }
+}
+
 
 @end
