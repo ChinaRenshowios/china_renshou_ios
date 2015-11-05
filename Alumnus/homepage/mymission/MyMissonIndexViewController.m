@@ -70,10 +70,12 @@
     _collectionVC.collectionView.frame = CGRectMake(0,chooseSegView.frame.origin.y+chooseSegView.frame.size.height,SIZEWIDTH,_collectionVC.collectionView.frame.size.height-(chooseSegView.frame.origin.y+chooseSegView.frame.size.height));
     _collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
     _collectionVC.type = KSYMisListTypeOfRecieve;
+    myRecieveUsed = YES;
     [self addChildViewController:_collectionVC];
     [self.view addSubview:_collectionVC.collectionView];
     currentPage = 1;
     [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:@"1"];
+    [self setupRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +86,8 @@
 -(void)didClickChooseButton:(UIButton *)btn{
     switch (btn.tag) {
         case 1:
+            myRecieveUsed = YES;
+            myApplyUsed = NO;
             downEdgeView.frame = CGRectMake(0,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
             currentPage = 1;
             [dataSource removeAllObjects];
@@ -91,6 +95,8 @@
             [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:@"1"];
             break;
         case 2:
+            myApplyUsed = YES;
+            myRecieveUsed = NO;
             downEdgeView.frame = CGRectMake(SIZEWIDTH/2,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
             currentPage = 1;
             [dataSource removeAllObjects];
@@ -167,4 +173,43 @@
     
     [_progress show:YES];
 }
+
+#pragma mark 上拉刷新
+- (void)setupRefresh
+{
+    __weak MyMissonIndexViewController *weakSelf = self;
+    // 下拉刷新
+    weakSelf.collectionVC.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        [dataSource removeAllObjects];
+        currentPage = 1;
+        [weakSelf.collectionVC.collectionView reloadData];
+        if (myRecieveUsed) {
+            [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:@"1"];
+        }
+        else if (myApplyUsed){
+            [self requestMyMissonOfType:KSYRequestTypeMyApply page:@"1"];
+        }
+        
+        [weakSelf.collectionVC.collectionView.header endRefreshing];
+        
+        
+    }];
+    weakSelf.collectionVC.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        currentPage++;
+        NSString *pageStr = [NSString stringWithFormat:@"%d",currentPage];
+        
+        if (myRecieveUsed) {
+            [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:pageStr];
+        }
+        else if (myApplyUsed){
+            [self requestMyMissonOfType:KSYRequestTypeMyApply page:pageStr];
+        }
+        
+        [weakSelf.collectionVC.collectionView.footer setState:MJRefreshStateIdle];
+        
+    }];
+}
+
 @end

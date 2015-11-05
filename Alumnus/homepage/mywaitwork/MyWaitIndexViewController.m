@@ -124,6 +124,8 @@
     _collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
     [self addChildViewController:_collectionVC];
     [self.view addSubview:_collectionVC.collectionView];
+    
+    [self setupRefresh];
     currentPage = 1;
     [self requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
     
@@ -271,29 +273,38 @@
 - (void)setupRefresh
 {
     __weak MyWaitIndexViewController *weakSelf = self;
-    
     // 下拉刷新
-/*    [[weakSelf.collectionVC.collectionView addH]:^{
-        currentPage = 1;
+    weakSelf.collectionVC.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
         [dataSource removeAllObjects];
-        [weakSelf requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
-        //[weakSelf.tableView.header endRefreshing];
+        currentPage = 1;
+        [weakSelf.collectionVC.collectionView reloadData];
+        if (waitWorkUsed) {
+            [self requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
+        }
+        else if (waitReadUsed){
+             [self requestType:KSYRequestTypeOfWaitingRead WithPage:@"1"];
+        }
+        
+        [weakSelf.collectionVC.collectionView.header endRefreshing];
+        
         
     }];
-    
-    // 上拉刷新
-    [weakSelf.tableView addLegendFooterWithRefreshingBlock:^{
+    weakSelf.collectionVC.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
         currentPage++;
-        NSString *page = [[NSString alloc] initWithFormat:@"%d",currentPage];
-        [weakSelf requestList:page WithType:_type];
-        // [weakSelf startRequestAllActive:page category:requestAll];
-        [weakSelf.tableView.footer setTitle:@"点击或上拉加载数据" forState:MJRefreshFooterStateIdle];
+        NSString *pageStr = [NSString stringWithFormat:@"%d",currentPage];
         
-        [weakSelf.tableView.footer endRefreshing];
+        if (waitWorkUsed) {
+            [self requestType:KSYRequestTypeOfWaitingWork WithPage:pageStr];
+        }
+        else if (waitReadUsed){
+            [self requestType:KSYRequestTypeOfWaitingRead WithPage:pageStr];
+        }
+        
+        [weakSelf.collectionVC.collectionView.footer setState:MJRefreshStateIdle];
+        
     }];
-    [weakSelf.tableView.footer setTitle:@"" forState:MJRefreshFooterStateIdle];
-    //self.collectionVC.collectionView.footer.hidden = YES;
- */
 }
 
 //加载
