@@ -8,6 +8,9 @@
 
 #import "MyMissonIndexViewController.h"
 #import "KSYMyMisCollectionViewController.h"
+#import "MyMissionResponseModel.h"
+#import "MyMissonModel.h"
+#import "MyApplyMissionModel.h"
 
 @interface MyMissonIndexViewController (){
     UIScrollView *chooseSegView;     //可滑动的选项卡view
@@ -15,10 +18,13 @@
     UIView *downEdgeView;
     
     NSMutableArray *dataSource;
-    KSYMyMisCollectionViewController *collectionVC;
+    
+    int currentPage;
+    BOOL myRecieveUsed;
+    BOOL myApplyUsed;
 
 }
-
+@property (nonatomic, strong) MBProgressHUD *progress;
 @end
 
 @implementation MyMissonIndexViewController
@@ -52,11 +58,6 @@
     [self.view addSubview:chooseSegView];
     
     dataSource = [[NSMutableArray alloc] init];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.itemSize = CGSizeMake(SIZEWIDTH,50);
@@ -64,12 +65,15 @@
     CGFloat paddingX = 0;
     flowLayout.sectionInset = UIEdgeInsetsMake(paddingY, paddingX, paddingY, paddingX);
     flowLayout.minimumLineSpacing = paddingY;
-    collectionVC = [[KSYMyMisCollectionViewController alloc] initWithCollectionViewLayout:flowLayout source:dataSource];
-    collectionVC.collectionView.scrollEnabled = YES;
-    collectionVC.collectionView.frame = CGRectMake(0,chooseSegView.frame.origin.y+chooseSegView.frame.size.height,SIZEWIDTH,collectionVC.collectionView.frame.size.height-(chooseSegView.frame.origin.y+chooseSegView.frame.size.height));
-    collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
-    [self addChildViewController:collectionVC];
-    [self.view addSubview:collectionVC.collectionView];
+    _collectionVC = [[KSYMyMisCollectionViewController alloc] initWithCollectionViewLayout:flowLayout source:dataSource];
+    _collectionVC.collectionView.scrollEnabled = YES;
+    _collectionVC.collectionView.frame = CGRectMake(0,chooseSegView.frame.origin.y+chooseSegView.frame.size.height,SIZEWIDTH,_collectionVC.collectionView.frame.size.height-(chooseSegView.frame.origin.y+chooseSegView.frame.size.height));
+    _collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
+    _collectionVC.type = KSYMisListTypeOfRecieve;
+    [self addChildViewController:_collectionVC];
+    [self.view addSubview:_collectionVC.collectionView];
+    currentPage = 1;
+    [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:@"1"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,14 +85,86 @@
     switch (btn.tag) {
         case 1:
             downEdgeView.frame = CGRectMake(0,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
-            //[self chooseChildrenSeg:1];
+            currentPage = 1;
+            [dataSource removeAllObjects];
+            _collectionVC.type = KSYMisListTypeOfRecieve;
+            [self requestMyMissonOfType:KSYRequestTypeMyRecieve page:@"1"];
             break;
         case 2:
             downEdgeView.frame = CGRectMake(SIZEWIDTH/2,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
-            //[self chooseChildrenSeg:1];
+            currentPage = 1;
+            [dataSource removeAllObjects];
+            _collectionVC.type = KSYMisListTypeOfApply;
+            [self requestMyMissonOfType:KSYRequestTypeMyApply page:@"1"];
             break;
         default:
             break;
     }
+}
+#pragma mark ---------------------网络请求----------------------------------
+-(void)requestMyMissonOfType:(KSYRequestMissionType)type page:(NSString *)page{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"s_mtime desc" forKey:@"_ORDER_"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [dict setValue:@"true" forKey:@"_IS_DES_"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [dict setValue:@"15" forKey:@"_ROWNUM_"];
+    [dict setValue:page forKey:@"NOWPAGE"];
+    [self setupProgressHUD];
+    if (type == KSYRequestTypeMyRecieve) {
+        [ALNetWorkApi myJobWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                NSMutableDictionary *dic = responseData;
+                MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:dic];
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyMissonModel *responsemodel = [MyMissonModel getEntityFromDic:model._DATA_[i]];
+                    [dataSource addObject:responsemodel];
+                }
+                [_collectionVC.collectionView reloadData];
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+            [_progress hide:YES];
+        }];
+    }
+    else if (type == KSYRequestTypeMyApply){
+        [ALNetWorkApi jobSendFromMeWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                NSMutableDictionary *dic = responseData;
+                MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:dic];
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyApplyMissionModel *responsemodel = [MyApplyMissionModel getEntityFromDic:model._DATA_[i]];
+                    [dataSource addObject:responsemodel];
+                }
+                [_collectionVC.collectionView reloadData];
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+            [_progress hide:YES];
+        }];
+    }
+
+}
+//加载
+- (void)setupProgressHUD
+{
+    _progress = [[MBProgressHUD alloc] initWithView:self.view];
+    _progress.frame = self.view.bounds;
+    _progress.minSize = CGSizeMake(100, 100);
+    //    NSLog(@"view == %f%f",self.view.bounds.size.height,self.view.bounds.size.width);
+    _progress.labelText = NSLocalizedString(@"加载中", nil);
+    _progress.mode = MBProgressHUDModeIndeterminate;
+    [self.view addSubview:_progress];
+    [_progress hide:YES afterDelay:3.0];
+    
+    [_progress show:YES];
 }
 @end

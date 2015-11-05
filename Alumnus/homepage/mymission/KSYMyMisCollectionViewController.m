@@ -8,6 +8,8 @@
 
 #import "KSYMyMisCollectionViewController.h"
 #import "KSYMyMissonCollectionViewCell.h"
+#import "MyMissonModel.h"
+#import "MyApplyMissionModel.h"
 
 @interface KSYMyMisCollectionViewController ()
 
@@ -64,9 +66,23 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     KSYMyMissonCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.titleLabel.text = @"执行中";
-    cell.nameLabel.text = @"系统管理员";
-    cell.timeLabel.text = @"2015-09-22 10:38:05";
+    if (_type == KSYMisListTypeOfRecieve) {
+        MyMissonModel *model = _dataSource[indexPath.row];
+        cell.stateLabel.text = model.REWUSTATE;
+        cell.titleLabel.text = model.RENWUNAME;
+        cell.nameLabel.text = model.CREATER__NAME;
+        cell.timeLabel.text = model.DONETIME;
+        cell.doneTimeLabel.text = model.RENWUTIME;
+    }
+    else if(_type == KSYMisListTypeOfApply){
+        MyApplyMissionModel *model = _dataSource[indexPath.row];
+        cell.stateLabel.text = model.RENWU_STATUS;
+        cell.titleLabel.text = model.RENWU_TITLE;
+        cell.timeLabel.text = model.RENWU_END;
+        cell.nameLabel.text = model.RENWU_USERS__NAME;
+        cell.doneTimeLabel.text = @"";
+    }
+
     // Configure the cell
     
     return cell;

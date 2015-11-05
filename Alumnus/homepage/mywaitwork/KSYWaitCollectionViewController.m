@@ -8,6 +8,7 @@
 
 #import "KSYWaitCollectionViewController.h"
 #import "KSYWaitCollectionViewCell.h"
+#import "MyWaitModel.h"
 
 @interface KSYWaitCollectionViewController ()
 
@@ -56,9 +57,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     KSYWaitCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.titleLabel.text = @"[1551 洽谈室] 会议室申请";
-    cell.nameLabel.text = @"系统管理员";
-    cell.timeLabel.text = @"2015-09-22 10:38:05";
+    MyWaitModel *model = [_dataSource objectAtIndex:indexPath.row];
+    cell.titleLabel.text =model.TODO_TITLE;
+    cell.nameLabel.text = model.SEND_USER_CODE__NAME;
+    cell.timeLabel.text = model.TODO_SEND_TIME;
     
     // Configure the cell
     

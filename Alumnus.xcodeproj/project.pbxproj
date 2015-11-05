@@ -66,6 +66,9 @@
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
 		289DF7131BEB1741007A4C20 /* MyWaitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7121BEB1741007A4C20 /* MyWaitModel.m */; };
 		289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */; };
+		289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7191BEB7B73007A4C20 /* MyMissionResponseModel.m */; };
+		289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */; };
+		289DF7201BEB9691007A4C20 /* MyApplyMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
@@ -253,6 +256,12 @@
 		289DF7121BEB1741007A4C20 /* MyWaitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitModel.m; sourceTree = "<group>"; };
 		289DF7141BEB4428007A4C20 /* MyWaitReponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitReponseModel.h; sourceTree = "<group>"; };
 		289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitReponseModel.m; sourceTree = "<group>"; };
+		289DF7181BEB7B73007A4C20 /* MyMissionResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMissionResponseModel.h; sourceTree = "<group>"; };
+		289DF7191BEB7B73007A4C20 /* MyMissionResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMissionResponseModel.m; sourceTree = "<group>"; };
+		289DF71B1BEB7D82007A4C20 /* MyMissonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMissonModel.h; sourceTree = "<group>"; };
+		289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMissonModel.m; sourceTree = "<group>"; };
+		289DF71E1BEB9691007A4C20 /* MyApplyMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplyMissionModel.h; sourceTree = "<group>"; };
+		289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplyMissionModel.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -554,6 +563,7 @@
 		281963C31BAA4FE40069EC84 /* mymission */ = {
 			isa = PBXGroup;
 			children = (
+				289DF7171BEB7B4B007A4C20 /* model */,
 				281040AC1BAA5EE100C43352 /* MyMissonIndexViewController.h */,
 				281040AD1BAA5EE100C43352 /* MyMissonIndexViewController.m */,
 				28E7FED61BE487160080EB9A /* KSYMyMissonCollectionViewCell.h */,
@@ -667,6 +677,19 @@
 				289DF7121BEB1741007A4C20 /* MyWaitModel.m */,
 				289DF7141BEB4428007A4C20 /* MyWaitReponseModel.h */,
 				289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		289DF7171BEB7B4B007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF7181BEB7B73007A4C20 /* MyMissionResponseModel.h */,
+				289DF7191BEB7B73007A4C20 /* MyMissionResponseModel.m */,
+				289DF71B1BEB7D82007A4C20 /* MyMissonModel.h */,
+				289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */,
+				289DF71E1BEB9691007A4C20 /* MyApplyMissionModel.h */,
+				289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1362,6 +1385,7 @@
 				35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */,
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
+				289DF7201BEB9691007A4C20 /* MyApplyMissionModel.m in Sources */,
 				281040D51BABAF8B00C43352 /* ZCCommonTextField.m in Sources */,
 				3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */,
 				281040D11BABAF8B00C43352 /* KSYLeftLabelRightText.m in Sources */,
@@ -1384,6 +1408,7 @@
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
+				289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */,
 				28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */,
@@ -1420,6 +1445,7 @@
 				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
 				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
 				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
+				289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
@@ -1588,12 +1614,13 @@
 			baseConfigurationReference = 92F170695FBDD4EF42D6DB86 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: JUNZE GUO (LAX9EXXDAD)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Alumnus/Alumnus.pch";
 				INFOPLIST_FILE = Alumnus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "70bfeef1-d7ef-441f-91af-70188f539228";
 			};
 			name = Debug;
 		};
@@ -1602,12 +1629,13 @@
 			baseConfigurationReference = DA924F57E128BDEDA65C5633 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: JUNZE GUO (LAX9EXXDAD)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Alumnus/Alumnus.pch";
 				INFOPLIST_FILE = Alumnus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "70bfeef1-d7ef-441f-91af-70188f539228";
 			};
 			name = Release;
 		};

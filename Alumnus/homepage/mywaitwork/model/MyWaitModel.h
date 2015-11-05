@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyWaitModel : NSObject
+@interface MyWaitModel : ALBaseModel
 @property(copy,nonatomic)NSString *SEND_USER_CODE;  //提交人
 @property(copy,nonatomic)NSString *TODO_CODE_NAME;  //文件种类
 @property(copy,nonatomic)NSString *TODO_SEND_TIME;  //交办时间

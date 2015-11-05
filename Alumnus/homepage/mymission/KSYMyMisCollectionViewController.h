@@ -10,7 +10,7 @@
 //枚举type复用
 typedef NS_ENUM(NSInteger,KSYMisListType){
     KSYMisListTypeOfRecieve,
-    KSYWaitListTypeOfApply
+    KSYMisListTypeOfApply
 };
 @interface KSYMyMisCollectionViewController : UICollectionViewController
 @property(strong,nonatomic) NSMutableArray *dataSource;

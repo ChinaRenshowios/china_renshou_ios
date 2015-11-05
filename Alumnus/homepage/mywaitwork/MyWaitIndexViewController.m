@@ -30,12 +30,12 @@
     //展示数据源
     NSMutableArray *dataSource;
     //show data
-    KSYWaitCollectionViewController *collectionVC;
+    //KSYWaitCollectionViewController *collectionVC;
     
     int currentPage;
     
 }
-
+@property (nonatomic, strong) MBProgressHUD *progress;
 @end
 
 @implementation MyWaitIndexViewController
@@ -118,12 +118,12 @@
     CGFloat paddingX = 0;
     flowLayout.sectionInset = UIEdgeInsetsMake(paddingY, paddingX, paddingY, paddingX);
     flowLayout.minimumLineSpacing = paddingY;
-    collectionVC = [[KSYWaitCollectionViewController alloc] initWithCollectionViewLayout:flowLayout source:dataSource];
-    collectionVC.collectionView.scrollEnabled = YES;
-    collectionVC.collectionView.frame = CGRectMake(0,childrenSegView.frame.origin.y+childrenSegView.frame.size.height,SIZEWIDTH,collectionVC.collectionView.frame.size.height-(childrenSegView.frame.origin.y+childrenSegView.frame.size.height));
-    collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
-    [self addChildViewController:collectionVC];
-    [self.view addSubview:collectionVC.collectionView];
+    _collectionVC = [[KSYWaitCollectionViewController alloc] initWithCollectionViewLayout:flowLayout source:dataSource];
+    _collectionVC.collectionView.scrollEnabled = YES;
+    _collectionVC.collectionView.frame = CGRectMake(0,childrenSegView.frame.origin.y+childrenSegView.frame.size.height,SIZEWIDTH,_collectionVC.collectionView.frame.size.height-(childrenSegView.frame.origin.y+childrenSegView.frame.size.height));
+    _collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
+    [self addChildViewController:_collectionVC];
+    [self.view addSubview:_collectionVC.collectionView];
     currentPage = 1;
     [self requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
     
@@ -133,10 +133,14 @@
     switch (btn.tag) {
         case 1:
             downEdgeView.frame = CGRectMake(0,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
+            innerNetUsed = YES;
+            oaUsed = NO;
             [self chooseChildrenSeg:1];
             break;
         case 2:
             downEdgeView.frame = CGRectMake(SIZEWIDTH/2,chooseSegView.frame.size.height-2, SIZEWIDTH/2, 2);
+            oaUsed = YES;
+            innerNetUsed = NO;
             [self chooseChildrenSeg:1];
             break;
         case 3:
@@ -163,7 +167,17 @@
         [waitReadButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         dataButton.backgroundColor = VIEW_BG_COLOR_Light;
         [dataButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        
+        //切换到第一栏
+        if (innerNetUsed) {
+            [dataSource removeAllObjects];
+            currentPage = 1;
+            [self requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
+        }
+        if (oaUsed) {
+            [dataSource removeAllObjects];
+            currentPage = 1;
+            [_collectionVC.collectionView reloadData];
+        }
         
     }
     else if (index == 2){
@@ -176,6 +190,16 @@
         [waitReadButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         dataButton.backgroundColor = VIEW_BG_COLOR_Light;
         [dataButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        if (innerNetUsed) {
+            [dataSource removeAllObjects];
+            currentPage = 1;
+            [self requestType:KSYRequestTypeOfWaitingRead WithPage:@"1"];
+        }
+        if (oaUsed) {
+            [dataSource removeAllObjects];
+            currentPage = 1;
+            [_collectionVC.collectionView reloadData];
+        }
     }
     else if (index == 3){
         waitWorkUsed = NO;
@@ -191,48 +215,100 @@
 }
 #pragma mark 网络请求
 -(void)requestType:(KSYRequestType)type WithPage:(NSString *)page{
-    if (type==KSYRequestTypeOfWaitingWork) {
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        [dict setValue:@"s_mtime desc" forKey:@"_ORDER_"];
-        [dict setValue:@"AND owner_code like '1Xvd5e5X50O8J0Ir-0zlwd'" forKey:@"_WHERE_"];
-        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
-        [dict setValue:@"true" forKey:@"_IS_DES_"];
-       // [dict setValue:@"1" forKey:@"1"];
-        [dict setValue:@"1" forKey:@"TODO_CATALOG"];
-        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
-        [dict setValue:@"15" forKey:@"_ROWNUM_"];
-        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"OWNER_CODE"] forKey:@"OWNER_CODE"];
-        [dict setValue:page forKey:@"NOWPAGE"];
-        
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"s_mtime desc" forKey:@"_ORDER_"];
+    [dict setValue:@"AND owner_code like '1Xvd5e5X50O8J0Ir-0zlwd'" forKey:@"_WHERE_"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [dict setValue:@"true" forKey:@"_IS_DES_"];
+    [dict setValue:@"1" forKey:@"TODO_CATALOG"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [dict setValue:@"15" forKey:@"_ROWNUM_"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"OWNER_CODE"] forKey:@"OWNER_CODE"];
+    [dict setValue:page forKey:@"NOWPAGE"];
+    [self setupProgressHUD];
+    if (type == KSYRequestTypeOfWaitingWork) {
         [ALNetWorkApi toDoWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
             if (success) {
                 //NSLog(@"array count = %@",responseData);
                 NSMutableDictionary *dic = responseData;
                 MyWaitReponseModel *model = [MyWaitReponseModel getEntityFromDic:dic];
-                NSLog(@"%@",model._OKCOUNT_);
-                //NSLog(@"%@",[dic valueForKey:@"_OKCOUNT_"]);
-                
-               /* if ([[dic valueForKey:@"_MOBILE_RES_CODE_"] isEqual:@"_SUCC_"]) {
-                    NSMutableArray *array = [dic valueForKey:@"_DATA_"];
-                    
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyWaitModel *responsemodel = [MyWaitModel getEntityFromDic:model._DATA_[i]];
+                    [dataSource addObject:responsemodel];
                 }
-               */
-               
+                [_collectionVC.collectionView reloadData];
+                
             }else{
                 NSLog(@"responseData - %@ message%@",responseData,message);
                 
             }
+            [_progress hide:YES];
+        }];
+    }
+    else if (type == KSYRequestTypeOfWaitingRead){
+        [ALNetWorkApi toReadWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                NSMutableDictionary *dic = responseData;
+                MyWaitReponseModel *model = [MyWaitReponseModel getEntityFromDic:dic];
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyWaitModel *responsemodel = [MyWaitModel getEntityFromDic:model._DATA_[i]];
+                    [dataSource addObject:responsemodel];
+                }
+                [_collectionVC.collectionView reloadData];
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+            [_progress hide:YES];
         }];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark 上拉刷新
+- (void)setupRefresh
+{
+    __weak MyWaitIndexViewController *weakSelf = self;
+    
+    // 下拉刷新
+/*    [[weakSelf.collectionVC.collectionView addH]:^{
+        currentPage = 1;
+        [dataSource removeAllObjects];
+        [weakSelf requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
+        //[weakSelf.tableView.header endRefreshing];
+        
+    }];
+    
+    // 上拉刷新
+    [weakSelf.tableView addLegendFooterWithRefreshingBlock:^{
+        currentPage++;
+        NSString *page = [[NSString alloc] initWithFormat:@"%d",currentPage];
+        [weakSelf requestList:page WithType:_type];
+        // [weakSelf startRequestAllActive:page category:requestAll];
+        [weakSelf.tableView.footer setTitle:@"点击或上拉加载数据" forState:MJRefreshFooterStateIdle];
+        
+        [weakSelf.tableView.footer endRefreshing];
+    }];
+    [weakSelf.tableView.footer setTitle:@"" forState:MJRefreshFooterStateIdle];
+    //self.collectionVC.collectionView.footer.hidden = YES;
+ */
 }
-*/
 
+//加载
+- (void)setupProgressHUD
+{
+    _progress = [[MBProgressHUD alloc] initWithView:self.view];
+    _progress.frame = self.view.bounds;
+    _progress.minSize = CGSizeMake(100, 100);
+    //    NSLog(@"view == %f%f",self.view.bounds.size.height,self.view.bounds.size.width);
+    _progress.labelText = NSLocalizedString(@"加载中", nil);
+    _progress.mode = MBProgressHUDModeIndeterminate;
+    [self.view addSubview:_progress];
+    [_progress hide:YES afterDelay:3.0];
+    
+    [_progress show:YES];
+}
 @end
