@@ -39,15 +39,12 @@
             
         }
     }];
-
-//    self.window = [[UIWindow alloc]init];
-//    self.window.frame = [UIScreen mainScreen].bounds;
-//    
-//    ALTabBarController *tabbarVc = [[ALTabBarController alloc]init];
-//    
-//    self.window.rootViewController = tabbarVc;
-//    [self.window makeKeyAndVisible];
-    // Override point for customization after application launch.
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:@"866769021414134" forKey:@"mobileDeviceId"];
+    [userDefault setObject:@"1Xvd5e5X50O8J0Ir-0zlwd" forKey:@"mobileUserCode"];
+    [userDefault setObject:@"1Xvd5e5X50O8J0Ir-0zlwd" forKey:@"OWNER_CODE"];
+    [userDefault synchronize];
+    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"login"]){
         LoginViewController *loginVC = [[LoginViewController alloc] init];
         self.window.rootViewController = loginVC;

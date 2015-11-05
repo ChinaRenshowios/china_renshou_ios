@@ -15,6 +15,7 @@
 #import "ZCImageButton.h"
 #import "KSYPresentCommonViewController.h"
 #import "ZCNSStringUtil.h"
+#import "ALBaseModel.h"
 
 #ifndef __IPHONE_7_0
 #warning "This project uses features only available in iOS SDK 7.0 and later."
@@ -32,6 +33,8 @@
 #import "UITextView+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
+#import "ALNetWorkApi.h"
+
 
 #define IOS_VERSION_CODE    [[[UIDevice currentDevice] systemVersion] intValue]
 #define iOS6             (IOS_VERSION_CODE < 7.0)

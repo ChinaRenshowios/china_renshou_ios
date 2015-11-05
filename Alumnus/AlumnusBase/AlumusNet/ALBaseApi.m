@@ -45,7 +45,9 @@
     }
     
     NSString *serveUrl = [NSString stringWithFormat:@"%@%@",[self baseUrl],[self requestUrl]];
+   
     NSDictionary *param = [self body];
+    NSLog(@"%@",param);
     [self setupHeadForRequest];
     
     switch (self.requestMeth) {
@@ -53,7 +55,7 @@
         {
             [ALHttpTool get:serveUrl params:param success:^(id json) {
                 NSDictionary *responseJson = (NSDictionary *)json;
-                NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
+               // NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
                 if ([[responseJson valueForKey:@"errorCode"]integerValue] == 0 && [[responseJson valueForKey:@"ErrorCode"]integerValue] == 0) {
                     //                    block(YES,json,[responseJson valueForKey:@"errorMessage"]);
                     block(YES,json,@"");
@@ -70,7 +72,7 @@
         {
             [ALHttpTool post:serveUrl params:param success:^(id json) {
                 NSDictionary *responseJson = (NSDictionary *)json;
-                NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
+                //NSLog(@"responseObject %@  [self requestUrl] %@",(NSDictionary *)responseJson,[self requestUrl]);
                 block(YES,json,@"");
                 //                block(YES,json,[responseJson valueForKey:@"errorMessage"]);
             } failure:^(NSError *error) {

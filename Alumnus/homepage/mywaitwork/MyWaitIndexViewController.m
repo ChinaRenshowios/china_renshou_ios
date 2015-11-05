@@ -8,6 +8,9 @@
 
 #import "MyWaitIndexViewController.h"
 #import "KSYWaitCollectionViewController.h"
+#import "MyWaitModel.h"
+#import "MyWaitReponseModel.h"
+#import "ALBaseModel.h"
 
 @interface MyWaitIndexViewController (){
     UIScrollView *chooseSegView;     //可滑动的选项卡view
@@ -28,6 +31,8 @@
     NSMutableArray *dataSource;
     //show data
     KSYWaitCollectionViewController *collectionVC;
+    
+    int currentPage;
     
 }
 
@@ -106,11 +111,6 @@
     waitWorkUsed = YES;
     
     dataSource = [[NSMutableArray alloc] init];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
-    [dataSource addObject:@"da"];
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.itemSize = CGSizeMake(SIZEWIDTH,50);
@@ -124,6 +124,8 @@
     collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
     [self addChildViewController:collectionVC];
     [self.view addSubview:collectionVC.collectionView];
+    currentPage = 1;
+    [self requestType:KSYRequestTypeOfWaitingWork WithPage:@"1"];
     
 }
 #pragma mark 选项卡点击
@@ -187,7 +189,42 @@
         [dataButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     }
 }
-
+#pragma mark 网络请求
+-(void)requestType:(KSYRequestType)type WithPage:(NSString *)page{
+    if (type==KSYRequestTypeOfWaitingWork) {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setValue:@"s_mtime desc" forKey:@"_ORDER_"];
+        [dict setValue:@"AND owner_code like '1Xvd5e5X50O8J0Ir-0zlwd'" forKey:@"_WHERE_"];
+        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+        [dict setValue:@"true" forKey:@"_IS_DES_"];
+       // [dict setValue:@"1" forKey:@"1"];
+        [dict setValue:@"1" forKey:@"TODO_CATALOG"];
+        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+        [dict setValue:@"15" forKey:@"_ROWNUM_"];
+        [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"OWNER_CODE"] forKey:@"OWNER_CODE"];
+        [dict setValue:page forKey:@"NOWPAGE"];
+        
+        [ALNetWorkApi toDoWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                NSMutableDictionary *dic = responseData;
+                MyWaitReponseModel *model = [MyWaitReponseModel getEntityFromDic:dic];
+                NSLog(@"%@",model._OKCOUNT_);
+                //NSLog(@"%@",[dic valueForKey:@"_OKCOUNT_"]);
+                
+               /* if ([[dic valueForKey:@"_MOBILE_RES_CODE_"] isEqual:@"_SUCC_"]) {
+                    NSMutableArray *array = [dic valueForKey:@"_DATA_"];
+                    
+                }
+               */
+               
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+        }];
+    }
+}
 /*
 #pragma mark - Navigation
 

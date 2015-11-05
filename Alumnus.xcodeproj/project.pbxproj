@@ -29,9 +29,9 @@
 		281963D11BAA58E70069EC84 /* rightarow.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D01BAA58E70069EC84 /* rightarow.png */; };
 		281963D31BAA58F90069EC84 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D21BAA58F90069EC84 /* return.png */; };
 		281963D51BAA5A580069EC84 /* returnback.png in Resources */ = {isa = PBXBuildFile; fileRef = 281963D41BAA5A580069EC84 /* returnback.png */; };
-		282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E21BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m */; settings = {ASSET_TAGS = (); }; };
-		282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E21BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m */; };
+		282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */; };
+		282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
 		2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EC1B84A7C500EAE87C /* dock_3.png */; };
@@ -64,18 +64,20 @@
 		286F5D861BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D851BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
+		289DF7131BEB1741007A4C20 /* MyWaitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7121BEB1741007A4C20 /* MyWaitModel.m */; };
+		289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
 		28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357E1BAF977C00CA2D80 /* YLSwipeLockView.m */; };
-		28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED11BCF3BD900217E96 /* CalendarView.m */; settings = {ASSET_TAGS = (); }; };
-		28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */; settings = {ASSET_TAGS = (); }; };
-		28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED11BE47DCA0080EB9A /* KSYWaitCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED41BE47E670080EB9A /* KSYWaitCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED71BE487160080EB9A /* KSYMyMissonCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FEDA1BE487290080EB9A /* KSYMyMisCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED11BCF3BD900217E96 /* CalendarView.m */; };
+		28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED41BCF43FF00217E96 /* DataIndexCollectionViewController.m */; };
+		28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8ED71BCF441400217E96 /* DataIndexCollectionViewCell.m */; };
+		28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD8EDA1BCF48C100217E96 /* AddDataViewController.m */; };
+		28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED11BE47DCA0080EB9A /* KSYWaitCollectionViewController.m */; };
+		28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED41BE47E670080EB9A /* KSYWaitCollectionViewCell.m */; };
+		28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FED71BE487160080EB9A /* KSYMyMissonCollectionViewCell.m */; };
+		28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7FEDA1BE487290080EB9A /* KSYMyMisCollectionViewController.m */; };
 		351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20311BA87C1800454CB2 /* ALNewfeatureViewController.m */; };
 		351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20331BA87C1800454CB2 /* ALTabBarController.m */; };
 		351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20361BA87C1800454CB2 /* ALDaoBase.m */; };
@@ -97,15 +99,15 @@
 		351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */; };
 		351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */; };
 		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; };
-		3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7541BD3511B00F9A1F8 /* MeetingRoomTable.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */; settings = {ASSET_TAGS = (); }; };
-		3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7621BD375B800F9A1F8 /* MeetingAdd.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7651BD3770300F9A1F8 /* AddressBookVc.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7681BD3860800F9A1F8 /* AddressSecVc.m */; settings = {ASSET_TAGS = (); }; };
-		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; settings = {ASSET_TAGS = (); }; };
-		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; settings = {ASSET_TAGS = (); }; };
-		3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7541BD3511B00F9A1F8 /* MeetingRoomTable.m */; };
+		3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */; };
+		3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */; };
+		3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7621BD375B800F9A1F8 /* MeetingAdd.m */; };
+		3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7651BD3770300F9A1F8 /* AddressBookVc.m */; };
+		3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7681BD3860800F9A1F8 /* AddressSecVc.m */; };
+		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; };
+		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; };
+		3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -119,16 +121,16 @@
 		35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474EA1BA9D66700F934A1 /* ALAddressBookManager.m */; };
 		35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E41BAAFFE60029B372 /* ZGSlideModule.m */; };
 		35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */; };
-		35EC36E61BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E81BCA19040002F4BF /* ALEncrypt.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EB1BCA27B50002F4BF /* testModel.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F21BCEC91A0002F4BF /* topScrollView.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F51BCECF380002F4BF /* topScrollBtn.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */; settings = {ASSET_TAGS = (); }; };
-		35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */; settings = {ASSET_TAGS = (); }; };
-		35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37041BCFE7500002F4BF /* MyMeetingModel.m */; settings = {ASSET_TAGS = (); }; };
+		35EC36E61BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E51BCA139C0002F4BF /* NSString+NetWorkUrlExtension.m */; };
+		35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E81BCA19040002F4BF /* ALEncrypt.m */; };
+		35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EB1BCA27B50002F4BF /* testModel.m */; };
+		35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */; };
+		35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F21BCEC91A0002F4BF /* topScrollView.m */; };
+		35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F51BCECF380002F4BF /* topScrollBtn.m */; };
+		35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */; };
+		35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */; };
+		35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */; };
+		35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37041BCFE7500002F4BF /* MyMeetingModel.m */; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -247,6 +249,10 @@
 		288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYCommonNaviViewController.m; sourceTree = "<group>"; };
 		288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYHomePageButtonView.h; sourceTree = "<group>"; };
 		288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYHomePageButtonView.m; sourceTree = "<group>"; };
+		289DF7111BEB1741007A4C20 /* MyWaitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitModel.h; sourceTree = "<group>"; };
+		289DF7121BEB1741007A4C20 /* MyWaitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitModel.m; sourceTree = "<group>"; };
+		289DF7141BEB4428007A4C20 /* MyWaitReponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaitReponseModel.h; sourceTree = "<group>"; };
+		289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaitReponseModel.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -568,6 +574,7 @@
 		281963C61BAA4FE40069EC84 /* mywaitwork */ = {
 			isa = PBXGroup;
 			children = (
+				289DF7101BEB1725007A4C20 /* model */,
 				281963C71BAA50800069EC84 /* MyWaitIndexViewController.h */,
 				281963C81BAA50800069EC84 /* MyWaitIndexViewController.m */,
 				28E7FED01BE47DCA0080EB9A /* KSYWaitCollectionViewController.h */,
@@ -651,6 +658,17 @@
 				286F5D851BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m */,
 			);
 			path = CommonVC;
+			sourceTree = "<group>";
+		};
+		289DF7101BEB1725007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF7111BEB1741007A4C20 /* MyWaitModel.h */,
+				289DF7121BEB1741007A4C20 /* MyWaitModel.m */,
+				289DF7141BEB4428007A4C20 /* MyWaitReponseModel.h */,
+				289DF7151BEB4428007A4C20 /* MyWaitReponseModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		28B635751BAF977C00CA2D80 /* LockVC */ = {
@@ -1335,6 +1353,7 @@
 				351C205C1BA87C1800454CB2 /* ALBaseApi.m in Sources */,
 				35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */,
 				351C20601BA87C1800454CB2 /* Foundation+Log.m in Sources */,
+				289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */,
 				281040D01BABAF8B00C43352 /* KSYCommonViewController.m in Sources */,
 				3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */,
 				286F5D7D1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m in Sources */,
@@ -1405,6 +1424,7 @@
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
 				286F5D651BBB7F4F005A051A /* ZCNSStringUtil.m in Sources */,
+				289DF7131BEB1741007A4C20 /* MyWaitModel.m in Sources */,
 				28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
 				35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */,
