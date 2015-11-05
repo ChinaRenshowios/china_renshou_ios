@@ -47,6 +47,8 @@
     NSString *serveUrl = [NSString stringWithFormat:@"%@%@",[self baseUrl],[self requestUrl]];
    
     NSDictionary *param = [self body];
+    [param setValue:@"true" forKey:@"_IS_DES_"];
+
     NSLog(@"%@",param);
     [self setupHeadForRequest];
     

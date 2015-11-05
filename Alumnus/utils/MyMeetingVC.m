@@ -14,6 +14,7 @@
 #import "ALNetWorkApi.h"
 #import "MyMeetingModel.h"
 #import "MeetingAdd.h"
+#import "MJRefresh.h"
 
 @interface MyMeetingVC()<topScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)topScrollView *top;
@@ -109,6 +110,10 @@
         _manageTabel.dataSource = self;
         _manageTabel.rowHeight = 80;
         _manageTabel.tableFooterView = [[UIView alloc]init];
+        _manageTabel.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            NSLog(@"刷新数据");
+        }];
+    
     }
     return _manageTabel;
 }
@@ -171,6 +176,10 @@
     self.noticeTabel.delegate = self;
     self.noticeTabel.dataSource = self;
     self.noticeTabel.rowHeight = 70;
+    self.noticeTabel.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        NSLog(@"刷新");
+        [self.noticeTabel.header endRefreshing];
+    }];
     [self.view addSubview:self.top];
     
     self.top.content = self.noticeTabel;

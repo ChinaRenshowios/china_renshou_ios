@@ -220,7 +220,6 @@
     [dict setValue:@"s_mtime desc" forKey:@"_ORDER_"];
     [dict setValue:@"AND owner_code like '1Xvd5e5X50O8J0Ir-0zlwd'" forKey:@"_WHERE_"];
     [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
-    [dict setValue:@"true" forKey:@"_IS_DES_"];
     [dict setValue:@"1" forKey:@"TODO_CATALOG"];
     [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
     [dict setValue:@"15" forKey:@"_ROWNUM_"];
