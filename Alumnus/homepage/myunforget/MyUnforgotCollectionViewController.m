@@ -9,6 +9,7 @@
 #import "MyUnforgotCollectionViewController.h"
 #import "MyUnforgetCollectionViewCell.h"
 #import "MyUnforgotModel.h"
+#import "MyUnforgotDetailViewController.h"
 
 @interface MyUnforgotCollectionViewController ()
 
@@ -76,19 +77,16 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-*/
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    MyUnforgotDetailViewController *vc = [[MyUnforgotDetailViewController alloc]init];
+    vc.titleString = @"备忘录";
+    MyUnforgotModel *model = [_dataSource objectAtIndex:indexPath.row];
+    vc.detailStr = model.MEMO_TEXT;
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 /*
 // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

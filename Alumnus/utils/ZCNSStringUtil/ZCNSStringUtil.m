@@ -255,7 +255,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
     }
     //    NSString * regEx = @"<([^>]*)>";
-    //    html = [html stringByReplacingOccurrencesOfString:regEx withString:@""];
+    html = [html stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""];
     return html;
 }
 @end
