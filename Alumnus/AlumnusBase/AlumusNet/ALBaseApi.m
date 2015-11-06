@@ -40,10 +40,10 @@
 
 - (void)sendData:(responseDataBlock)block {
     
-    if (![AFNetworkReachabilityManager sharedManager].reachable) {//网络不畅通状态
+ /*   if (![AFNetworkReachabilityManager sharedManager].reachable) {//网络不畅通状态
         [MBProgressHUD showError:@"网络异常,请检查网络设置"];
     }
-    
+  */  
     NSString *serveUrl = [NSString stringWithFormat:@"%@%@",[self baseUrl],[self requestUrl]];
    
     NSDictionary *param = [self body];

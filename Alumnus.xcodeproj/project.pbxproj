@@ -69,6 +69,11 @@
 		289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7191BEB7B73007A4C20 /* MyMissionResponseModel.m */; };
 		289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */; };
 		289DF7201BEB9691007A4C20 /* MyApplyMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */; };
+		289DF7241BECC919007A4C20 /* MyTeamWorkIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7231BECC919007A4C20 /* MyTeamWorkIndexViewController.m */; };
+		289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7261BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m */; };
+		289DF72A1BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7291BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m */; };
+		289DF7311BECCE7F007A4C20 /* TeamWorkResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */; };
+		289DF7341BECD458007A4C20 /* MyTeamWorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
@@ -262,6 +267,16 @@
 		289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMissonModel.m; sourceTree = "<group>"; };
 		289DF71E1BEB9691007A4C20 /* MyApplyMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplyMissionModel.h; sourceTree = "<group>"; };
 		289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplyMissionModel.m; sourceTree = "<group>"; };
+		289DF7221BECC919007A4C20 /* MyTeamWorkIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamWorkIndexViewController.h; sourceTree = "<group>"; };
+		289DF7231BECC919007A4C20 /* MyTeamWorkIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamWorkIndexViewController.m; sourceTree = "<group>"; };
+		289DF7251BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamWorkCollectionViewController.h; sourceTree = "<group>"; };
+		289DF7261BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamWorkCollectionViewController.m; sourceTree = "<group>"; };
+		289DF7281BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamWorkCollectionViewCell.h; sourceTree = "<group>"; };
+		289DF7291BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamWorkCollectionViewCell.m; sourceTree = "<group>"; };
+		289DF72F1BECCE7F007A4C20 /* TeamWorkResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamWorkResponseModel.h; sourceTree = "<group>"; };
+		289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamWorkResponseModel.m; sourceTree = "<group>"; };
+		289DF7321BECD458007A4C20 /* MyTeamWorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamWorkModel.h; sourceTree = "<group>"; };
+		289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamWorkModel.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -574,13 +589,6 @@
 			path = mymission;
 			sourceTree = "<group>";
 		};
-		281963C41BAA4FE40069EC84 /* myteamwork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = myteamwork;
-			sourceTree = "<group>";
-		};
 		281963C61BAA4FE40069EC84 /* mywaitwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +698,31 @@
 				289DF71C1BEB7D82007A4C20 /* MyMissonModel.m */,
 				289DF71E1BEB9691007A4C20 /* MyApplyMissionModel.h */,
 				289DF71F1BEB9691007A4C20 /* MyApplyMissionModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		289DF7211BECC8EF007A4C20 /* myteamwork */ = {
+			isa = PBXGroup;
+			children = (
+				289DF72E1BECCE39007A4C20 /* model */,
+				289DF7221BECC919007A4C20 /* MyTeamWorkIndexViewController.h */,
+				289DF7231BECC919007A4C20 /* MyTeamWorkIndexViewController.m */,
+				289DF7251BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.h */,
+				289DF7261BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m */,
+				289DF7281BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.h */,
+				289DF7291BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m */,
+			);
+			path = myteamwork;
+			sourceTree = "<group>";
+		};
+		289DF72E1BECCE39007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF72F1BECCE7F007A4C20 /* TeamWorkResponseModel.h */,
+				289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */,
+				289DF7321BECD458007A4C20 /* MyTeamWorkModel.h */,
+				289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1027,6 +1060,7 @@
 		596EB9201B8186BC0043E62D /* homepage */ = {
 			isa = PBXGroup;
 			children = (
+				289DF7211BECC8EF007A4C20 /* myteamwork */,
 				282F97E01BD0B7AC00D103C8 /* myunforget */,
 				281963BE1BAA4FE40069EC84 /* mycollection */,
 				281963BF1BAA4FE40069EC84 /* mycommunicate */,
@@ -1034,7 +1068,6 @@
 				281963C11BAA4FE40069EC84 /* mymail */,
 				281963C21BAA4FE40069EC84 /* mymeeting */,
 				281963C31BAA4FE40069EC84 /* mymission */,
-				281963C41BAA4FE40069EC84 /* myteamwork */,
 				281963C61BAA4FE40069EC84 /* mywaitwork */,
 				596EB93D1B818C590043E62D /* HomepageMainViewController.h */,
 				596EB93E1B818C590043E62D /* HomepageMainViewController.m */,
@@ -1397,6 +1430,7 @@
 				351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */,
 				28CD8ED81BCF441400217E96 /* DataIndexCollectionViewCell.m in Sources */,
 				351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */,
+				289DF72A1BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m in Sources */,
 				281040DE1BABB13000C43352 /* NJKWebViewProgressView.m in Sources */,
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
@@ -1422,6 +1456,7 @@
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
 				35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */,
 				351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */,
+				289DF7241BECC919007A4C20 /* MyTeamWorkIndexViewController.m in Sources */,
 				351C205B1BA87C1800454CB2 /* SandboxFile.m in Sources */,
 				351C205E1BA87C1800454CB2 /* ALConst.m in Sources */,
 				286F5D861BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m in Sources */,
@@ -1434,6 +1469,7 @@
 				351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */,
 				35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */,
 				351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */,
+				289DF7311BECCE7F007A4C20 /* TeamWorkResponseModel.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
@@ -1455,6 +1491,7 @@
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
 				35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */,
 				28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */,
+				289DF7341BECD458007A4C20 /* MyTeamWorkModel.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
@@ -1471,6 +1508,7 @@
 				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
 				3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
+				289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */,
 				286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,

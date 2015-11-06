@@ -13,6 +13,7 @@
 #import "MydateIndexViewController.h"
 #import "MyMeetingVC.h"
 #import "MyUnforgetIndexViewController.h"
+#import "MyTeamWorkIndexViewController.h"
 #import "AddressBookVc.h"
 #import <MessageUI/MessageUI.h>
 #define modelMargin (LEFTEDGE/2)
@@ -28,6 +29,7 @@
     MyMissonIndexViewController *myMissonVC;     //任务页面
     MydateIndexViewController *myDataVC;         //日程页面
     MyMeetingVC *myMeetingVc;                    //我的会议
+    MyTeamWorkIndexViewController *myTeamWorkVC; //我的团队
     MyUnforgetIndexViewController *myUnforgotVC; //我的备忘
     AddressBookVc *addressBookVc;                //我的通讯录
     MFMailComposeViewController *mailVc;          //邮箱
@@ -180,7 +182,9 @@
             [self presentViewController:myMissonVC animated:YES completion:nil];
             break;
         case 5:
-            
+            myTeamWorkVC = [[MyTeamWorkIndexViewController alloc] init];
+            myTeamWorkVC.titleString = @"团队协作";
+            [self presentViewController:myTeamWorkVC animated:YES completion:nil];
             break;
         case 6:
             mailVc = [[MFMailComposeViewController alloc] init];
