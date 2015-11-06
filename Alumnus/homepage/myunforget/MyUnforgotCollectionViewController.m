@@ -8,6 +8,7 @@
 
 #import "MyUnforgotCollectionViewController.h"
 #import "MyUnforgetCollectionViewCell.h"
+#import "MyUnforgotModel.h"
 
 @interface MyUnforgotCollectionViewController ()
 
@@ -64,8 +65,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MyUnforgetCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.titleLabel.text = @"这是一条备忘录";
-    cell.timeLabel.text = @"2015-01-01";
+    MyUnforgotModel *model = [_dataSource objectAtIndex:indexPath.row];
+    cell.titleLabel.text = model.MEMO_TITLE;
+    cell.timeLabel.text = model.MEMO_WRITE_TIME;
     
     // Configure the cell
     

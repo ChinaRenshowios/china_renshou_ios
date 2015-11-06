@@ -7,7 +7,9 @@
 //
 
 #import "KSYPresentCommonViewController.h"
+#import "MyUnforgotCollectionViewController.h"
 
 @interface MyUnforgetIndexViewController : KSYPresentCommonViewController
 @property (strong,nonatomic) NSMutableArray *datasource;
+@property (strong,nonatomic) MyUnforgotCollectionViewController *collectionVC;
 @end

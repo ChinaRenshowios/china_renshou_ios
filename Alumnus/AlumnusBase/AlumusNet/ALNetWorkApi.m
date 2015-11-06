@@ -477,5 +477,19 @@
     }];
 }
 
+/*
+ 备忘录:
+ */
++ (void)myUnforgetWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block{
+    ALBaseApi *api = [self buildBaseApi];
+    api.bodyDic = dic;
+    //根据确定请求方式
+    api.requestMeth = ALRequestMethodPost;
+    //确定每个接口的详细路径
+    api.appendUrl = @"SY_COMM_MEMO_PAD.finds.do";
+    [api sendData:^(BOOL success, id responseData, NSString *message) {
+        block(success,responseData,message);
+    }];
+}
 
 @end

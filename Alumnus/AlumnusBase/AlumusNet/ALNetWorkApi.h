@@ -133,7 +133,10 @@
  */
 + (void)inviteMeWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
 
-
+/*
+ 备忘录:
+ */
++ (void)myUnforgetWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
 
 
 @end

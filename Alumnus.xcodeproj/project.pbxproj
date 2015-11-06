@@ -74,6 +74,8 @@
 		289DF72A1BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7291BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m */; };
 		289DF7311BECCE7F007A4C20 /* TeamWorkResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */; };
 		289DF7341BECD458007A4C20 /* MyTeamWorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */; };
+		289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7371BECEF00007A4C20 /* MyUnforgotResponseModel.m */; };
+		289DF73B1BECEF23007A4C20 /* MyUnforgotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
@@ -277,6 +279,10 @@
 		289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamWorkResponseModel.m; sourceTree = "<group>"; };
 		289DF7321BECD458007A4C20 /* MyTeamWorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamWorkModel.h; sourceTree = "<group>"; };
 		289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamWorkModel.m; sourceTree = "<group>"; };
+		289DF7361BECEF00007A4C20 /* MyUnforgotResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnforgotResponseModel.h; sourceTree = "<group>"; };
+		289DF7371BECEF00007A4C20 /* MyUnforgotResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotResponseModel.m; sourceTree = "<group>"; };
+		289DF7391BECEF22007A4C20 /* MyUnforgotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnforgotModel.h; sourceTree = "<group>"; };
+		289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotModel.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -606,6 +612,7 @@
 		282F97E01BD0B7AC00D103C8 /* myunforget */ = {
 			isa = PBXGroup;
 			children = (
+				289DF7351BECEEE5007A4C20 /* model */,
 				282F97E11BD0B7BE00D103C8 /* MyUnforgetIndexViewController.h */,
 				282F97E21BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m */,
 				282F97E71BD0BE3700D103C8 /* MyUnforgotCollectionViewController.h */,
@@ -723,6 +730,17 @@
 				289DF7301BECCE7F007A4C20 /* TeamWorkResponseModel.m */,
 				289DF7321BECD458007A4C20 /* MyTeamWorkModel.h */,
 				289DF7331BECD458007A4C20 /* MyTeamWorkModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		289DF7351BECEEE5007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF7361BECEF00007A4C20 /* MyUnforgotResponseModel.h */,
+				289DF7371BECEF00007A4C20 /* MyUnforgotResponseModel.m */,
+				289DF7391BECEF22007A4C20 /* MyUnforgotModel.h */,
+				289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1437,6 +1455,7 @@
 				28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */,
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
+				289DF73B1BECEF23007A4C20 /* MyUnforgotModel.m in Sources */,
 				28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */,
 				35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
@@ -1509,6 +1528,7 @@
 				3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
 				289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */,
+				289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */,
 				286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
