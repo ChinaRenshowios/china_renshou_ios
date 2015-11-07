@@ -32,6 +32,7 @@
 		282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E21BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m */; };
 		282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */; };
 		282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */; };
+		283E82EE1BEDF18700A15BCB /* MyUploadDocumentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
 		2850E5F01B84A7C500EAE87C /* dock_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EC1B84A7C500EAE87C /* dock_3.png */; };
@@ -58,8 +59,6 @@
 		286F5D721BBB892D005A051A /* know_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 286F5D6B1BBB892D005A051A /* know_light.png */; };
 		286F5D731BBB892D005A051A /* know_wen.png in Resources */ = {isa = PBXBuildFile; fileRef = 286F5D6C1BBB892D005A051A /* know_wen.png */; };
 		286F5D741BBB892D005A051A /* know_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 286F5D6D1BBB892D005A051A /* know_set.png */; };
-		286F5D7D1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D7C1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m */; };
-		286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D7F1BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m */; };
 		286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D821BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m */; };
 		286F5D861BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D851BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
@@ -82,6 +81,13 @@
 		289DF8AB1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8AA1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m */; };
 		289DF8AE1BEDB631007A4C20 /* MyKnowCenterCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8AD1BEDB631007A4C20 /* MyKnowCenterCollectModel.m */; };
 		289DF8B11BEDB64C007A4C20 /* MyInforCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */; };
+		289DF8B71BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8B61BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m */; };
+		289DF8BA1BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8B91BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m */; };
+		289DF8BE1BEDDA00007A4C20 /* AskAndAnswerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8BD1BEDDA00007A4C20 /* AskAndAnswerModel.m */; };
+		289DF8C61BEDE933007A4C20 /* AskAndAnswerChooseSegView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8C11BEDE933007A4C20 /* AskAndAnswerChooseSegView.m */; };
+		289DF8C71BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8C31BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.m */; };
+		289DF8C81BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8C51BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m */; };
+		289DF8CB1BEDE955007A4C20 /* DocumentChooseSegView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8CA1BEDE955007A4C20 /* DocumentChooseSegView.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
@@ -222,6 +228,8 @@
 		282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotCollectionViewController.m; sourceTree = "<group>"; };
 		282F97EA1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnforgetCollectionViewCell.h; sourceTree = "<group>"; };
 		282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgetCollectionViewCell.m; sourceTree = "<group>"; };
+		283E82EC1BEDF18700A15BCB /* MyUploadDocumentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUploadDocumentModel.h; sourceTree = "<group>"; };
+		283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUploadDocumentModel.m; sourceTree = "<group>"; };
 		2850E5EA1B84A7C500EAE87C /* dock_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_1.png; sourceTree = "<group>"; };
 		2850E5EB1B84A7C500EAE87C /* dock_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_2.png; sourceTree = "<group>"; };
 		2850E5EC1B84A7C500EAE87C /* dock_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_3.png; sourceTree = "<group>"; };
@@ -253,10 +261,6 @@
 		286F5D6B1BBB892D005A051A /* know_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = know_light.png; sourceTree = "<group>"; };
 		286F5D6C1BBB892D005A051A /* know_wen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = know_wen.png; sourceTree = "<group>"; };
 		286F5D6D1BBB892D005A051A /* know_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = know_set.png; sourceTree = "<group>"; };
-		286F5D7B1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterHeadCollectionReusableView.h; sourceTree = "<group>"; };
-		286F5D7C1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterHeadCollectionReusableView.m; sourceTree = "<group>"; };
-		286F5D7E1BBE2F42005A051A /* KnowCenterFootCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterFootCollectionReusableView.h; sourceTree = "<group>"; };
-		286F5D7F1BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterFootCollectionReusableView.m; sourceTree = "<group>"; };
 		286F5D811BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWithHeadFootCollectionViewController.h; sourceTree = "<group>"; };
 		286F5D821BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWithHeadFootCollectionViewController.m; sourceTree = "<group>"; };
 		286F5D841BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWithHeadFootCollectionViewCell.h; sourceTree = "<group>"; };
@@ -301,6 +305,20 @@
 		289DF8AD1BEDB631007A4C20 /* MyKnowCenterCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyKnowCenterCollectModel.m; sourceTree = "<group>"; };
 		289DF8AF1BEDB64C007A4C20 /* MyInforCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInforCollectModel.h; sourceTree = "<group>"; };
 		289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInforCollectModel.m; sourceTree = "<group>"; };
+		289DF8B51BEDD9AB007A4C20 /* KnowCenterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterCollectionViewController.h; sourceTree = "<group>"; };
+		289DF8B61BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterCollectionViewController.m; sourceTree = "<group>"; };
+		289DF8B81BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterCollectionViewCell.h; sourceTree = "<group>"; };
+		289DF8B91BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterCollectionViewCell.m; sourceTree = "<group>"; };
+		289DF8BC1BEDDA00007A4C20 /* AskAndAnswerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskAndAnswerModel.h; sourceTree = "<group>"; };
+		289DF8BD1BEDDA00007A4C20 /* AskAndAnswerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskAndAnswerModel.m; sourceTree = "<group>"; };
+		289DF8C01BEDE933007A4C20 /* AskAndAnswerChooseSegView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskAndAnswerChooseSegView.h; sourceTree = "<group>"; };
+		289DF8C11BEDE933007A4C20 /* AskAndAnswerChooseSegView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskAndAnswerChooseSegView.m; sourceTree = "<group>"; };
+		289DF8C21BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterFootCollectionReusableView.h; sourceTree = "<group>"; };
+		289DF8C31BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterFootCollectionReusableView.m; sourceTree = "<group>"; };
+		289DF8C41BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowCenterHeadCollectionReusableView.h; sourceTree = "<group>"; };
+		289DF8C51BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowCenterHeadCollectionReusableView.m; sourceTree = "<group>"; };
+		289DF8C91BEDE955007A4C20 /* DocumentChooseSegView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentChooseSegView.h; sourceTree = "<group>"; };
+		289DF8CA1BEDE955007A4C20 /* DocumentChooseSegView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentChooseSegView.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -650,12 +668,14 @@
 		2850E6081B84A97F00EAE87C /* knowledgecenter */ = {
 			isa = PBXGroup;
 			children = (
+				289DF8BF1BEDE933007A4C20 /* View */,
+				289DF8BB1BEDD9DD007A4C20 /* model */,
 				2850E6091B84A99200EAE87C /* KnowledgeCenterViewController.h */,
 				2850E60A1B84A99200EAE87C /* KnowledgeCenterViewController.m */,
-				286F5D7B1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.h */,
-				286F5D7C1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m */,
-				286F5D7E1BBE2F42005A051A /* KnowCenterFootCollectionReusableView.h */,
-				286F5D7F1BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m */,
+				289DF8B51BEDD9AB007A4C20 /* KnowCenterCollectionViewController.h */,
+				289DF8B61BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m */,
+				289DF8B81BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.h */,
+				289DF8B91BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m */,
 			);
 			path = knowledgecenter;
 			sourceTree = "<group>";
@@ -781,6 +801,32 @@
 				289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		289DF8BB1BEDD9DD007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF8BC1BEDDA00007A4C20 /* AskAndAnswerModel.h */,
+				289DF8BD1BEDDA00007A4C20 /* AskAndAnswerModel.m */,
+				283E82EC1BEDF18700A15BCB /* MyUploadDocumentModel.h */,
+				283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		289DF8BF1BEDE933007A4C20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				289DF8C01BEDE933007A4C20 /* AskAndAnswerChooseSegView.h */,
+				289DF8C11BEDE933007A4C20 /* AskAndAnswerChooseSegView.m */,
+				289DF8C21BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.h */,
+				289DF8C31BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.m */,
+				289DF8C41BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.h */,
+				289DF8C51BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m */,
+				289DF8C91BEDE955007A4C20 /* DocumentChooseSegView.h */,
+				289DF8CA1BEDE955007A4C20 /* DocumentChooseSegView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		28B635751BAF977C00CA2D80 /* LockVC */ = {
@@ -1468,7 +1514,6 @@
 				289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */,
 				281040D01BABAF8B00C43352 /* KSYCommonViewController.m in Sources */,
 				3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */,
-				286F5D7D1BBE2F30005A051A /* KnowCenterHeadCollectionReusableView.m in Sources */,
 				35D474DC1BA9D2AB00F934A1 /* ALCacheCenter.m in Sources */,
 				351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */,
 				35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */,
@@ -1478,9 +1523,11 @@
 				281040D51BABAF8B00C43352 /* ZCCommonTextField.m in Sources */,
 				3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */,
 				281040D11BABAF8B00C43352 /* KSYLeftLabelRightText.m in Sources */,
+				283E82EE1BEDF18700A15BCB /* MyUploadDocumentModel.m in Sources */,
 				281040D61BABAF8B00C43352 /* ZCTextField.m in Sources */,
 				351C205A1BA87C1800454CB2 /* NSDate+Utilities.m in Sources */,
 				286F5D611BBB7E7B005A051A /* ModifyPSWViewController.m in Sources */,
+				289DF8C71BEDE933007A4C20 /* KnowCenterFootCollectionReusableView.m in Sources */,
 				596EB8FE1B8176280043E62D /* AppDelegate.m in Sources */,
 				281040AE1BAA5EE100C43352 /* MyMissonIndexViewController.m in Sources */,
 				351C20651BA87C1800454CB2 /* UITextView+Extension.m in Sources */,
@@ -1507,6 +1554,8 @@
 				28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */,
 				35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */,
 				281040D41BABAF8B00C43352 /* KSYWebWithNoNaviViewController.m in Sources */,
+				289DF8B71BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m in Sources */,
+				289DF8C61BEDE933007A4C20 /* AskAndAnswerChooseSegView.m in Sources */,
 				289DF73E1BECF506007A4C20 /* MyUnforgotDetailViewController.m in Sources */,
 				28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */,
 				351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */,
@@ -1525,6 +1574,7 @@
 				35E957E81BAB0E110029B372 /* ZGSlideModuleManager.m in Sources */,
 				596EB9341B8188CC0043E62D /* ZCImageButton.m in Sources */,
 				281040BB1BABAE6300C43352 /* LoginViewController.m in Sources */,
+				289DF8BE1BEDDA00007A4C20 /* AskAndAnswerModel.m in Sources */,
 				288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */,
 				351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */,
 				35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */,
@@ -1536,6 +1586,7 @@
 				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
 				35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */,
 				282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */,
+				289DF8C81BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
@@ -1560,6 +1611,7 @@
 				28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */,
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
 				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
+				289DF8CB1BEDE955007A4C20 /* DocumentChooseSegView.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				281040CF1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m in Sources */,
 				35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */,
@@ -1569,11 +1621,11 @@
 				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
 				3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
+				289DF8BA1BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m in Sources */,
 				289DF8B11BEDB64C007A4C20 /* MyInforCollectModel.m in Sources */,
 				289DF8AE1BEDB631007A4C20 /* MyKnowCenterCollectModel.m in Sources */,
 				289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */,
 				289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */,
-				286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,

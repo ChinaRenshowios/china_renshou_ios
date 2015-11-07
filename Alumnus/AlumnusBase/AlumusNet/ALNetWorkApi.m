@@ -402,7 +402,7 @@
     //根据确定请求方式
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
-    api.appendUrl = @"SY_COMM_ZHIDAO_MYASK.query.do";
+    api.appendUrl = @"PT_WENKU_READ_DOCUMENT.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];
@@ -418,7 +418,7 @@
     //根据确定请求方式
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
-    api.appendUrl = @"SY_COMM_ZHIDAO_MY_QUESTION_FOLLOW.query.do";
+    api.appendUrl = @"PT_WENKU_NEW_DOCUMENT.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];
