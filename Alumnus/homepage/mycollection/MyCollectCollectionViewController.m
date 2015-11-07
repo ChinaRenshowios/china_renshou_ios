@@ -1,28 +1,29 @@
 //
-//  MyTeamWorkCollectionViewController.m
+//  MyCollectCollectionViewController.m
 //  Alumnus
 //
-//  Created by ksy on 15/11/6.
+//  Created by ksy on 15/11/7.
 //  Copyright © 2015年 wiipu. All rights reserved.
 //
 
-#import "MyTeamWorkCollectionViewController.h"
-#import "MyTeamWorkCollectionViewCell.h"
-#import "MyTeamWorkModel.h"
+#import "MyCollectCollectionViewController.h"
+#import "MyInforCollectModel.h"
+#import "MyKnowCenterCollectModel.h"
+#import "MyCollectCollectionViewCell.h"
 
-@interface MyTeamWorkCollectionViewController ()
+@interface MyCollectCollectionViewController ()
 
 @end
 
-@implementation MyTeamWorkCollectionViewController
+@implementation MyCollectCollectionViewController
+
+static NSString * const reuseIdentifier = @"Cell";
 - (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout source:(NSMutableArray *)array
 {
     self = [super initWithCollectionViewLayout:layout];
     _dataSource = array;
     return self;
 }
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,7 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[MyTeamWorkCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[MyCollectCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -60,22 +61,22 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _dataSource.count;
 }
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MyTeamWorkCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    if (_type == KSYTeamWorkCollectionTypeOfMyTeam) {
-        MyTeamWorkModel *model = [_dataSource objectAtIndex:indexPath.row];
-        cell.titleLabel.text = model.INFO_TITLE;
-        cell.nameLabel.text = model.INFO_CREATER__NAME;
-        cell.isUsedLabel.text = [NSString stringWithFormat:@"启用:%@",model.INFO_STATE__NAME];
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyCollectCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    if (_type == KSYCollectCollectionTypeOfKnowCenter) {
+        MyKnowCenterCollectModel *model = [_dataSource objectAtIndex:indexPath.row];
+        cell.stateLabel.text = model.SERV_ID__NAME;
+        cell.titleLabel.text = model.DATA_DIS_NAME;
+        cell.nameLabel.text = model.DATA_OWNER__NAME;        
     }
-    else if(_type == KSYTeamWorkCollectionTypeOfOtherTeam){
-        MyTeamWorkModel *model = [_dataSource objectAtIndex:indexPath.row];
-        cell.titleLabel.text = model.INFO_TITLE;
-        cell.nameLabel.text = model.INFO_CREATER__NAME;
-        cell.isUsedLabel.text = [NSString stringWithFormat:@"启用:%@",model.INFO_STATE__NAME];
+    if (_type == KSYCollectCollectionTypeOfInfor) {
+        MyKnowCenterCollectModel *model = [_dataSource objectAtIndex:indexPath.row];
+        cell.stateLabel.text = model.SERV_ID__NAME;
+        cell.titleLabel.text = model.DATA_DIS_NAME;
+        cell.nameLabel.text = model.DATA_OWNER__NAME;
     }
-    
-    // Configure the cell
+   
     
     return cell;
 }

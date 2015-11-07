@@ -16,6 +16,7 @@
 #import "MyTeamWorkIndexViewController.h"
 #import "AddressBookVc.h"
 #import <MessageUI/MessageUI.h>
+#import "MyCollectionIndexViewController.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>
@@ -32,6 +33,7 @@
     MyTeamWorkIndexViewController *myTeamWorkVC; //我的团队
     MyUnforgetIndexViewController *myUnforgotVC; //我的备忘
     AddressBookVc *addressBookVc;                //我的通讯录
+    MyCollectionIndexViewController *myCollectionVC; //我的收藏
     MFMailComposeViewController *mailVc;          //邮箱
 }
 
@@ -202,6 +204,9 @@
             [self presentViewController:addressBookVc animated:YES completion:nil];
             break;
         case 9:
+            myCollectionVC = [[MyCollectionIndexViewController alloc]init];
+            myCollectionVC.titleString = @"我的收藏";
+            [self presentViewController:myCollectionVC animated:YES completion:nil];
             break;
         default:
             break;

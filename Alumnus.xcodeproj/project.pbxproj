@@ -77,6 +77,11 @@
 		289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7371BECEF00007A4C20 /* MyUnforgotResponseModel.m */; };
 		289DF73B1BECEF23007A4C20 /* MyUnforgotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */; };
 		289DF73E1BECF506007A4C20 /* MyUnforgotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF73D1BECF506007A4C20 /* MyUnforgotDetailViewController.m */; };
+		289DF7421BEDB167007A4C20 /* MyCollectionIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7411BEDB167007A4C20 /* MyCollectionIndexViewController.m */; };
+		289DF7461BEDB2A3007A4C20 /* MyCollectCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7451BEDB2A3007A4C20 /* MyCollectCollectionViewController.m */; };
+		289DF8AB1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8AA1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m */; };
+		289DF8AE1BEDB631007A4C20 /* MyKnowCenterCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8AD1BEDB631007A4C20 /* MyKnowCenterCollectModel.m */; };
+		289DF8B11BEDB64C007A4C20 /* MyInforCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */; };
 		28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */; };
 		28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B635791BAF977C00CA2D80 /* YLInitSwipePasswordController.m */; };
 		28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6357C1BAF977C00CA2D80 /* YLSwipeLockNodeView.m */; };
@@ -286,6 +291,16 @@
 		289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotModel.m; sourceTree = "<group>"; };
 		289DF73C1BECF506007A4C20 /* MyUnforgotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnforgotDetailViewController.h; sourceTree = "<group>"; };
 		289DF73D1BECF506007A4C20 /* MyUnforgotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotDetailViewController.m; sourceTree = "<group>"; };
+		289DF7401BEDB167007A4C20 /* MyCollectionIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionIndexViewController.h; sourceTree = "<group>"; };
+		289DF7411BEDB167007A4C20 /* MyCollectionIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionIndexViewController.m; sourceTree = "<group>"; };
+		289DF7441BEDB2A3007A4C20 /* MyCollectCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectCollectionViewController.h; sourceTree = "<group>"; };
+		289DF7451BEDB2A3007A4C20 /* MyCollectCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectCollectionViewController.m; sourceTree = "<group>"; };
+		289DF8A91BEDB30C007A4C20 /* MyCollectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectCollectionViewCell.h; sourceTree = "<group>"; };
+		289DF8AA1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectCollectionViewCell.m; sourceTree = "<group>"; };
+		289DF8AC1BEDB631007A4C20 /* MyKnowCenterCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyKnowCenterCollectModel.h; sourceTree = "<group>"; };
+		289DF8AD1BEDB631007A4C20 /* MyKnowCenterCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyKnowCenterCollectModel.m; sourceTree = "<group>"; };
+		289DF8AF1BEDB64C007A4C20 /* MyInforCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInforCollectModel.h; sourceTree = "<group>"; };
+		289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInforCollectModel.m; sourceTree = "<group>"; };
 		28B635761BAF977C00CA2D80 /* YLCheckToUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCheckToUnlockViewController.h; sourceTree = "<group>"; };
 		28B635771BAF977C00CA2D80 /* YLCheckToUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCheckToUnlockViewController.m; sourceTree = "<group>"; };
 		28B635781BAF977C00CA2D80 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
@@ -524,13 +539,6 @@
 			path = user;
 			sourceTree = "<group>";
 		};
-		281963BE1BAA4FE40069EC84 /* mycollection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = mycollection;
-			sourceTree = "<group>";
-		};
 		281963BF1BAA4FE40069EC84 /* mycommunicate */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +754,31 @@
 				289DF7371BECEF00007A4C20 /* MyUnforgotResponseModel.m */,
 				289DF7391BECEF22007A4C20 /* MyUnforgotModel.h */,
 				289DF73A1BECEF22007A4C20 /* MyUnforgotModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		289DF73F1BEDB150007A4C20 /* mycollection */ = {
+			isa = PBXGroup;
+			children = (
+				289DF7431BEDB17F007A4C20 /* model */,
+				289DF7401BEDB167007A4C20 /* MyCollectionIndexViewController.h */,
+				289DF7411BEDB167007A4C20 /* MyCollectionIndexViewController.m */,
+				289DF7441BEDB2A3007A4C20 /* MyCollectCollectionViewController.h */,
+				289DF7451BEDB2A3007A4C20 /* MyCollectCollectionViewController.m */,
+				289DF8A91BEDB30C007A4C20 /* MyCollectCollectionViewCell.h */,
+				289DF8AA1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m */,
+			);
+			path = mycollection;
+			sourceTree = "<group>";
+		};
+		289DF7431BEDB17F007A4C20 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				289DF8AC1BEDB631007A4C20 /* MyKnowCenterCollectModel.h */,
+				289DF8AD1BEDB631007A4C20 /* MyKnowCenterCollectModel.m */,
+				289DF8AF1BEDB64C007A4C20 /* MyInforCollectModel.h */,
+				289DF8B01BEDB64C007A4C20 /* MyInforCollectModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1083,9 +1116,9 @@
 		596EB9201B8186BC0043E62D /* homepage */ = {
 			isa = PBXGroup;
 			children = (
+				289DF73F1BEDB150007A4C20 /* mycollection */,
 				289DF7211BECC8EF007A4C20 /* myteamwork */,
 				282F97E01BD0B7AC00D103C8 /* myunforget */,
-				281963BE1BAA4FE40069EC84 /* mycollection */,
 				281963BF1BAA4FE40069EC84 /* mycommunicate */,
 				281963C01BAA4FE40069EC84 /* mydate */,
 				281963C11BAA4FE40069EC84 /* mymail */,
@@ -1456,6 +1489,7 @@
 				289DF72A1BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m in Sources */,
 				281040DE1BABB13000C43352 /* NJKWebViewProgressView.m in Sources */,
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
+				289DF8AB1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */,
 				286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */,
@@ -1476,6 +1510,7 @@
 				289DF73E1BECF506007A4C20 /* MyUnforgotDetailViewController.m in Sources */,
 				28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */,
 				351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */,
+				289DF7421BEDB167007A4C20 /* MyCollectionIndexViewController.m in Sources */,
 				35D474DF1BA9D3B400F934A1 /* AlumusAccount.m in Sources */,
 				281040D21BABAF8B00C43352 /* KSYViewWithImageAndButton.m in Sources */,
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
@@ -1530,9 +1565,12 @@
 				35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
+				289DF7461BEDB2A3007A4C20 /* MyCollectCollectionViewController.m in Sources */,
 				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
 				3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
+				289DF8B11BEDB64C007A4C20 /* MyInforCollectModel.m in Sources */,
+				289DF8AE1BEDB631007A4C20 /* MyKnowCenterCollectModel.m in Sources */,
 				289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */,
 				289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */,
 				286F5D801BBE2F42005A051A /* KnowCenterFootCollectionReusableView.m in Sources */,
