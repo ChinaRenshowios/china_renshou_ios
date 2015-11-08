@@ -8,34 +8,23 @@
 
 #import "MessageMainViewController.h"
 #import "topScrollView.h"
+#import "MBProgressHUD+MJ.h"
 
-@interface MessageMainViewController ()<topScrollViewDelegate>
+@interface MessageMainViewController ()<topScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)topScrollView *top;
-
+@property (nonatomic, strong)UITableView *table;
 
 @end
 
 @implementation MessageMainViewController
 
 #pragma lazy
-- (topScrollView *)top
-{
-    if (!_top) {
-        NSArray *arr = @[@"信息首页",@"电子刊物",@"IT首页",@"团重门户"];
-        _top = [[topScrollView alloc]initWithTitles:arr];
-        _top.delegate = self;
-        
-        [self.view addSubview:_top];
-    }
-    return _top;
-}
-
 
 #pragma mark - lifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     //初始化
     [self setup];
 }
@@ -58,7 +47,12 @@
 //初始化
 - (void)setup
 {
-    
+    self.table = [[UITableView alloc]init];
+    self.table.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.table];
+    self.table.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+    }];
 }
 
 //获取数据
@@ -70,7 +64,13 @@
 //刷新视图
 - (void)resetSubViews
 {
+    NSArray *arr = @[@"公司动态",@"公司通知"];
+    self.top = [[topScrollView alloc]initWithTitles:arr];
     self.top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64 - 50);
+    self.top.delegate = self;
+    self.top.content = self.table;
+
+    [self.view addSubview:self.top];
 }
 #pragma mark - public api
 

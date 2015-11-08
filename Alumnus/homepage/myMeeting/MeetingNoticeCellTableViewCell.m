@@ -23,6 +23,7 @@ static const CGFloat  iconWidthHeight = 30;
 @property (nonatomic, strong)UILabel *meetingTitle;
 @property (nonatomic, strong)UILabel *meetingSubTitle;
 @property (nonatomic, strong)UIImageView *rightIcon;
+@property (nonatomic, strong)UILabel *timeLabel;
 @end
 
 @implementation MeetingNoticeCellTableViewCell
@@ -36,16 +37,18 @@ static const CGFloat  iconWidthHeight = 30;
 }
 
 #pragma mark - property
-- (void)setData:(NSDictionary *)data
+- (void)setModel:(MyMeetingModel *)model
 {
-    _data = data;
+    _model = model;
     self.meetingTitle = [UILabel new];
     self.meetingSubTitle = [UILabel new];
-    self.meetingTitle.text = [data valueForKey:@"title"];
-    self.meetingSubTitle.text = [data valueForKey:@"subTitle"];
+    self.timeLabel = [UILabel new];
+    self.meetingTitle.text = model.REM_TITLE;
+    self.meetingSubTitle.text = model.S_USER__NAME;
+    self.timeLabel.text = model.EXECUTE_TIME;
     [self.meetingSubTitle sizeToFit];
-    self.noticeType = [[data valueForKey:@"type"] integerValue];
 }
+
 
 - (void)setNoticeType:(noticeType)noticeType
 {
@@ -56,14 +59,13 @@ static const CGFloat  iconWidthHeight = 30;
         case noticeTypeInvite:
         {
             self.icon.image = [UIImage imageNamed:@"know_light"];
-            self.title.text = @"会议邀请:";
             self.title.textColor = ALColor(31.0, 178.0, 138.0);
         }
             break;
         case noticeTypeAdd:
         {
             [self.icon setImage:[UIImage imageNamed:@"know_set"]];
-            self.title.text = @"补充通知:";
+
             self.title.textColor = ALColor(83.0, 135.0, 193.0);
         }
             break;
@@ -135,6 +137,10 @@ static const CGFloat  iconWidthHeight = 30;
     self.meetingSubTitle.x = self.title.x;
     self.meetingSubTitle.y = CGRectGetMaxY(self.title.frame) + 8;
     [self addSubview:self.meetingSubTitle];
+    
+    self.timeLabel.x = CGRectGetMaxX(self.meetingSubTitle.frame) + 20;
+    self.timeLabel.y = self.meetingSubTitle.y;
+    [self addSubview:self.timeLabel];
 
 //    [self.rightIcon sizeToFit];
 //    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;

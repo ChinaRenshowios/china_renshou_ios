@@ -6,17 +6,28 @@
 //  Copyright © 2015年 wiipu. All rights reserved.
 //
 
+
+
 #import "MeetingRoomTable.h"
+#import "MyMeetingManager.h"
 
 @interface MeetingRoomTable()
-{
-    @private
-    NSMutableArray *_dataList;
-}
+@property (nonatomic, strong)MyMeetingManager *manager;
+
 
 @end
 
 @implementation MeetingRoomTable
+- (MyMeetingManager *)manager
+{
+    if (!_manager) {
+        _manager = [MyMeetingManager sharedMyMeeting];
+    }
+    
+    return _manager;
+}
+
+
 - (instancetype)init
 {
     self = [super init];
@@ -24,7 +35,6 @@
     if (self) {
         self.dataSource = self;
         self.delegate = self;
-        _dataList = [NSMutableArray array];
         self.tableFooterView = [[UIView alloc]init];
         
     }
@@ -67,7 +77,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //    return _dataList.count + 1;
-    return 3;
+    return self.manager.findModels.count;
 }
 
 #pragma mark - tableDelegate
@@ -81,22 +91,40 @@
     //    }else if (indexPath.row == 2){
     //
     //    }else
-    
-    switch (indexPath.row) {
-        case 0:
-        {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"timeCell"];
-            cell.textLabel.text = @"时间";
-            cell.detailTextLabel.text = [self timeForMeeting];
-             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-            break;
-        case 1:
-        {
+    MyMeetingFinddingModel *model = self.manager.findModels[indexPath.row];
+//    switch (indexPath.row) {
+//        case 0:
+//        {
+//            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"timeCell"];
+//            cell.textLabel.text = @"时间";
+//            cell.detailTextLabel.text = model.S_MTIME;
+//             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        }
+//            break;
+//        case 1:
+//        {
+//            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"meetingCell1"];
+//            UILabel *mTitle = [[UILabel alloc]init];
+//            mTitle.textColor = [UIColor orangeColor];
+//            [mTitle sizeToFit];
+//            mTitle.x = 20;
+//            mTitle.y = 8;
+//            [cell addSubview:mTitle];
+//            
+//            UILabel *mName = [[UILabel alloc]init];
+//            mName.font = [UIFont systemFontOfSize:13];
+//            [mName sizeToFit];
+//            mName.x = mTitle.x;
+//            mName.y = CGRectGetMaxY(mTitle.frame) + 5;
+//            [cell addSubview:mName];
+//        }
+//            break;
+//        case 2:
+//        {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"meetingCell1"];
             UILabel *mTitle = [[UILabel alloc]init];
             mTitle.textColor = [UIColor orangeColor];
-            mTitle.text = @"完全空闲会议室";
+            mTitle.text = model.APY_DEPT;
             [mTitle sizeToFit];
             mTitle.x = 20;
             mTitle.y = 8;
@@ -104,27 +132,7 @@
             
             UILabel *mName = [[UILabel alloc]init];
             mName.font = [UIFont systemFontOfSize:13];
-            mName.text = @"1620洽谈室  1670VIP会议室";
-            [mName sizeToFit];
-            mName.x = mTitle.x;
-            mName.y = CGRectGetMaxY(mTitle.frame) + 5;
-            [cell addSubview:mName];
-        }
-            break;
-        case 2:
-        {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"meetingCell1"];
-            UILabel *mTitle = [[UILabel alloc]init];
-            mTitle.textColor = [UIColor orangeColor];
-            mTitle.text = @"部分空闲会议室";
-            [mTitle sizeToFit];
-            mTitle.x = 20;
-            mTitle.y = 8;
-            [cell addSubview:mTitle];
-            
-            UILabel *mName = [[UILabel alloc]init];
-            mName.font = [UIFont systemFontOfSize:13];
-            mName.text = @"1620洽谈室";
+            mName.text = model.APY_MEETING_ROOM;
             [mName sizeToFit];
             mName.x = mTitle.x;
             mName.y = CGRectGetMaxY(mTitle.frame) + 5;
@@ -132,7 +140,7 @@
             
             UILabel *time = [[UILabel alloc]init];
             time.font = [UIFont systemFontOfSize:11];
-            time.text = @"2015年2月11日 周三 上午";
+            time.text =  model.S_MTIME;
             time.textColor = [UIColor grayColor];
             [time sizeToFit];
             time.x = mTitle.x;
@@ -141,19 +149,19 @@
             
             UILabel *people = [[UILabel alloc]init];
             people.font = [UIFont systemFontOfSize:13];
-            people.text = @"张先生[协调会]关于某合作洽谈";
+            people.text = model.REMARK;
             [people sizeToFit];
             people.x = mTitle.x;
             people.y = CGRectGetMaxY(time.frame) + 2;
             [cell addSubview:people];
-        }
-            break;
-            
-            
-            
-        default:
-            break;
-    }
+//        }
+//            break;
+//            
+//            
+//            
+//        default:
+//            break;
+//    }
     
     return cell;
 }
@@ -161,26 +169,26 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height;
-    switch (indexPath.row) {
-        case 0:
-        {
-            height = 44;
-        }
-            break;
-        case 1:
-        {
-            height = 60;
-        }
-            break;
-        case 2:
-        {
+//    switch (indexPath.row) {
+//        case 0:
+//        {
+//            height = 44;
+//        }
+//            break;
+//        case 1:
+//        {
+//            height = 60;
+//        }
+//            break;
+//        case 2:
+//        {
             height = 95;
-        }
-            break;
-            
-        default:
-            break;
-    }
+//        }
+//            break;
+//            
+//        default:
+//            break;
+//    }
     
     return height;
 }

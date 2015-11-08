@@ -139,7 +139,7 @@
     //确定每个接口的详细路径
     api.appendUrl = @"PT_MEET_REMIND_MYSELF.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        block(success,[responseData valueForKey:@"_DATA_"],message);
     }];
 }
 
@@ -156,7 +156,7 @@
 
     api.appendUrl = @"PT_MEETING.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        block(success,[responseData valueForKey:@"_DATA_"],message);
     }];
 }
 
@@ -173,7 +173,7 @@
     //确定每个接口的详细路径
     api.appendUrl = @"PT_MEETINGROOM_APPLY.finds.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        block(success,[responseData valueForKey:@"_DATA_"],message);
     }];
 }
 
@@ -190,7 +190,7 @@
     //确定每个接口的详细路径
     api.appendUrl = @"PT_MEETINGROOM_APPLY.finds.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        block(success,[responseData valueForKey:@"_DATA_"],message);
     }];
 }
 

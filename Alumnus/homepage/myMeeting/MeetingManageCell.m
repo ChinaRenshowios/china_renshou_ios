@@ -12,6 +12,8 @@
 typedef NS_ENUM(NSInteger,noticeType) {
     noticeTypeInvite,//会议邀请
     noticeTypeAdd,//补充通知
+    noticeTypeYes,//已通知
+    noticeTypeNo//未通知
 };
 
 static const CGFloat  topMargin = 15;
@@ -25,6 +27,7 @@ static const CGFloat  iconWidthHeight = 30;
 @property (nonatomic, strong)UILabel *meetingTitle;
 @property (nonatomic, strong)UILabel *meetingSubTitle;
 @property (nonatomic, strong)UIImageView *rightIcon;
+@property (nonatomic, strong)UILabel *timeLabel;
 @end
 
 @implementation MeetingManageCell
@@ -38,15 +41,22 @@ static const CGFloat  iconWidthHeight = 30;
 }
 
 #pragma mark - property
-- (void)setData:(NSDictionary *)data
+- (void)setModel:(MyMeetingManagerModel *)model
 {
-    _data = data;
+    _model = model;
     self.meetingTitle = [UILabel new];
     self.meetingSubTitle = [UILabel new];
-    self.meetingTitle.text = [data valueForKey:@"title"];
-    self.meetingSubTitle.text = [data valueForKey:@"subTitle"];
+    self.timeLabel = [UILabel new];
+    self.meetingTitle.text = model.MT_TITLE;
+    self.meetingSubTitle.text = model.MT_ROOM;
+    self.timeLabel.text = [self timeForMeeting];
+    [self.timeLabel sizeToFit];
     [self.meetingSubTitle sizeToFit];
-    self.noticeType = [[data valueForKey:@"type"] integerValue];
+//    if (model.mt) {
+//        <#statements#>
+//    }
+//    self.noticeType = [[data valueForKey:@"type"] integerValue];
+//
 }
 
 - (void)setNoticeType:(noticeType)noticeType
@@ -55,17 +65,15 @@ static const CGFloat  iconWidthHeight = 30;
     self.icon = [[UIImageView alloc]init];
     self.title = [UILabel new];
     switch (_noticeType) {
-        case noticeTypeInvite:
+        case noticeTypeYes:
         {
             self.icon.image = [UIImage imageNamed:@"know_light"];
-            self.title.text = @"总经理办公会:";
             self.title.textColor = ALColor(31.0, 178.0, 138.0);
         }
             break;
-        case noticeTypeAdd:
+        case noticeTypeNo:
         {
             [self.icon setImage:[UIImage imageNamed:@"know_set"]];
-            self.title.text = @"协调会:";
             self.title.textColor = ALColor(83.0, 135.0, 193.0);
         }
             break;
@@ -138,12 +146,23 @@ static const CGFloat  iconWidthHeight = 30;
     self.meetingSubTitle.y = CGRectGetMaxY(self.title.frame) + 8;
     [self addSubview:self.meetingSubTitle];
     
+    self.timeLabel.x = CGRectGetMaxX(self.meetingSubTitle.frame) + 20;
+    self.timeLabel.y = self.meetingSubTitle.y;
+    [self addSubview:self.timeLabel];
+    
 //    [self.rightIcon sizeToFit];
 //    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;
 //    self.rightIcon.centerY = self.height * 0.5;
 //
 //    [self addSubview:self.rightIcon];
     
+}
+
+#pragma mark - 私有方法
+- (NSString *)timeForMeeting
+{
+    NSString *str = [NSString stringWithFormat:@"%@ 至 %@",_model.MT_STARTTIME,_model.S_MTIME];
+    return str;
 }
 
 @end

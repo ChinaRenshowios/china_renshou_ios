@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyMeetingModel.h"
 
 @interface MeetingNoticeCellTableViewCell : UITableViewCell
-@property (nonatomic, strong)NSDictionary *data;
+@property (nonatomic, strong)MyMeetingModel *model;
 + (instancetype)cellWithTabelView:(UITableView *)tableView;
 
 

@@ -9,26 +9,51 @@
 #import "MeetingBookVc.h"
 #import "MeetingRoomTable.h"
 #import "MeetingTimeTable.h"
+#import "ALNetWorkApi.h"
+#import "MyMeetingManager.h"
+#import "MBProgressHUD+MJ.h"
+#import "MJRefresh.h"
+
 
 #define timeTag 1
 #define roomTag (timeTag + 1)
 #define searchTag (timeTag + 2)
 
-@interface MeetingBookVc ()
+@interface MeetingBookVc ()<UITableViewDataSource
+,UITableViewDelegate>
 @property (nonatomic, strong)UIButton *selectBtn;
-@property (nonatomic, strong)UIView *content;
+@property (nonatomic, strong)ALBaseTable *content;
 @property (nonatomic, strong)MeetingTimeTable *timeTable;
 @property (nonatomic, strong)MeetingRoomTable *roomTable;
+@property (nonatomic, strong)MyMeetingManager *manager;
+
 @property (nonatomic, strong)UIView *seg;
 @end
 
 @implementation MeetingBookVc
 
 #pragma lazy
+
+- (MyMeetingManager *)manager
+{
+    if (!_manager) {
+        _manager = [MyMeetingManager sharedMyMeeting];
+    }
+    return _manager;
+}
+
 - (UITableView *)timeTable
 {
     if (!_timeTable) {
         _timeTable = [[MeetingTimeTable alloc]init];
+        _timeTable.header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [self loadData];
+            NSLog(@"刷新数据");
+        }];
+        
+        _timeTable.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            [self loadData];
+        }];
     }
     return _timeTable;
 }
@@ -37,6 +62,15 @@
 {
     if (!_roomTable) {
         _roomTable = [[MeetingRoomTable alloc]init];
+        _roomTable.header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            NSLog(@"刷新数据");
+        }];
+        
+        _roomTable.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            [self loadData];
+        }];
+
+
     }
     return _roomTable;
 }
@@ -124,7 +158,6 @@
     switch (btn.tag) {
         case timeTag:
         {
-            self.timeTable.dataList =
             self.content = self.timeTable;
         }
             break;
@@ -144,13 +177,54 @@
         default:
             break;
     }
+    
+    [self loadData];
+    [self.content reloadData];
 
 }
 
 //获取数据
 - (void)loadData
 {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [params setValue:@"true" forKey:@"_IS_DES_"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@"15" forKey:@"_ROWNUM_"];
+    [params setValue:@"1" forKey:@"NOWPAGE"];
+    [params setValue:@"AND+S_FLAG+%3D1+and+S_ODEPT+like+%273rin6giCR9vUIv6kHIO3ex%27+and+%28apy_starttime+like+%272015-09-16%25%27+or+apy_endtime+like+%272015-09-16%25%27+or+%28apy_starttime+%3C+%272015-09-16%27+and+apy_endtime+%3E+%272015-09-16%27%29%29" forKey:@"_WHERE_"];
     
+    if (self.content == self.timeTable) {
+        [MBProgressHUD showMessage:@"正在加载"];
+
+        [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+            [self.manager.findModels removeAllObjects];
+            for (id value in (NSArray *)responseData) {
+                [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
+            }
+            [self.timeTable reloadData];
+            
+            [MBProgressHUD hideHUD];
+
+        }];
+
+    }else if (self.content == self.roomTable){
+        [MBProgressHUD showMessage:@"正在加载"];
+
+        [ALNetWorkApi findMeetingRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+            [self.manager.findModels removeAllObjects];
+            for (id value in (NSArray *)responseData) {
+                [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
+            }
+            
+            [self.roomTable reloadData];
+            
+            [MBProgressHUD hideHUD];
+
+        }];
+
+
+    }
 }
 
 //刷新视图

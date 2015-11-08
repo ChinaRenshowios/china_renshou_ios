@@ -12,24 +12,33 @@
 #import "MeetingNoticeCellTableViewCell.h"
 #import "MeetingManageCell.h"
 #import "ALNetWorkApi.h"
-#import "MyMeetingModel.h"
 #import "MeetingAdd.h"
 #import "MJRefresh.h"
+#import "MyMeetingManager.h"
+#import "MyMeetingModel.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface MyMeetingVC()<topScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)topScrollView *top;
 @property (nonatomic, strong)UITableView *noticeTabel;
 @property (nonatomic, strong)UITableView *manageTabel;
 @property (nonatomic, strong)MeetingBookVc *bookVc;
-@property (nonatomic, strong)NSArray *data;
-@property (nonatomic, strong)NSArray *manageData;
 @property (nonatomic, strong)UIView *bottom;
 @property (nonatomic, strong)UIButton *search;
+@property (nonatomic, strong)MyMeetingManager *manager;
 @end
 
 @implementation MyMeetingVC
 
 #pragma lazy
+- (MyMeetingManager *)manager
+{
+    if (!_manager) {
+        _manager = [MyMeetingManager sharedMyMeeting];
+    }
+    return _manager;
+}
+
 - (MeetingBookVc *)bookVc
 {
     if (!_bookVc) {
@@ -72,35 +81,6 @@
     return _bottom;
 }
 
-- (NSArray *)data
-{
-    NSArray *data = @[
-                            @{@"type" : @"0",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"},
-                            @{@"type" : @"1",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"},
-                            @{@"type" : @"0",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"}
-                            
-                               ];
-    
-
-    return data;
-}
-
-- (NSArray *)manageData
-{
-    NSArray *manageData = @[
-                      @{@"type" : @"0",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"},
-                      @{@"type" : @"1",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"},
-                      @{@"type" : @"0",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"},
-                       @{@"type" : @"0",@"title":@"关于某业务总结会",@"subTitle":@"1015洽谈室  2015-02-01 16:00至2015-02-01 1"}
-                      ];
-    
-    
-    return manageData;
-}
-
-
-
-
 - (UITableView *)manageTabel
 {
     if (!_manageTabel) {
@@ -111,6 +91,7 @@
         _manageTabel.rowHeight = 80;
         _manageTabel.tableFooterView = [[UIView alloc]init];
         _manageTabel.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [self loadData];
             NSLog(@"刷新数据");
         }];
     
@@ -164,11 +145,6 @@
 //初始化
 - (void)setup
 {
-//    NSArray *arr = @[@"会议通知",@"会议管理",@"会议室预定"];
-//    topScrollView *top = [[topScrollView alloc]initWithTitles:arr];
-//    top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64);
-//    self.top = top;
-//    top.delegate = self;
     self.top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64 - 50);
     
     self.noticeTabel = [[UITableView alloc]init];
@@ -178,6 +154,7 @@
     self.noticeTabel.rowHeight = 70;
     self.noticeTabel.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         NSLog(@"刷新");
+        [self loadData];
         [self.noticeTabel.header endRefreshing];
     }];
     [self.view addSubview:self.top];
@@ -189,18 +166,56 @@
 //获取数据
 - (void)loadData
 {
-    //测试
-    MyMeetingModel *model = [[MyMeetingModel alloc]init];
-    
-    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [ALNetWorkApi meetRemindWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-        if (success) {
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [params setValue:@"true" forKey:@"_IS_DES_"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@"15" forKey:@"_ROWNUM_"];
+    [params setValue:@"1" forKey:@"NOWPAGE"];
+
+    if (self.top.content == self.noticeTabel) {
+        [MBProgressHUD showMessage:@"正在加载"];
+        [ALNetWorkApi meetRemindWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                [self.manager.noticeModels removeAllObjects];
+                for (id value in (NSArray *)responseData) {
+                                    [self.manager.noticeModels addObject:[MyMeetingModel getEntityFromDic:value]];
+                }
+                
+                [self.noticeTabel reloadData];
+            }else{
+                
+            }
+            [MBProgressHUD hideHUD];
+
+        }];
+    }else if (self.top.content == self.manageTabel){
+        [MBProgressHUD showMessage:@"正在加载"];
+
+        [ALNetWorkApi meetingManageWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+            [self.manager.manageModels removeAllObjects];
+            for (id value in (NSArray *)responseData) {
+            [self.manager.manageModels addObject:[MyMeetingManagerModel getEntityFromDic:value]];
+            }
+
             
-        }else{
-        
-        }
-    }];
+            [self.manageTabel reloadData];
+            [MBProgressHUD hideHUD];
+
+        }];
+    }else{
+        [MBProgressHUD showMessage:@"正在加载"];
+
+        [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+            [self.manager.findModels removeAllObjects];
+            for (id value in (NSArray *)responseData) {
+                [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
+                
+                [MBProgressHUD hideHUD];
+            }
+            
+        }];
+    }
     
 }
 
@@ -219,9 +234,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.noticeTabel) {
-        return 3;
+        return self.manager.noticeModels.count;
     }else{
-        return 4;
+        return self.manager.manageModels.count;
     }
     return 0;
 }
@@ -230,12 +245,12 @@
 {
     if (tableView == self.noticeTabel) {
        MeetingNoticeCellTableViewCell *cell = [MeetingNoticeCellTableViewCell cellWithTabelView:self.noticeTabel];
-        cell.data = self.data[indexPath.row];
+        cell.model = self.manager.noticeModels[indexPath.row];
          cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }else{
         MeetingManageCell *cell = [MeetingManageCell cellWithTabelView:self.manageTabel];
-        cell.data = self.manageData[indexPath.row];
+        cell.model = self.manager.manageModels[indexPath.row];
          cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
@@ -243,7 +258,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (tableView == self.noticeTabel) {
+        
+    }else{
+        
+    }
 }
 
 #pragma mark - customDelegate
@@ -253,17 +272,20 @@
         case 0:
         {
             self.top.content = self.noticeTabel;
+            [self loadData];
         }
             break;
         case 1:
         {
             self.top.content = self.manageTabel;
+            [self loadData];
         }
             break;
 
         case 2:
         {
             self.top.contentVc = self.bookVc;
+            [self loadData];
         }
             break;
             

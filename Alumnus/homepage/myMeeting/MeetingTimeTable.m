@@ -8,6 +8,9 @@
 
 #import "MeetingTimeTable.h"
 #import "CalendarView.h"
+#import "MyMeetingManager.h"
+#import "ALNetWorkApi.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface MeetingTimeTable()<UITableViewDelegate,UITableViewDataSource,CalendarDataSource,CalendarDelegate>
 {
@@ -18,11 +21,21 @@
 @property (nonatomic, strong) CalendarView * customCalendarView;
 @property (nonatomic, strong) NSCalendar * gregorian;
 @property (nonatomic, assign) NSInteger currentYear;
+@property (nonatomic, strong)MyMeetingManager *manager;
 @end
 
 @implementation MeetingTimeTable
 
 #pragma lazy
+- (MyMeetingManager *)manager
+{
+    if (!_manager) {
+        _manager = [MyMeetingManager sharedMyMeeting];
+    }
+    
+    return _manager;
+}
+
 
 #pragma mark - lifeCycle
 - (instancetype)init
@@ -50,7 +63,23 @@
 //获取数据
 - (void)loadData
 {
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [params setValue:@"true" forKey:@"_IS_DES_"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@"15" forKey:@"_ROWNUM_"];
+    [params setValue:@"1" forKey:@"NOWPAGE"];
+    [params setValue:@"AND+S_FLAG+%3D1+and+S_ODEPT+like+%273rin6giCR9vUIv6kHIO3ex%27+and+%28apy_starttime+like+%272015-09-16%25%27+or+apy_endtime+like+%272015-09-16%25%27+or+%28apy_starttime+%3C+%272015-09-16%27+and+apy_endtime+%3E+%272015-09-16%27%29%29" forKey:@"_WHERE_"];
+    [MBProgressHUD showMessage:@"正在加载"];
+
+    [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+        [self.manager.findModels removeAllObjects];
+        for (id value in (NSArray *)responseData) {
+            [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
+        }
+        [MBProgressHUD hideHUD];
+    }];
+
 }
 
 //格式化会议时间
@@ -75,7 +104,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //    return _dataList.count + 1;
-    return 3;
+    return self.manager.findModels.count+2;
 }
 
 #pragma mark - tableDelegate
@@ -89,13 +118,17 @@
     //    }else if (indexPath.row == 2){
     //
     //    }else
+    MyMeetingFinddingModel *model;
+    if (indexPath.row >= 2) {
+        model = self.manager.findModels[indexPath.row - 2];
+    }
     
     switch (indexPath.row) {
         case 0:
         {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"timeCell"];
             cell.textLabel.text = @"会议室";
-            cell.detailTextLabel.text = @"105会议室";
+            cell.detailTextLabel.text = @"上午";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
             break;
@@ -128,7 +161,7 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"meetingCell1"];
             UILabel *mTitle = [[UILabel alloc]init];
             mTitle.textColor = [UIColor orangeColor];
-            mTitle.text = @"上午";
+            mTitle.text = model.APY_CAUSE;
             [mTitle sizeToFit];
             mTitle.x = 20;
             mTitle.y = 8;
@@ -136,7 +169,7 @@
             
             UILabel *mName = [[UILabel alloc]init];
             mName.font = [UIFont systemFontOfSize:13];
-            mName.text = @"10:00~15:00 张先生[协调会]关于业务总结会";
+            mName.text = model.APY_STARTTIME;
             [mName sizeToFit];
             mName.x = mTitle.x;
             mName.y = CGRectGetMaxY(mTitle.frame) + 5;
@@ -185,6 +218,7 @@
 
 -(void)dayChangedToDate:(NSDate *)selectedDate
 {
+    [self loadData];
     NSLog(@"dayChangedToDate %@(GMT)",selectedDate);
 }
 

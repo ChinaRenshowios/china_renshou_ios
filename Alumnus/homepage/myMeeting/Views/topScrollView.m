@@ -82,7 +82,6 @@
 {
     if (index == 0) {
         self.topView.frame = CGRectMake(0, 0, SIZEWIDTH, 44);
-        
         CGFloat btnWidth;
         if (self.titleArray.count < 4) {
             btnWidth = SIZEWIDTH/self.titleArray.count;
@@ -103,7 +102,7 @@
                     titleBtn.x = titleBtn.tag * titleBtn.width;
                     [titleBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
                     [self.topView addSubview:titleBtn];
-                    
+                     
                 }
             }
             

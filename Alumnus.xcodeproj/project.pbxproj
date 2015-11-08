@@ -121,8 +121,6 @@
 		351C20711BA87DFB00454CB2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C206D1BA87DFB00454CB2 /* MBProgressHUD+MJ.m */; };
 		351C20721BA87DFB00454CB2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */; };
 		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; };
-		3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7541BD3511B00F9A1F8 /* MeetingRoomTable.m */; };
-		3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */; };
 		3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */; };
 		3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7621BD375B800F9A1F8 /* MeetingAdd.m */; };
 		3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7651BD3770300F9A1F8 /* AddressBookVc.m */; };
@@ -130,6 +128,17 @@
 		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; };
 		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; };
 		3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */; };
+		3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7831BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78D1BEF58A100F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7851BEF58A100F9A1F8 /* MeetingRoomTable.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78E1BEF58A100F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7871BEF58A100F9A1F8 /* MeetingTimeTable.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7891BEF58A100F9A1F8 /* MyMeetingModel.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7951BEF594000F9A1F8 /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7921BEF594000F9A1F8 /* topScrollBtn.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7961BEF594000F9A1F8 /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7941BEF594000F9A1F8 /* topScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7991BEF597E00F9A1F8 /* MyMeetingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */; settings = {ASSET_TAGS = (); }; };
+		3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */; settings = {ASSET_TAGS = (); }; };
+		3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */; settings = {ASSET_TAGS = (); }; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -147,12 +156,6 @@
 		35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36E81BCA19040002F4BF /* ALEncrypt.m */; };
 		35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EB1BCA27B50002F4BF /* testModel.m */; };
 		35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */; };
-		35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F21BCEC91A0002F4BF /* topScrollView.m */; };
-		35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F51BCECF380002F4BF /* topScrollBtn.m */; };
-		35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */; };
-		35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */; };
-		35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */; };
-		35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EC37041BCFE7500002F4BF /* MyMeetingModel.m */; };
 		35EDAF4F1BA9B03E00B3C175 /* ALNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */; };
 		3DD0529C253EDCD26E385764 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF244FB3DCC7D69ED1465EB /* libPods.a */; };
 		596EB8FB1B8176280043E62D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EB8FA1B8176280043E62D /* main.m */; };
@@ -383,10 +386,6 @@
 		351C206E1BA87DFB00454CB2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		351C206F1BA87DFB00454CB2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		351C20701BA87DFB00454CB2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		3573A7531BD3511B00F9A1F8 /* MeetingRoomTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingRoomTable.h; sourceTree = SOURCE_ROOT; };
-		3573A7541BD3511B00F9A1F8 /* MeetingRoomTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingRoomTable.m; sourceTree = SOURCE_ROOT; };
-		3573A7561BD3512A00F9A1F8 /* MeetingTimeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingTimeTable.h; sourceTree = SOURCE_ROOT; };
-		3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingTimeTable.m; sourceTree = SOURCE_ROOT; };
 		3573A75D1BD3523800F9A1F8 /* ALBaseTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBaseTable.h; sourceTree = "<group>"; };
 		3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBaseTable.m; sourceTree = "<group>"; };
 		3573A7601BD3530200F9A1F8 /* ALKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALKit.h; sourceTree = "<group>"; };
@@ -402,6 +401,29 @@
 		3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchBtn.m; path = Alumnus/AlumnusBase/AlumusBaseKit/SwitchBtn.m; sourceTree = SOURCE_ROOT; };
 		3573A77A1BE62A3400F9A1F8 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		3573A77E1BEF58A100F9A1F8 /* MeetingBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingBookVc.h; sourceTree = "<group>"; };
+		3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingBookVc.m; sourceTree = "<group>"; };
+		3573A7801BEF58A100F9A1F8 /* MeetingManageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingManageCell.h; path = ../MeetingManageCell.h; sourceTree = "<group>"; };
+		3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingManageCell.m; path = ../MeetingManageCell.m; sourceTree = "<group>"; };
+		3573A7821BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingNoticeCellTableViewCell.h; path = ../MeetingNoticeCellTableViewCell.h; sourceTree = "<group>"; };
+		3573A7831BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingNoticeCellTableViewCell.m; path = ../MeetingNoticeCellTableViewCell.m; sourceTree = "<group>"; };
+		3573A7841BEF58A100F9A1F8 /* MeetingRoomTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingRoomTable.h; path = ../MeetingRoomTable.h; sourceTree = "<group>"; };
+		3573A7851BEF58A100F9A1F8 /* MeetingRoomTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingRoomTable.m; path = ../MeetingRoomTable.m; sourceTree = "<group>"; };
+		3573A7861BEF58A100F9A1F8 /* MeetingTimeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingTimeTable.h; path = ../MeetingTimeTable.h; sourceTree = "<group>"; };
+		3573A7871BEF58A100F9A1F8 /* MeetingTimeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingTimeTable.m; path = ../MeetingTimeTable.m; sourceTree = "<group>"; };
+		3573A7881BEF58A100F9A1F8 /* MyMeetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMeetingModel.h; path = ../MyMeetingModel.h; sourceTree = "<group>"; };
+		3573A7891BEF58A100F9A1F8 /* MyMeetingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMeetingModel.m; path = ../MyMeetingModel.m; sourceTree = "<group>"; };
+		3573A7911BEF594000F9A1F8 /* topScrollBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollBtn.h; sourceTree = "<group>"; };
+		3573A7921BEF594000F9A1F8 /* topScrollBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollBtn.m; sourceTree = "<group>"; };
+		3573A7931BEF594000F9A1F8 /* topScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollView.h; sourceTree = "<group>"; };
+		3573A7941BEF594000F9A1F8 /* topScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollView.m; sourceTree = "<group>"; };
+		3573A7971BEF597E00F9A1F8 /* MyMeetingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingManager.h; sourceTree = "<group>"; };
+		3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingManager.m; sourceTree = "<group>"; };
+		3573A79A1BEF59E200F9A1F8 /* ALSingleston.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSingleston.h; sourceTree = "<group>"; };
+		3573A79C1BEF630B00F9A1F8 /* MyMeetingManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingManagerModel.h; sourceTree = "<group>"; };
+		3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingManagerModel.m; sourceTree = "<group>"; };
+		3573A79F1BEF634900F9A1F8 /* MyMeetingFinddingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingFinddingModel.h; sourceTree = "<group>"; };
+		3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingFinddingModel.m; sourceTree = "<group>"; };
 		35D474C11BA9C3D500F934A1 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		35D474C41BA9C87200F934A1 /* ALUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUserDefault.h; sourceTree = "<group>"; };
@@ -437,18 +459,6 @@
 		35EC36EB1BCA27B50002F4BF /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testModel.m; path = utils/testModel.m; sourceTree = "<group>"; };
 		35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMeetingVC.h; path = Alumnus/utils/MyMeetingVC.h; sourceTree = SOURCE_ROOT; };
 		35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMeetingVC.m; path = Alumnus/utils/MyMeetingVC.m; sourceTree = SOURCE_ROOT; };
-		35EC36F11BCEC91A0002F4BF /* topScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollView.h; sourceTree = SOURCE_ROOT; };
-		35EC36F21BCEC91A0002F4BF /* topScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollView.m; sourceTree = SOURCE_ROOT; };
-		35EC36F41BCECF380002F4BF /* topScrollBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topScrollBtn.h; sourceTree = SOURCE_ROOT; };
-		35EC36F51BCECF380002F4BF /* topScrollBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topScrollBtn.m; sourceTree = SOURCE_ROOT; };
-		35EC36F71BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingNoticeCellTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingNoticeCellTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		35EC36FA1BCFD7CE0002F4BF /* MeetingManageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingManageCell.h; sourceTree = SOURCE_ROOT; };
-		35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingManageCell.m; sourceTree = SOURCE_ROOT; };
-		35EC37001BCFE3AA0002F4BF /* MeetingBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingBookVc.h; sourceTree = SOURCE_ROOT; };
-		35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingBookVc.m; sourceTree = SOURCE_ROOT; };
-		35EC37031BCFE7500002F4BF /* MyMeetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingModel.h; sourceTree = SOURCE_ROOT; };
-		35EC37041BCFE7500002F4BF /* MyMeetingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingModel.m; sourceTree = SOURCE_ROOT; };
 		35EDAF4D1BA9B03E00B3C175 /* ALNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavViewController.h; sourceTree = "<group>"; };
 		35EDAF4E1BA9B03E00B3C175 /* ALNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavViewController.m; sourceTree = "<group>"; };
 		596EB8F51B8176280043E62D /* Alumnus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alumnus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -592,22 +602,6 @@
 			children = (
 			);
 			path = mymail;
-			sourceTree = "<group>";
-		};
-		281963C21BAA4FE40069EC84 /* mymeeting */ = {
-			isa = PBXGroup;
-			children = (
-				35EC36F01BCEC8BC0002F4BF /* Views */,
-				35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */,
-				35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */,
-				35EC37001BCFE3AA0002F4BF /* MeetingBookVc.h */,
-				35EC37011BCFE3AA0002F4BF /* MeetingBookVc.m */,
-				35EC37031BCFE7500002F4BF /* MyMeetingModel.h */,
-				35EC37041BCFE7500002F4BF /* MyMeetingModel.m */,
-				3573A7611BD375B800F9A1F8 /* MeetingAdd.h */,
-				3573A7621BD375B800F9A1F8 /* MeetingAdd.m */,
-			);
-			path = mymeeting;
 			sourceTree = "<group>";
 		};
 		281963C31BAA4FE40069EC84 /* mymission */ = {
@@ -987,6 +981,56 @@
 			path = AlumusBaseKit;
 			sourceTree = "<group>";
 		};
+		3573A77D1BEF58A100F9A1F8 /* myMeeting */ = {
+			isa = PBXGroup;
+			children = (
+				3573A79B1BEF62B700F9A1F8 /* Model */,
+				3573A79A1BEF59E200F9A1F8 /* ALSingleston.h */,
+				3573A7901BEF593600F9A1F8 /* Views */,
+				3573A7611BD375B800F9A1F8 /* MeetingAdd.h */,
+				3573A7621BD375B800F9A1F8 /* MeetingAdd.m */,
+				35EC36ED1BCEC87F0002F4BF /* MyMeetingVC.h */,
+				35EC36EE1BCEC87F0002F4BF /* MyMeetingVC.m */,
+				3573A77E1BEF58A100F9A1F8 /* MeetingBookVc.h */,
+				3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */,
+				3573A7971BEF597E00F9A1F8 /* MyMeetingManager.h */,
+				3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */,
+			);
+			path = myMeeting;
+			sourceTree = "<group>";
+		};
+		3573A7901BEF593600F9A1F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3573A7801BEF58A100F9A1F8 /* MeetingManageCell.h */,
+				3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */,
+				3573A7821BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.h */,
+				3573A7831BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m */,
+				3573A7841BEF58A100F9A1F8 /* MeetingRoomTable.h */,
+				3573A7851BEF58A100F9A1F8 /* MeetingRoomTable.m */,
+				3573A7861BEF58A100F9A1F8 /* MeetingTimeTable.h */,
+				3573A7871BEF58A100F9A1F8 /* MeetingTimeTable.m */,
+				3573A7911BEF594000F9A1F8 /* topScrollBtn.h */,
+				3573A7921BEF594000F9A1F8 /* topScrollBtn.m */,
+				3573A7931BEF594000F9A1F8 /* topScrollView.h */,
+				3573A7941BEF594000F9A1F8 /* topScrollView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3573A79B1BEF62B700F9A1F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3573A7881BEF58A100F9A1F8 /* MyMeetingModel.h */,
+				3573A7891BEF58A100F9A1F8 /* MyMeetingModel.m */,
+				3573A79C1BEF630B00F9A1F8 /* MyMeetingManagerModel.h */,
+				3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */,
+				3573A79F1BEF634900F9A1F8 /* MyMeetingFinddingModel.h */,
+				3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		35D474C71BA9C99000F934A1 /* AlumusAccountCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1062,25 +1106,6 @@
 				35E957E71BAB0E110029B372 /* ZGSlideModuleManager.m */,
 			);
 			path = SlideModule;
-			sourceTree = "<group>";
-		};
-		35EC36F01BCEC8BC0002F4BF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				35EC36F11BCEC91A0002F4BF /* topScrollView.h */,
-				35EC36F21BCEC91A0002F4BF /* topScrollView.m */,
-				35EC36F41BCECF380002F4BF /* topScrollBtn.h */,
-				35EC36F51BCECF380002F4BF /* topScrollBtn.m */,
-				35EC36F71BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.h */,
-				35EC36F81BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m */,
-				35EC36FA1BCFD7CE0002F4BF /* MeetingManageCell.h */,
-				35EC36FB1BCFD7CE0002F4BF /* MeetingManageCell.m */,
-				3573A7531BD3511B00F9A1F8 /* MeetingRoomTable.h */,
-				3573A7541BD3511B00F9A1F8 /* MeetingRoomTable.m */,
-				3573A7561BD3512A00F9A1F8 /* MeetingTimeTable.h */,
-				3573A7571BD3512A00F9A1F8 /* MeetingTimeTable.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		596EB8EC1B8176280043E62D = {
@@ -1168,7 +1193,7 @@
 				281963BF1BAA4FE40069EC84 /* mycommunicate */,
 				281963C01BAA4FE40069EC84 /* mydate */,
 				281963C11BAA4FE40069EC84 /* mymail */,
-				281963C21BAA4FE40069EC84 /* mymeeting */,
+				3573A77D1BEF58A100F9A1F8 /* myMeeting */,
 				281963C31BAA4FE40069EC84 /* mymission */,
 				281963C61BAA4FE40069EC84 /* mywaitwork */,
 				596EB93D1B818C590043E62D /* HomepageMainViewController.h */,
@@ -1512,16 +1537,17 @@
 				35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */,
 				351C20601BA87C1800454CB2 /* Foundation+Log.m in Sources */,
 				289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */,
+				3573A78E1BEF58A100F9A1F8 /* MeetingTimeTable.m in Sources */,
 				281040D01BABAF8B00C43352 /* KSYCommonViewController.m in Sources */,
-				3573A7581BD3512A00F9A1F8 /* MeetingTimeTable.m in Sources */,
+				3573A78D1BEF58A100F9A1F8 /* MeetingRoomTable.m in Sources */,
+				3573A7961BEF594000F9A1F8 /* topScrollView.m in Sources */,
 				35D474DC1BA9D2AB00F934A1 /* ALCacheCenter.m in Sources */,
 				351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */,
-				35EC37051BCFE7500002F4BF /* MyMeetingModel.m in Sources */,
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
 				289DF7201BEB9691007A4C20 /* MyApplyMissionModel.m in Sources */,
+				3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */,
 				281040D51BABAF8B00C43352 /* ZCCommonTextField.m in Sources */,
-				3573A7551BD3511B00F9A1F8 /* MeetingRoomTable.m in Sources */,
 				281040D11BABAF8B00C43352 /* KSYLeftLabelRightText.m in Sources */,
 				283E82EE1BEDF18700A15BCB /* MyUploadDocumentModel.m in Sources */,
 				281040D61BABAF8B00C43352 /* ZCTextField.m in Sources */,
@@ -1536,6 +1562,7 @@
 				289DF72A1BECCAAE007A4C20 /* MyTeamWorkCollectionViewCell.m in Sources */,
 				281040DE1BABB13000C43352 /* NJKWebViewProgressView.m in Sources */,
 				35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */,
+				3573A7991BEF597E00F9A1F8 /* MyMeetingManager.m in Sources */,
 				289DF8AB1BEDB30C007A4C20 /* MyCollectCollectionViewCell.m in Sources */,
 				351C206A1BA87C8100454CB2 /* ALNetWorkApi.m in Sources */,
 				28E7FED21BE47DCA0080EB9A /* KSYWaitCollectionViewController.m in Sources */,
@@ -1543,12 +1570,12 @@
 				596EB92B1B81873D0043E62D /* Dock.m in Sources */,
 				289DF73B1BECEF23007A4C20 /* MyUnforgotModel.m in Sources */,
 				28CD8ED51BCF43FF00217E96 /* DataIndexCollectionViewController.m in Sources */,
-				35EC36F61BCECF380002F4BF /* topScrollBtn.m in Sources */,
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
+				3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */,
 				3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */,
 				28E7FED51BE47E670080EB9A /* KSYWaitCollectionViewCell.m in Sources */,
 				28B635801BAF977C00CA2D80 /* YLInitSwipePasswordController.m in Sources */,
@@ -1563,6 +1590,7 @@
 				35D474DF1BA9D3B400F934A1 /* AlumusAccount.m in Sources */,
 				281040D21BABAF8B00C43352 /* KSYViewWithImageAndButton.m in Sources */,
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
+				3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */,
 				35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */,
 				351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */,
 				289DF7241BECC919007A4C20 /* MyTeamWorkIndexViewController.m in Sources */,
@@ -1576,8 +1604,8 @@
 				281040BB1BABAE6300C43352 /* LoginViewController.m in Sources */,
 				289DF8BE1BEDDA00007A4C20 /* AskAndAnswerModel.m in Sources */,
 				288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */,
+				3573A7951BEF594000F9A1F8 /* topScrollBtn.m in Sources */,
 				351C20661BA87C1800454CB2 /* UIView+Extension.m in Sources */,
-				35EC36F91BCFD7B40002F4BF /* MeetingNoticeCellTableViewCell.m in Sources */,
 				351C20571BA87C1800454CB2 /* ALNewfeatureViewController.m in Sources */,
 				289DF7311BECCE7F007A4C20 /* TeamWorkResponseModel.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
@@ -1590,17 +1618,16 @@
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
 				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
-				35EC37021BCFE3AA0002F4BF /* MeetingBookVc.m in Sources */,
 				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
 				289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
+				3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
 				286F5D651BBB7F4F005A051A /* ZCNSStringUtil.m in Sources */,
 				289DF7131BEB1741007A4C20 /* MyWaitModel.m in Sources */,
 				28CD8ED21BCF3BD900217E96 /* CalendarView.m in Sources */,
 				35D474D81BA9CAA500F934A1 /* AlumusAccountManger in Sources */,
-				35EC36FC1BCFD7CE0002F4BF /* MeetingManageCell.m in Sources */,
 				28E7FEDB1BE487290080EB9A /* KSYMyMisCollectionViewController.m in Sources */,
 				289DF7341BECD458007A4C20 /* MyTeamWorkModel.m in Sources */,
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
@@ -1614,8 +1641,8 @@
 				289DF8CB1BEDE955007A4C20 /* DocumentChooseSegView.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				281040CF1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m in Sources */,
-				35EC36F31BCEC91A0002F4BF /* topScrollView.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
+				3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
 				289DF7461BEDB2A3007A4C20 /* MyCollectCollectionViewController.m in Sources */,
 				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
@@ -1629,6 +1656,7 @@
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,
+				3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */,
 				35D474D21BA9CA6500F934A1 /* ALBaseManager.m in Sources */,
 				35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */,
 				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
