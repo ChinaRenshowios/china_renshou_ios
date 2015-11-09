@@ -130,7 +130,6 @@
 {
     [super viewDidAppear:animated];
     //获取数据
-    [self loadData];
 }
 
 - (void)viewDidLayoutSubviews
@@ -160,6 +159,7 @@
     [self.view addSubview:self.top];
     
     self.top.content = self.noticeTabel;
+    [self loadData];
 
 }
 
@@ -179,13 +179,13 @@
             if (success) {
                 [self.manager.noticeModels removeAllObjects];
                 for (id value in (NSArray *)responseData) {
-                                    [self.manager.noticeModels addObject:[MyMeetingModel getEntityFromDic:value]];
+                    [self.manager.noticeModels addObject:[MyMeetingModel getEntityFromDic:value]];
                 }
                 
-                [self.noticeTabel reloadData];
             }else{
                 
             }
+            [self.noticeTabel reloadData];
             [MBProgressHUD hideHUD];
 
         }];
