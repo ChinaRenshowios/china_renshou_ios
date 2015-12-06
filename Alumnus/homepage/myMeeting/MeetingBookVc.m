@@ -192,7 +192,7 @@
     [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
     [params setValue:@"15" forKey:@"_ROWNUM_"];
     [params setValue:@"1" forKey:@"NOWPAGE"];
-    [params setValue:@"AND+S_FLAG+%3D1+and+S_ODEPT+like+%273rin6giCR9vUIv6kHIO3ex%27+and+%28apy_starttime+like+%272015-09-16%25%27+or+apy_endtime+like+%272015-09-16%25%27+or+%28apy_starttime+%3C+%272015-09-16%27+and+apy_endtime+%3E+%272015-09-16%27%29%29" forKey:@"_WHERE_"];
+    [params setValue:@"AND S_FLAG = 1 and S_ODEPT like '3rin6giCR9vUIv6kHIO3ex' and （apy_starttime like '2015-09-16%' or apy_endtime like '2015-09-16%' or (apy_starttime < '2015-09-16' and apy_endtime > '2015-09-16'))" forKey:@"_WHERE_"];
     
     if (self.content == self.timeTable) {
         [MBProgressHUD showMessage:@"正在加载"];

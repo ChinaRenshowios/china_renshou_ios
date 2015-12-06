@@ -194,6 +194,7 @@
 
         [ALNetWorkApi meetingManageWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
             [self.manager.manageModels removeAllObjects];
+            NSLog(@"count == %d",((NSArray *)responseData).count);
             for (id value in (NSArray *)responseData) {
             [self.manager.manageModels addObject:[MyMeetingManagerModel getEntityFromDic:value]];
             }
