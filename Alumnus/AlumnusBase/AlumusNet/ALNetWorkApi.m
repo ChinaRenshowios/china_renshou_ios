@@ -15,8 +15,8 @@
 {
     ALBaseApi *api = [[ALBaseApi alloc]init];
     //todo:配置api的一些默认配置默认的request是post
-    api.requestMeth = ALRequestMethodPost;
-    api.url = @"http://192.168.159.1:8081/mobileClient/";
+    api.requestMeth = ALRequestMethodGet;
+    api.url = @"https://192.168.159.1:8081/mobileClient/";
     api.header = [self header];
     return api;
 }
@@ -36,6 +36,7 @@
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
     api.appendUrl = @"PT_ORG_USER_MOBILE.mobileLogin.do";
+//    api.appendUrl =@"";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];

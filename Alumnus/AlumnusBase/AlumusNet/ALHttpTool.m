@@ -16,7 +16,7 @@
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
     mgr.requestSerializer = [AFHTTPRequestSerializer serializer];
-
+    [mgr.securityPolicy setAllowInvalidCertificates:YES];
     return mgr;
 }
 
