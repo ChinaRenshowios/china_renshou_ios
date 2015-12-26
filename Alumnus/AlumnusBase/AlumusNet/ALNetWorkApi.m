@@ -373,7 +373,8 @@
     //确定每个接口的详细路径
     api.appendUrl = @"SY_COMM_FAVORITES_MARK_INFO.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+         MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        block(success,model._DATA_,message);
     }];
 }
 

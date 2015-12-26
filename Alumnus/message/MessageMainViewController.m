@@ -9,11 +9,13 @@
 #import "MessageMainViewController.h"
 #import "topScrollView.h"
 #import "MBProgressHUD+MJ.h"
+#import "ALNetWorkApi.h"
+#import "MessageModel.h"
 
 @interface MessageMainViewController ()<topScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)topScrollView *top;
 @property (nonatomic, strong)UITableView *table;
-
+@property (nonatomic, strong)NSMutableArray *dataList;
 @end
 
 @implementation MessageMainViewController
@@ -49,16 +51,36 @@
 {
     self.table = [[UITableView alloc]init];
     self.table.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:self.table];
+    self.table.delegate = self;
+    self.table.dataSource = self;
     self.table.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
+        [self loadData];
     }];
+    self.top.content = self.table;
 }
 
 //获取数据
 - (void)loadData
 {
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@"866769021414134" forKey:@"mobileDeviceId"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@"1" forKey:@"1"];
+    [params setValue:@"15" forKey:@"_ROWNUM_"];
+    [params setValue:@"1" forKey:@"NOWPAGE"];
+    [MBProgressHUD showMessage:@"正在加载"];
+    [ALNetWorkApi infoWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+        self.dataList = [NSMutableArray array];
+        NSMutableArray *temp = [NSMutableArray array];
+        for (NSDictionary *dict in (NSArray *)responseData) {
+            MessageModel *model = [MessageModel getEntityFromDic:dict];
+            [temp addObject:model];
+        }
+        self.dataList = temp;
+        [self.table reloadData];
+        [self.table.header endRefreshing];
+        [MBProgressHUD hideHUD];
+    }];
 }
 
 //刷新视图
@@ -69,12 +91,32 @@
     self.top.frame = CGRectMake(0, 64,SIZEWIDTH , SIZEHEIGHT - 64 - 50);
     self.top.delegate = self;
     self.top.content = self.table;
+    
+    self.table.frame = CGRectMake(0, -13, SIZEWIDTH, SIZEHEIGHT - 64 -44 - 50);
 
     [self.view addSubview:self.top];
 }
 #pragma mark - public api
 
 #pragma mark - appleDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    MessageModel *model = self.dataList[indexPath.row];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"messageCell"];
+    }
+    cell.textLabel.text = model.SERV_ID__NAME;
+    cell.detailTextLabel.text = model.DATA_OWNER__NAME;
+    
+    return cell;
+}
 
 #pragma mark - customDelegate
 - (void)topScrollViewDidClickButtonIndex:(NSUInteger)index

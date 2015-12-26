@@ -147,6 +147,7 @@
 		3591049A1C2E7BEE007E88BB /* AddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359104991C2E7BEE007E88BB /* AddressBookModel.m */; };
 		3591049D1C2E82A6007E88BB /* AddressSecModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591049C1C2E82A6007E88BB /* AddressSecModel.m */; };
 		359104A01C2E82C3007E88BB /* AddressPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591049F1C2E82C3007E88BB /* AddressPersonModel.m */; };
+		359104A31C2E870B007E88BB /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359104A21C2E870B007E88BB /* MessageModel.m */; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -448,6 +449,8 @@
 		3591049C1C2E82A6007E88BB /* AddressSecModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressSecModel.m; sourceTree = "<group>"; };
 		3591049E1C2E82C3007E88BB /* AddressPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPersonModel.h; sourceTree = "<group>"; };
 		3591049F1C2E82C3007E88BB /* AddressPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPersonModel.m; sourceTree = "<group>"; };
+		359104A11C2E870B007E88BB /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		359104A21C2E870B007E88BB /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		35D474C11BA9C3D500F934A1 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		35D474C41BA9C87200F934A1 /* ALUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUserDefault.h; sourceTree = "<group>"; };
@@ -1251,6 +1254,8 @@
 			children = (
 				596EB9401B818C7A0043E62D /* MessageMainViewController.h */,
 				596EB9411B818C7A0043E62D /* MessageMainViewController.m */,
+				359104A11C2E870B007E88BB /* MessageModel.h */,
+				359104A21C2E870B007E88BB /* MessageModel.m */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -1698,6 +1703,7 @@
 				289DF8CB1BEDE955007A4C20 /* DocumentChooseSegView.m in Sources */,
 				596EB9421B818C7A0043E62D /* MessageMainViewController.m in Sources */,
 				281040CF1BABAF8B00C43352 /* KSYCommonButtonWithGreen.m in Sources */,
+				359104A31C2E870B007E88BB /* MessageModel.m in Sources */,
 				281963CC1BAA52B00069EC84 /* MydateIndexViewController.m in Sources */,
 				3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
