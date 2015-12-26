@@ -10,7 +10,7 @@
 #define Alumnus_MyConfig_h
 
 //域名
-#define API @"http://192.168.159.1:8081/"
+#define API @"https://192.168.159.1:8081/"
 
 //版本号
 #define VERSION @"1.0"

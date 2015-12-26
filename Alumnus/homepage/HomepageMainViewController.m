@@ -17,6 +17,7 @@
 #import "AddressBookVc.h"
 #import <MessageUI/MessageUI.h>
 #import "MyCollectionIndexViewController.h"
+#import "UserHomePageModel.h"
 #define modelMargin (LEFTEDGE/2)
 
 @interface HomepageMainViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>
@@ -44,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    _userModleArray = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];
+    _userModleArray = [[NSMutableArray alloc] init];
     [self addAllSubViews];
     [self changeModelByUserInfo];
     
@@ -84,17 +85,99 @@
 }
 #pragma mark ------------------------------根据用户信息配置模块------------------------------------------
 -(void)changeModelByUserInfo{
-#warning 数据先写死。后期根据接口内容改变
-    userModelNum = _userModleArray.count;
-    NSInteger page = (userModelNum%9!=0)?userModelNum/9+1:userModelNum/9;   //计算布局
-    fuctionChangeControl.currentPage = 1;
-    fuctionChangeControl.numberOfPages = page;
-    fuctionModelScrollView.contentSize = CGSizeMake(SIZEWIDTH*fuctionChangeControl.numberOfPages,0);
-    [self addModel];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"deviceId"] forKey:@"mobileDeviceId"];
+    [dict setValue:@"true" forKey:@"_IS_DES_"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [dict setValue:[NSString stringWithFormat:@"AND USER_CODE = '%@'",[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"]] forKey:@"_WHERE_"];
+    [ALNetWorkApi getUserHomepageDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+        if (success) {
+            //NSLog(@"array count = %@",responseData);
+            NSArray *dic = responseData;
+            UserHomePageModel *model = [UserHomePageModel getEntityFromDic:dic[0]];
+            if (model.ONE_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.ONE_ITEMCODE]];
+            }
+            if (model.TWO_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.TWO_ITEMCODE]];
+            }
+            if (model.THREE_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.THREE_ITEMCODE]];
+            }
+            if (model.FOUR_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.FOUR_ITEMCODE]];
+            }
+            if (model.FIVE_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.FIVE_ITEMCODE]];
+            }
+            if (model.SIX_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.SIX_ITEMCODE]];
+            }
+            if (model.SEVEN_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.SEVEN_ITEMCODE]];
+            }
+            if (model.EIGHT_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.EIGHT_ITEMCODE]];
+            }
+            if (model.NINE_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.NINE_ITEMCODE]];
+            }
+            if (model.TEN_ITEMCODE.length!=0) {
+                [_userModleArray addObject:[self getHomePage:model.TEN_ITEMCODE]];
+            }
+            
+            
+            userModelNum = _userModleArray.count;
+            NSInteger page = (userModelNum%9!=0)?userModelNum/9+1:userModelNum/9;   //计算布局
+            fuctionChangeControl.currentPage = 1;
+            fuctionChangeControl.numberOfPages = page;
+            fuctionModelScrollView.contentSize = CGSizeMake(SIZEWIDTH*fuctionChangeControl.numberOfPages,0);
+            [self addModel];
+            
+        }else{
+            NSLog(@"responseData - %@ message%@",responseData,message);
+            
+        }
+        
+    }];
+
     
     
     
     
+}
+-(NSString *)getHomePage:(NSString *)str{
+    if ([str isEqual:@"item_wddb"]) {
+        return @"1";
+    }
+    else if ([str isEqual:@"item_wdhy"]){
+        return @"2";
+    }
+    else if ([str isEqual:@"item_wdrc"]){
+        return @"3";
+    }
+    else if ([str isEqual:@"item_wdrw"]){
+        return @"4";
+    }
+    else if ([str isEqual:@"item_tdxz"]){
+        return @"5";
+    }
+    else if ([str isEqual:@"item_wdyj"]){
+        return @"6";
+    }
+    else if ([str isEqual:@"item_bwl"]){
+        return @"7";
+    }
+    else if ([str isEqual:@"item_txl"]){
+        return @"8";
+    }
+    else if ([str isEqual:@"item_wdsc"]){
+        return @"9";
+    }
+    else if ([str isEqual:@"item_bwlwww"]){
+        return @"10";
+    }
+    return str;
 }
 #pragma mark ------------------------------配置模块(可能需要传参)------------------------------------------
 -(void)addModel{

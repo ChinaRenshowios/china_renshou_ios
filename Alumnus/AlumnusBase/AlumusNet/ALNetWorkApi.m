@@ -305,6 +305,8 @@
     //确定每个接口的详细路径
     api.appendUrl = @"MOBILE_SY_ORG_DEPT.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        NSLog(@" %d\n\n",model._DATA_.count);
         block(success,responseData,message);
     }];
 }
@@ -501,5 +503,19 @@
         block(success,responseData,message);
     }];
 }
-
+/*
+ 九宫格:
+ */
++(void)getUserHomepageDict:(NSDictionary *)dic withResponse:(responseDataBlock)block{
+    ALBaseApi *api = [self buildBaseApi];
+    api.bodyDic = dic;
+    //根据确定请求方式
+    api.requestMeth = ALRequestMethodPost;
+    //确定每个接口的详细路径
+    api.appendUrl = @"MOBILE_GZPT_ITEM_USER.finds.do";
+    [api sendData:^(BOOL success, id responseData, NSString *message) {
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        block(success,model._DATA_,message);
+    }];
+}
 @end

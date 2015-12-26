@@ -137,6 +137,9 @@
  备忘录:
  */
 + (void)myUnforgetWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
-
+/*
+ 九宫格:
+ */
++(void)getUserHomepageDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
 
 @end
