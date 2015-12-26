@@ -127,10 +127,6 @@
 		351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C20701BA87DFB00454CB2 /* MBProgressHUD.m */; };
 		3573A75F1BD3523800F9A1F8 /* ALBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A75E1BD3523800F9A1F8 /* ALBaseTable.m */; };
 		3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7621BD375B800F9A1F8 /* MeetingAdd.m */; };
-		3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7651BD3770300F9A1F8 /* AddressBookVc.m */; };
-		3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7681BD3860800F9A1F8 /* AddressSecVc.m */; };
-		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; };
-		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; };
 		3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */; };
 		3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */; };
 		3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */; };
@@ -143,6 +139,13 @@
 		3573A7991BEF597E00F9A1F8 /* MyMeetingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */; };
 		3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */; };
 		3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */; };
+		359104941C2E7BD9007E88BB /* AddressBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591048D1C2E7BD9007E88BB /* AddressBookVc.m */; };
+		359104951C2E7BD9007E88BB /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591048F1C2E7BD9007E88BB /* AddressPersonInfo.m */; };
+		359104961C2E7BD9007E88BB /* AddressSecVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 359104911C2E7BD9007E88BB /* AddressSecVc.m */; };
+		359104971C2E7BD9007E88BB /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 359104931C2E7BD9007E88BB /* SwitchBtn.m */; };
+		3591049A1C2E7BEE007E88BB /* AddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359104991C2E7BEE007E88BB /* AddressBookModel.m */; };
+		3591049D1C2E82A6007E88BB /* AddressSecModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591049C1C2E82A6007E88BB /* AddressSecModel.m */; };
+		359104A01C2E82C3007E88BB /* AddressPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591049F1C2E82C3007E88BB /* AddressPersonModel.m */; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -403,14 +406,6 @@
 		3573A7601BD3530200F9A1F8 /* ALKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALKit.h; sourceTree = "<group>"; };
 		3573A7611BD375B800F9A1F8 /* MeetingAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingAdd.h; path = Alumnus/AlumnusBase/AlumusBaseKit/MeetingAdd.h; sourceTree = SOURCE_ROOT; };
 		3573A7621BD375B800F9A1F8 /* MeetingAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingAdd.m; path = Alumnus/AlumnusBase/AlumusBaseKit/MeetingAdd.m; sourceTree = SOURCE_ROOT; };
-		3573A7641BD3770300F9A1F8 /* AddressBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressBookVc.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressBookVc.h; sourceTree = SOURCE_ROOT; };
-		3573A7651BD3770300F9A1F8 /* AddressBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressBookVc.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressBookVc.m; sourceTree = SOURCE_ROOT; };
-		3573A7671BD3860800F9A1F8 /* AddressSecVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressSecVc.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressSecVc.h; sourceTree = SOURCE_ROOT; };
-		3573A7681BD3860800F9A1F8 /* AddressSecVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressSecVc.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressSecVc.m; sourceTree = SOURCE_ROOT; };
-		3573A76A1BD3863000F9A1F8 /* AddressPersonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressPersonInfo.h; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressPersonInfo.h; sourceTree = SOURCE_ROOT; };
-		3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressPersonInfo.m; path = Alumnus/AlumnusBase/AlumusBaseKit/AddressPersonInfo.m; sourceTree = SOURCE_ROOT; };
-		3573A76D1BD3985D00F9A1F8 /* SwitchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchBtn.h; path = Alumnus/AlumnusBase/AlumusBaseKit/SwitchBtn.h; sourceTree = SOURCE_ROOT; };
-		3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchBtn.m; path = Alumnus/AlumnusBase/AlumusBaseKit/SwitchBtn.m; sourceTree = SOURCE_ROOT; };
 		3573A77A1BE62A3400F9A1F8 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		3573A77E1BEF58A100F9A1F8 /* MeetingBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingBookVc.h; sourceTree = "<group>"; };
@@ -436,6 +431,20 @@
 		3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingManagerModel.m; sourceTree = "<group>"; };
 		3573A79F1BEF634900F9A1F8 /* MyMeetingFinddingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMeetingFinddingModel.h; sourceTree = "<group>"; };
 		3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMeetingFinddingModel.m; sourceTree = "<group>"; };
+		3591048C1C2E7BD9007E88BB /* AddressBookVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookVc.h; sourceTree = "<group>"; };
+		3591048D1C2E7BD9007E88BB /* AddressBookVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookVc.m; sourceTree = "<group>"; };
+		3591048E1C2E7BD9007E88BB /* AddressPersonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPersonInfo.h; sourceTree = "<group>"; };
+		3591048F1C2E7BD9007E88BB /* AddressPersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPersonInfo.m; sourceTree = "<group>"; };
+		359104901C2E7BD9007E88BB /* AddressSecVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressSecVc.h; sourceTree = "<group>"; };
+		359104911C2E7BD9007E88BB /* AddressSecVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressSecVc.m; sourceTree = "<group>"; };
+		359104921C2E7BD9007E88BB /* SwitchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchBtn.h; sourceTree = "<group>"; };
+		359104931C2E7BD9007E88BB /* SwitchBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchBtn.m; sourceTree = "<group>"; };
+		359104981C2E7BEE007E88BB /* AddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModel.h; sourceTree = "<group>"; };
+		359104991C2E7BEE007E88BB /* AddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModel.m; sourceTree = "<group>"; };
+		3591049B1C2E82A6007E88BB /* AddressSecModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressSecModel.h; sourceTree = "<group>"; };
+		3591049C1C2E82A6007E88BB /* AddressSecModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressSecModel.m; sourceTree = "<group>"; };
+		3591049E1C2E82C3007E88BB /* AddressPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPersonModel.h; sourceTree = "<group>"; };
+		3591049F1C2E82C3007E88BB /* AddressPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPersonModel.m; sourceTree = "<group>"; };
 		35D474C11BA9C3D500F934A1 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		35D474C41BA9C87200F934A1 /* ALUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUserDefault.h; sourceTree = "<group>"; };
@@ -577,21 +586,6 @@
 				281040E21BABB2E600C43352 /* user_login_psw.png */,
 			);
 			path = user;
-			sourceTree = "<group>";
-		};
-		281963BF1BAA4FE40069EC84 /* mycommunicate */ = {
-			isa = PBXGroup;
-			children = (
-				3573A7641BD3770300F9A1F8 /* AddressBookVc.h */,
-				3573A7651BD3770300F9A1F8 /* AddressBookVc.m */,
-				3573A7671BD3860800F9A1F8 /* AddressSecVc.h */,
-				3573A7681BD3860800F9A1F8 /* AddressSecVc.m */,
-				3573A76A1BD3863000F9A1F8 /* AddressPersonInfo.h */,
-				3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */,
-				3573A76D1BD3985D00F9A1F8 /* SwitchBtn.h */,
-				3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */,
-			);
-			path = mycommunicate;
 			sourceTree = "<group>";
 		};
 		281963C01BAA4FE40069EC84 /* mydate */ = {
@@ -1055,6 +1049,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3591048B1C2E7BD9007E88BB /* mycommunicate */ = {
+			isa = PBXGroup;
+			children = (
+				3591048C1C2E7BD9007E88BB /* AddressBookVc.h */,
+				3591048D1C2E7BD9007E88BB /* AddressBookVc.m */,
+				3591048E1C2E7BD9007E88BB /* AddressPersonInfo.h */,
+				3591048F1C2E7BD9007E88BB /* AddressPersonInfo.m */,
+				359104901C2E7BD9007E88BB /* AddressSecVc.h */,
+				359104911C2E7BD9007E88BB /* AddressSecVc.m */,
+				359104921C2E7BD9007E88BB /* SwitchBtn.h */,
+				359104931C2E7BD9007E88BB /* SwitchBtn.m */,
+				359104981C2E7BEE007E88BB /* AddressBookModel.h */,
+				359104991C2E7BEE007E88BB /* AddressBookModel.m */,
+				3591049B1C2E82A6007E88BB /* AddressSecModel.h */,
+				3591049C1C2E82A6007E88BB /* AddressSecModel.m */,
+				3591049E1C2E82C3007E88BB /* AddressPersonModel.h */,
+				3591049F1C2E82C3007E88BB /* AddressPersonModel.m */,
+			);
+			path = mycommunicate;
+			sourceTree = "<group>";
+		};
 		35D474C71BA9C99000F934A1 /* AlumusAccountCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1211,10 +1226,10 @@
 		596EB9201B8186BC0043E62D /* homepage */ = {
 			isa = PBXGroup;
 			children = (
+				3591048B1C2E7BD9007E88BB /* mycommunicate */,
 				289DF73F1BEDB150007A4C20 /* mycollection */,
 				289DF7211BECC8EF007A4C20 /* myteamwork */,
 				282F97E01BD0B7AC00D103C8 /* myunforget */,
-				281963BF1BAA4FE40069EC84 /* mycommunicate */,
 				281963C01BAA4FE40069EC84 /* mydate */,
 				281963C11BAA4FE40069EC84 /* mymail */,
 				3573A77D1BEF58A100F9A1F8 /* myMeeting */,
@@ -1574,6 +1589,7 @@
 				351C205F1BA87C1800454CB2 /* ALFoundatuon.m in Sources */,
 				596EB9011B8176280043E62D /* ViewController.m in Sources */,
 				596EB9331B8188CC0043E62D /* ZCCommonButton.m in Sources */,
+				359104A01C2E82C3007E88BB /* AddressPersonModel.m in Sources */,
 				289DF7201BEB9691007A4C20 /* MyApplyMissionModel.m in Sources */,
 				3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */,
 				281040D51BABAF8B00C43352 /* ZCCommonTextField.m in Sources */,
@@ -1603,6 +1619,7 @@
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
 				2870201D1BF824AE0042BDFA /* UserModel.m in Sources */,
+				359104971C2E7BD9007E88BB /* SwitchBtn.m in Sources */,
 				289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */,
@@ -1613,6 +1630,7 @@
 				281040D41BABAF8B00C43352 /* KSYWebWithNoNaviViewController.m in Sources */,
 				289DF8B71BEDD9AB007A4C20 /* KnowCenterCollectionViewController.m in Sources */,
 				289DF8C61BEDE933007A4C20 /* AskAndAnswerChooseSegView.m in Sources */,
+				359104951C2E7BD9007E88BB /* AddressPersonInfo.m in Sources */,
 				289DF73E1BECF506007A4C20 /* MyUnforgotDetailViewController.m in Sources */,
 				28E7FED81BE487160080EB9A /* KSYMyMissonCollectionViewCell.m in Sources */,
 				351C20591BA87C1800454CB2 /* ALDaoBase.m in Sources */,
@@ -1641,6 +1659,7 @@
 				289DF7311BECCE7F007A4C20 /* TeamWorkResponseModel.m in Sources */,
 				2850E60B1B84A99200EAE87C /* KnowledgeCenterViewController.m in Sources */,
 				3573A7631BD375B800F9A1F8 /* MeetingAdd.m in Sources */,
+				359104941C2E7BD9007E88BB /* AddressBookVc.m in Sources */,
 				351C20641BA87C1800454CB2 /* UIBarButtonItem+Extension.m in Sources */,
 				28B6357F1BAF977C00CA2D80 /* YLCheckToUnlockViewController.m in Sources */,
 				35EC36EC1BCA27B50002F4BF /* testModel.m in Sources */,
@@ -1648,8 +1667,6 @@
 				289DF8C81BEDE933007A4C20 /* KnowCenterHeadCollectionReusableView.m in Sources */,
 				282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */,
 				281040DD1BABB13000C43352 /* NJKWebViewProgress.m in Sources */,
-				3573A7661BD3770300F9A1F8 /* AddressBookVc.m in Sources */,
-				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
 				289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
 				287020271BF83EAB0042BDFA /* MyAskModel.m in Sources */,
@@ -1665,9 +1682,11 @@
 				596EB9451B818C8C0043E62D /* UserMainViewController.m in Sources */,
 				28681E3A1BB9002700E092DE /* ZCImagePickerViewController.m in Sources */,
 				596EB94A1B818D770043E62D /* WBNavigationController.m in Sources */,
+				3591049A1C2E7BEE007E88BB /* AddressBookModel.m in Sources */,
 				28CD8EDB1BCF48C100217E96 /* AddDataViewController.m in Sources */,
 				351C20581BA87C1800454CB2 /* ALTabBarController.m in Sources */,
 				28B635821BAF977C00CA2D80 /* YLSwipeLockView.m in Sources */,
+				359104961C2E7BD9007E88BB /* AddressSecVc.m in Sources */,
 				35D474D51BA9CA7900F934A1 /* ALBaseModel.m in Sources */,
 				281963C91BAA50800069EC84 /* MyWaitIndexViewController.m in Sources */,
 				289DF8CB1BEDE955007A4C20 /* DocumentChooseSegView.m in Sources */,
@@ -1677,7 +1696,6 @@
 				3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */,
 				281040D71BABAF8B00C43352 /* ZCTextFieldOnlyNum.m in Sources */,
 				289DF7461BEDB2A3007A4C20 /* MyCollectCollectionViewController.m in Sources */,
-				3573A7691BD3860800F9A1F8 /* AddressSecVc.m in Sources */,
 				3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */,
 				28B635811BAF977C00CA2D80 /* YLSwipeLockNodeView.m in Sources */,
 				289DF8BA1BEDD9C4007A4C20 /* KnowCenterCollectionViewCell.m in Sources */,
@@ -1686,6 +1704,7 @@
 				289DF7271BECCA9B007A4C20 /* MyTeamWorkCollectionViewController.m in Sources */,
 				289DF7381BECEF00007A4C20 /* MyUnforgotResponseModel.m in Sources */,
 				351C20611BA87C1800454CB2 /* NSDate+Extension.m in Sources */,
+				3591049D1C2E82A6007E88BB /* AddressSecModel.m in Sources */,
 				35D474E31BA9D5D700F934A1 /* ALAddressBookViewController.m in Sources */,
 				35D474E81BA9D61500F934A1 /* ALAddressBook.m in Sources */,
 				3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */,
@@ -1693,7 +1712,6 @@
 				35EC36EF1BCEC87F0002F4BF /* MyMeetingVC.m in Sources */,
 				288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */,
 				281963CF1BAA57CC0069EC84 /* KSYPresentCommonViewController.m in Sources */,
-				3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */,
 				282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */,
 				351C20631BA87C1800454CB2 /* NSString+Extension.m in Sources */,
 				281040D31BABAF8B00C43352 /* KSYWebViewController.m in Sources */,

@@ -9,12 +9,14 @@
 #import "AddressBookVc.h"
 #import "AddressSecVc.h"
 #import "ALNetWorkApi.h"
+#import "MBProgressHUD+MJ.h"
+#import "AddressBookModel.h"
 
 @interface AddressBookVc ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)UIView *top;
 @property (nonatomic, strong)UISearchBar *searchBar;
 @property (nonatomic, strong)UITableView *bookTable;
-@property (nonatomic, strong)NSArray *dataList;
+@property (nonatomic, strong)NSMutableArray *dataList;
 @property (nonatomic, strong)UITableView *searchTabel;
 @property (nonatomic, strong)UIView *coverView;
 
@@ -22,17 +24,6 @@
 
 @implementation AddressBookVc
 #pragma lazy
-- (NSArray *)dataList
-{
-    return @[
-             @"总裁室",
-             @"办公室|董事会办公室",
-             @"战略发展部",
-             @"人力资源部",
-             @"财务会计部",
-             @"投资管理部",
-             ];
-}
 
 - (UITableView *)searchTabel
 {
@@ -42,8 +33,7 @@
         _searchTabel.dataSource = self;
         _searchTabel.tableFooterView = [[UIView alloc]init];
         _searchTabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
-  
-        
+        _searchTabel.hidden = YES;
         [self.view addSubview:_searchTabel];
         
     }
@@ -58,10 +48,7 @@
         _bookTable.delegate = self;
         _bookTable.dataSource = self;
         _bookTable.tableFooterView = [[UIView alloc]init];
-        _bookTable.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [self loadData];
-            NSLog(@"刷新数据");
-        }];
+        [self.view addSubview:_bookTable];
     }
     return _bookTable;
 }
@@ -129,12 +116,18 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@"866769021414134" forKey:@"mobileDeviceId"];
     [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
-    [params setValue:@" AND DEPT_PCODE = '3rin6giCR9vUIv6kHIO3ex' and DEPT_CODE != ODEPT_CODE" forKey:@"_WHERE_"];
-
+    [params setValue:@"  AND ODEPT_CODE = DEPT_CODE" forKey:@"_WHERE_"];
+    [MBProgressHUD showMessage:@"正在加载"];
     [ALNetWorkApi mobileDeptWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-       
+        self.dataList = [NSMutableArray array];
+        NSMutableArray *temp = [NSMutableArray array];
+        for (NSDictionary *dict in (NSArray *)responseData) {
+            AddressBookModel *model = [AddressBookModel getEntityFromDic:dict];
+            [temp addObject:model];
+        }
+        self.dataList = temp;
         [self.bookTable reloadData];
-        [self.bookTable.header endRefreshing];
+        [MBProgressHUD hideHUD];
     }];
 }
 
@@ -159,19 +152,22 @@
 {
     if (tableView == self.searchTabel) {
         return 3;
+    }else if (tableView == self.bookTable){
+        return self.dataList.count;
     }
-    return self.dataList.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
     if (tableView == self.bookTable) {
-         cell = [tableView dequeueReusableCellWithIdentifier:@"addressBookCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"addressBookCell"];
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"addressBookCell"];
         }
-        cell.textLabel.text = self.dataList[indexPath.row];
+        AddressBookModel *model = self.dataList[indexPath.row];
+        cell.textLabel.text = model.DEPT_NAME;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         UIView *bc = [[UIView alloc]initWithFrame:cell.frame];
         bc.backgroundColor = [UIColor orangeColor];
@@ -195,7 +191,7 @@
     if (searchText.length == 0) {
         self.searchTabel.hidden = YES;
     }
-
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

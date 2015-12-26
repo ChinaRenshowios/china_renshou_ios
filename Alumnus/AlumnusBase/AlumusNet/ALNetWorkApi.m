@@ -36,7 +36,7 @@
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
     api.appendUrl = @"PT_ORG_USER_MOBILE.mobileLogin.do";
-//    api.appendUrl =@"";
+    //    api.appendUrl =@"";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];
@@ -137,7 +137,7 @@
     //根据确定请求方式
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
-
+    
     api.appendUrl = @"PT_MEETING.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         NSDictionary *resdic = responseData;
@@ -223,7 +223,7 @@
         else{
             NSLog(@"%@",model._MSG_);
         }
-
+        
     }];
 }
 
@@ -305,7 +305,8 @@
     //确定每个接口的详细路径
     api.appendUrl = @"MOBILE_SY_ORG_DEPT.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        block(success,model._DATA_,message);
     }];
 }
 
@@ -321,7 +322,8 @@
     //确定每个接口的详细路径
     api.appendUrl = @"MOBILE_SY_ORG_DEPT.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        block(success,model._DATA_,message);
     }];
 }
 
@@ -337,7 +339,8 @@
     //确定每个接口的详细路径
     api.appendUrl = @"MOBILE_SY_ORG_USER.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:responseData];
+        block(success,model._DATA_,message);
     }];
 }
 

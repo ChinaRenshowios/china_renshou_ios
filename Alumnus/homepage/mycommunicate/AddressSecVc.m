@@ -9,12 +9,14 @@
 #import "AddressSecVc.h"
 #import "AddressPersonInfo.h"
 #import "SwitchBtn.h"
+#import "MBProgressHUD+MJ.h"
+#import "AddressSecModel.h"
 
 @interface AddressSecVc ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate,SwitchBtnDelegate>
 @property (nonatomic, strong)UIView *top;
 @property (nonatomic, strong)UISearchBar *searchBar;
 @property (nonatomic, strong)UITableView *searchTabel;
-@property (nonatomic, strong)NSArray *dataList;
+@property (nonatomic, strong)NSMutableArray *dataList;
 @property (nonatomic, strong)UITableView *bookTable;
 @property (nonatomic, strong)UIView *switchView;
 @property (nonatomic, strong)SwitchBtn *switchBtn;
@@ -24,20 +26,6 @@
 @implementation AddressSecVc
 
 #pragma lazy
-
-- (NSArray *)dataList
-{
-    return @[@{
-                 @"name":@"李先生",
-                 @"position":@"项目经理",
-                 @"department":@"投资管理部",
-                 @"phone":@"13911111321",
-                 @"icon":@""
-                 },
-             
-             ];
-}
-
 - (SwitchBtn *)switchBtn
 {
     if (!_switchBtn) {
@@ -103,7 +91,6 @@
 {
     AddressSecVc *vc = [self init];
     vc.titleString = title;
-    
     return vc;
 }
 
@@ -138,7 +125,23 @@
 //获取数据
 - (void)loadData
 {
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@"866769021414134" forKey:@"mobileDeviceId"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@" AND DEPT_PCODE = '3rin6giCR9vUIv6kHIO3ex' and DEPT_CODE != ODEPT_CODE" forKey:@"_WHERE_"];
+    [MBProgressHUD showMessage:@"正在加载"];
+    [ALNetWorkApi mobileThisDeptWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+        self.dataList = [NSMutableArray array];
+        NSMutableArray *temp = [NSMutableArray array];
+        for (NSDictionary *dict in (NSArray *)responseData) {
+            AddressSecModel *model = [AddressSecModel getEntityFromDic:dict];
+            [temp addObject:model];
+        }
+        self.dataList = temp;
+        [self.bookTable reloadData];
+        [MBProgressHUD hideHUD];
+    }];
+
 }
 
 //刷新视图
@@ -164,13 +167,14 @@
     if (tableView == self.searchTabel) {
         return 3;
     }
-    return 10;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
     if (tableView == self.bookTable) {
+        AddressSecModel *model = self.dataList[indexPath.row];
         cell = [tableView dequeueReusableCellWithIdentifier:@"addressBookCell"];
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"addressBookCell"];
