@@ -8,6 +8,8 @@
 
 #import "DataIndexCollectionViewController.h"
 #import "DataIndexCollectionViewCell.h"
+#import "MyDataModel.h"
+#import "KSYWebViewController.h"
 
 @interface DataIndexCollectionViewController ()
 
@@ -65,10 +67,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DataIndexCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.startTimeLabel.text = @"12:00";
-    cell.endTimeLabel.text = @"13:00";
-    cell.edgeView.backgroundColor = [UIColor blueColor];
-    cell.TitleLabel.text = @"工作计划";
+    MyDataModel *model = [_dataSource objectAtIndex:indexPath.row];
+    
+    cell.startTimeLabel.text = [NSString stringWithFormat:@"%@~%@",model.START_TIME,model.END_TIME];
+    cell.TitleLabel.text = model.CAL_TITLE;
     
     
     
@@ -77,33 +79,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+#pragma mark <UICollectionViewDelegate>
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyDataModel *model = [_dataSource objectAtIndex:indexPath.row];
+    KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+    if (model.CAL_USER_ID.length!=0) {
+        webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/sy/base/view/stdCardView.jsp?sId=SY_COMM_CAL_REC_V%%26pkCode=%@",model.CAL_USER_ID]];
+        NSLog(@"%@",webVC.url);
+        [self presentViewController:webVC animated:NO completion:nil];
+    }
+    else{
+        
+    }
+  
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

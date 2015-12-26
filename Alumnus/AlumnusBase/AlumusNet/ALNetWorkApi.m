@@ -212,7 +212,17 @@
     //确定每个接口的详细路径
     api.appendUrl = @"SY_COMM_CAL_REC_V.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
-        block(success,responseData,message);
+        NSDictionary *resdic = responseData;
+        MyMissionResponseModel *model = [MyMissionResponseModel getEntityFromDic:resdic];
+        NSLog(@"%@",model._MSG_);
+        if ([model._MOBILE_RES_CODE_ isEqual:@"_SUCC_"]) {
+            NSLog(@"%d",model._DATA_.count);
+            block(success,model._DATA_,message);
+        }
+        else{
+            NSLog(@"%@",model._MSG_);
+        }
+
     }];
 }
 
@@ -424,7 +434,7 @@
     //根据确定请求方式
     api.requestMeth = ALRequestMethodPost;
     //确定每个接口的详细路径
-    api.appendUrl = @"SY_COMM_ZHIDAO_USER.query.do";
+    api.appendUrl = @"SY_COMM_ZHIDAO_MYASK.query.do";
     [api sendData:^(BOOL success, id responseData, NSString *message) {
         block(success,responseData,message);
     }];
@@ -433,7 +443,17 @@
 /*
  我关注的问题：
  */
-//+ (void)allQuestionsWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
++ (void)myConcernQuestionsWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block{
+    ALBaseApi *api = [self buildBaseApi];
+    api.bodyDic = dic;
+    //根据确定请求方式
+    api.requestMeth = ALRequestMethodPost;
+    //确定每个接口的详细路径
+    api.appendUrl = @"PT_ZHIDAO_MY_QUESTION_FOLLOW.query.do";
+    [api sendData:^(BOOL success, id responseData, NSString *message) {
+        block(success,responseData,message);
+    }];
+}
 /*
  全部问题：
  */

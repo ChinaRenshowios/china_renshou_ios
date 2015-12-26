@@ -61,6 +61,10 @@
 		286F5D741BBB892D005A051A /* know_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 286F5D6D1BBB892D005A051A /* know_set.png */; };
 		286F5D831BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D821BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m */; };
 		286F5D861BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5D851BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m */; };
+		2870201D1BF824AE0042BDFA /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2870201C1BF824AE0042BDFA /* UserModel.m */; };
+		287020201BF825BF0042BDFA /* UserResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2870201F1BF825BF0042BDFA /* UserResponseModel.m */; };
+		287020241BF82CD50042BDFA /* MyDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287020231BF82CD50042BDFA /* MyDataModel.m */; };
+		287020271BF83EAB0042BDFA /* MyAskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287020261BF83EAB0042BDFA /* MyAskModel.m */; };
 		288247BE1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */; };
 		288247C11BA820E0007BDAA0 /* KSYHomePageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288247C01BA820E0007BDAA0 /* KSYHomePageButtonView.m */; };
 		289DF7131BEB1741007A4C20 /* MyWaitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DF7121BEB1741007A4C20 /* MyWaitModel.m */; };
@@ -128,17 +132,17 @@
 		3573A76C1BD3863000F9A1F8 /* AddressPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76B1BD3863000F9A1F8 /* AddressPersonInfo.m */; };
 		3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A76E1BD3985D00F9A1F8 /* SwitchBtn.m */; };
 		3573A77C1BE62A3400F9A1F8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77B1BE62A3400F9A1F8 /* UIImage+Extension.m */; };
-		3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */; settings = {ASSET_TAGS = (); }; };
-		3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */; settings = {ASSET_TAGS = (); }; };
-		3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7831BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		3573A78D1BEF58A100F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7851BEF58A100F9A1F8 /* MeetingRoomTable.m */; settings = {ASSET_TAGS = (); }; };
-		3573A78E1BEF58A100F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7871BEF58A100F9A1F8 /* MeetingTimeTable.m */; settings = {ASSET_TAGS = (); }; };
-		3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7891BEF58A100F9A1F8 /* MyMeetingModel.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7951BEF594000F9A1F8 /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7921BEF594000F9A1F8 /* topScrollBtn.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7961BEF594000F9A1F8 /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7941BEF594000F9A1F8 /* topScrollView.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7991BEF597E00F9A1F8 /* MyMeetingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */; settings = {ASSET_TAGS = (); }; };
-		3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */; settings = {ASSET_TAGS = (); }; };
-		3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */; settings = {ASSET_TAGS = (); }; };
+		3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A77F1BEF58A100F9A1F8 /* MeetingBookVc.m */; };
+		3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7811BEF58A100F9A1F8 /* MeetingManageCell.m */; };
+		3573A78C1BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7831BEF58A100F9A1F8 /* MeetingNoticeCellTableViewCell.m */; };
+		3573A78D1BEF58A100F9A1F8 /* MeetingRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7851BEF58A100F9A1F8 /* MeetingRoomTable.m */; };
+		3573A78E1BEF58A100F9A1F8 /* MeetingTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7871BEF58A100F9A1F8 /* MeetingTimeTable.m */; };
+		3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7891BEF58A100F9A1F8 /* MyMeetingModel.m */; };
+		3573A7951BEF594000F9A1F8 /* topScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7921BEF594000F9A1F8 /* topScrollBtn.m */; };
+		3573A7961BEF594000F9A1F8 /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7941BEF594000F9A1F8 /* topScrollView.m */; };
+		3573A7991BEF597E00F9A1F8 /* MyMeetingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7981BEF597E00F9A1F8 /* MyMeetingManager.m */; };
+		3573A79E1BEF630B00F9A1F8 /* MyMeetingManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A79D1BEF630B00F9A1F8 /* MyMeetingManagerModel.m */; };
+		3573A7A11BEF634900F9A1F8 /* MyMeetingFinddingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573A7A01BEF634900F9A1F8 /* MyMeetingFinddingModel.m */; };
 		35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C21BA9C3D500F934A1 /* UIColor+Extension.m */; };
 		35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474C51BA9C87200F934A1 /* ALUserDefault.m */; };
 		35D474CF1BA9CA3700F934A1 /* AlumusAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D474CE1BA9CA3700F934A1 /* AlumusAccountViewController.m */; };
@@ -268,6 +272,14 @@
 		286F5D821BBE30E4005A051A /* CommonWithHeadFootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWithHeadFootCollectionViewController.m; sourceTree = "<group>"; };
 		286F5D841BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWithHeadFootCollectionViewCell.h; sourceTree = "<group>"; };
 		286F5D851BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWithHeadFootCollectionViewCell.m; sourceTree = "<group>"; };
+		2870201B1BF824AE0042BDFA /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		2870201C1BF824AE0042BDFA /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		2870201E1BF825BF0042BDFA /* UserResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserResponseModel.h; sourceTree = "<group>"; };
+		2870201F1BF825BF0042BDFA /* UserResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserResponseModel.m; sourceTree = "<group>"; };
+		287020221BF82CD50042BDFA /* MyDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataModel.h; sourceTree = "<group>"; };
+		287020231BF82CD50042BDFA /* MyDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataModel.m; sourceTree = "<group>"; };
+		287020251BF83EAB0042BDFA /* MyAskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAskModel.h; sourceTree = "<group>"; };
+		287020261BF83EAB0042BDFA /* MyAskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAskModel.m; sourceTree = "<group>"; };
 		288247BC1BA7EE48007BDAA0 /* KSYCommonNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYCommonNaviViewController.h; sourceTree = "<group>"; };
 		288247BD1BA7EE48007BDAA0 /* KSYCommonNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYCommonNaviViewController.m; sourceTree = "<group>"; };
 		288247BF1BA820E0007BDAA0 /* KSYHomePageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYHomePageButtonView.h; sourceTree = "<group>"; };
@@ -585,6 +597,7 @@
 		281963C01BAA4FE40069EC84 /* mydate */ = {
 			isa = PBXGroup;
 			children = (
+				287020211BF82CC60042BDFA /* model */,
 				281963CA1BAA52B00069EC84 /* MydateIndexViewController.h */,
 				281963CB1BAA52B00069EC84 /* MydateIndexViewController.m */,
 				28CD8ED31BCF43FF00217E96 /* DataIndexCollectionViewController.h */,
@@ -697,6 +710,15 @@
 			path = knowledge;
 			sourceTree = "<group>";
 		};
+		287020211BF82CC60042BDFA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				287020221BF82CD50042BDFA /* MyDataModel.h */,
+				287020231BF82CD50042BDFA /* MyDataModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		288247BB1BA7ED66007BDAA0 /* CommonVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +826,8 @@
 				289DF8BD1BEDDA00007A4C20 /* AskAndAnswerModel.m */,
 				283E82EC1BEDF18700A15BCB /* MyUploadDocumentModel.h */,
 				283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */,
+				287020251BF83EAB0042BDFA /* MyAskModel.h */,
+				287020261BF83EAB0042BDFA /* MyAskModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1218,6 +1242,10 @@
 				596EB9441B818C8C0043E62D /* UserMainViewController.m */,
 				281040B91BABAE6300C43352 /* LoginViewController.h */,
 				281040BA1BABAE6300C43352 /* LoginViewController.m */,
+				2870201B1BF824AE0042BDFA /* UserModel.h */,
+				2870201C1BF824AE0042BDFA /* UserModel.m */,
+				2870201E1BF825BF0042BDFA /* UserResponseModel.h */,
+				2870201F1BF825BF0042BDFA /* UserResponseModel.m */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -1534,6 +1562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				351C205C1BA87C1800454CB2 /* ALBaseApi.m in Sources */,
+				287020241BF82CD50042BDFA /* MyDataModel.m in Sources */,
 				35D474C31BA9C3D500F934A1 /* UIColor+Extension.m in Sources */,
 				351C20601BA87C1800454CB2 /* Foundation+Log.m in Sources */,
 				289DF7161BEB4428007A4C20 /* MyWaitReponseModel.m in Sources */,
@@ -1573,6 +1602,7 @@
 				35E957E51BAAFFE60029B372 /* ZGSlideModule.m in Sources */,
 				35EC36E91BCA19040002F4BF /* ALEncrypt.m in Sources */,
 				351C205D1BA87C1800454CB2 /* ALHttpTool.m in Sources */,
+				2870201D1BF824AE0042BDFA /* UserModel.m in Sources */,
 				289DF71D1BEB7D82007A4C20 /* MyMissonModel.m in Sources */,
 				351C20621BA87C1800454CB2 /* NSString+Emoji.m in Sources */,
 				3573A78F1BEF58A100F9A1F8 /* MyMeetingModel.m in Sources */,
@@ -1594,6 +1624,7 @@
 				35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */,
 				351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */,
 				289DF7241BECC919007A4C20 /* MyTeamWorkIndexViewController.m in Sources */,
+				287020201BF825BF0042BDFA /* UserResponseModel.m in Sources */,
 				351C205B1BA87C1800454CB2 /* SandboxFile.m in Sources */,
 				351C205E1BA87C1800454CB2 /* ALConst.m in Sources */,
 				286F5D861BBE310A005A051A /* CommonWithHeadFootCollectionViewCell.m in Sources */,
@@ -1621,6 +1652,7 @@
 				3573A76F1BD3985D00F9A1F8 /* SwitchBtn.m in Sources */,
 				289DF71A1BEB7B73007A4C20 /* MyMissionResponseModel.m in Sources */,
 				596EB92C1B81873D0043E62D /* DockController.m in Sources */,
+				287020271BF83EAB0042BDFA /* MyAskModel.m in Sources */,
 				35D474EB1BA9D66700F934A1 /* ALAddressBookManager.m in Sources */,
 				3573A78B1BEF58A100F9A1F8 /* MeetingManageCell.m in Sources */,
 				351C20731BA87DFB00454CB2 /* MBProgressHUD.m in Sources */,
@@ -1802,7 +1834,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70bfeef1-d7ef-441f-91af-70188f539228";
+				PROVISIONING_PROFILE = "800b932b-9f31-4c07-b337-6a6ef98d976e";
 			};
 			name = Debug;
 		};
@@ -1817,7 +1849,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70bfeef1-d7ef-441f-91af-70188f539228";
+				PROVISIONING_PROFILE = "800b932b-9f31-4c07-b337-6a6ef98d976e";
 			};
 			name = Release;
 		};

@@ -24,7 +24,7 @@
     [super viewDidLoad];
     NSLog(@"loadddddddd");
     self.view.backgroundColor = [UIColor whiteColor];
-    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,20, SIZEWIDTH, SIZEHEIGHT)];
+    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,64, SIZEWIDTH, SIZEHEIGHT-64)];
     NSURL *url = [NSURL URLWithString:_url];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
   //  [webView loadRequest:request];
@@ -40,7 +40,7 @@
     CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height - progressBarHeight, navigaitonBarBounds.size.width, progressBarHeight);
     _progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
     _progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    //[self.view bringSubviewToFront:self.nav];
+    [self.view bringSubviewToFront:self.nav];
 
 }
 - (void)viewWillAppear:(BOOL)animated

@@ -11,6 +11,8 @@
 #import "AskAndAnswerModel.h"
 #import "CommonWithHeadFootCollectionViewCell.h"
 #import "MyUploadDocumentModel.h"
+#import "MyAskModel.h"
+#import "KSYWebViewController.h"
 
 @interface KnowCenterCollectionViewController ()
 
@@ -71,9 +73,24 @@ static NSString * const documentCenterIdentifier = @"documentCenterCell";
         NSLog(@"问答中心");
         KnowCenterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:askCenterIdentifier forIndexPath:indexPath];
         if (_type == KSYKnowCenterShowTypeOfMyAsk) {
-            AskAndAnswerModel *model = _dataSource[indexPath.row];
-            cell.titleLabel.text = model.USER_DESC;
-            cell.timeLabel.text = model.USER_ID__NAME;
+            MyAskModel *model = _dataSource[indexPath.row];
+            cell.titleLabel.text = model.Q_TITLE;
+            cell.timeLabel.text = model.S_ATIME;
+        }
+        else if (_type == KSYKnowCenterShowTypeOfMyConsern){
+            MyAskModel *model = _dataSource[indexPath.row];
+            cell.titleLabel.text = model.Q_TITLE;
+            cell.timeLabel.text = model.S_ATIME;
+        }
+        else if (_type == KSYKnowCenterShowTypeOfAllQuestion){
+            MyAskModel *model = _dataSource[indexPath.row];
+            cell.titleLabel.text = model.Q_TITLE;
+            cell.timeLabel.text = model.S_ATIME;
+        }
+        else if (_type == KSYKnowCenterShowTypeOfWaitMeAnswer){
+            MyAskModel *model = _dataSource[indexPath.row];
+            cell.titleLabel.text = model.Q_TITLE;
+            cell.timeLabel.text = model.S_ATIME;
         }
         
         return cell;
@@ -96,34 +113,57 @@ static NSString * const documentCenterIdentifier = @"documentCenterCell";
 }
 
 #pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_type == KSYKnowCenterShowTypeOfMyUploadDocument) {
+        MyUploadDocumentModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_WENKU_DOCUMENT/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    else if(_type == KSYKnowCenterShowTypeOfPopularDocument){
+        MyUploadDocumentModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_WENKU_DOCUMENT/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    else if (_type == KSYKnowCenterShowTypeOfNewestDocument){
+        MyUploadDocumentModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_WENKU_DOCUMENT/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    else if (_type == KSYKnowCenterShowTypeOfMyAsk||_type == KSYKnowCenterShowTypeOfMyConsern||_type == KSYKnowCenterShowTypeOfAllQuestion||_type == KSYKnowCenterShowTypeOfWaitMeAnswer){
+        MyAskModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_ZHIDAO_QUESTION/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    
+    
 }
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
-
 @end

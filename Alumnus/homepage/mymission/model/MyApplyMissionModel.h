@@ -17,5 +17,5 @@
 @property(copy,nonatomic)NSString *INFO_ID__NAME;
 @property(copy,nonatomic)NSString *RENWU_USERS__NAME;
 @property(copy,nonatomic)NSString *RENWU_ID;
-
+@property(copy,nonatomic)NSString *_PK_;
 @end

@@ -12,4 +12,5 @@
 @property(copy,nonatomic)NSString *_OKCOUNT_;
 @property(copy,nonatomic)NSString *_MOBILE_RES_CODE_;
 @property(copy,nonatomic)NSMutableArray *_DATA_;
+@property(copy,nonatomic)NSString *_MSG_;
 @end

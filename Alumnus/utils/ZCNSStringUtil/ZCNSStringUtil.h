@@ -22,4 +22,5 @@
 + (NSString *)addUrl:(NSString *)string1 url2:(NSString *)string2;
 + (NSString *)timeToString:(NSTimeInterval)time;
 +(NSString *)filterHTML:(NSString *)html;
++(NSString *)getMainUrl:(NSString *)htmlurl;
 @end

@@ -16,5 +16,5 @@
 @property(copy,nonatomic)NSString *INFO_STATE__NAME;
 @property(copy,nonatomic)NSString *INFO_STATE;
 @property(copy,nonatomic)NSString *S_TDEPT__NAME;
-
+@property(copy,nonatomic)NSString *_PK_;
 @end

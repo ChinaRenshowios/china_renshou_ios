@@ -24,4 +24,5 @@
 @property(copy,nonatomic)NSString *DOCUMENT_CHNL__NAMET;
 @property(copy,nonatomic)NSString *S_CTIME;
 @property(copy,nonatomic)NSString *DOCUMENT_CHNL;
+@property(copy,nonatomic)NSString *_PK_;
 @end

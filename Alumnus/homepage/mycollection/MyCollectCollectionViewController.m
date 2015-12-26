@@ -10,6 +10,7 @@
 #import "MyInforCollectModel.h"
 #import "MyKnowCenterCollectModel.h"
 #import "MyCollectCollectionViewCell.h"
+#import "KSYWebViewController.h"
 
 @interface MyCollectCollectionViewController ()
 
@@ -82,6 +83,35 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_type == KSYCollectCollectionTypeOfKnowCenter) {
+        MyKnowCenterCollectModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_ZHIDAO_QUESTION/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    else{
+        MyKnowCenterCollectModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if (model._PK_.length!=0) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/cms/SY_COMM_INFOS/%@.html",model._PK_]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            
+        }
+    }
+    
+    
+}
 
 
 @end

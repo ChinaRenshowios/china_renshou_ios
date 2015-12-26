@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NJKWebViewProgress.h"
+#import "KSYCommonViewController.h"
 
-@interface KSYWebViewController : UIViewController<UIWebViewDelegate, NJKWebViewProgressDelegate>
+@interface KSYWebViewController : KSYCommonViewController<UIWebViewDelegate, NJKWebViewProgressDelegate>
 
 @property (strong,nonatomic) NSString *url;
 @property (strong,nonatomic) NSString *titleName;

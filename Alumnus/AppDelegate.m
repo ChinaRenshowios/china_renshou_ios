@@ -24,26 +24,7 @@
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setValue:@"00000000" forKey:@"loginName"];
-    [dict setValue:@"fb276fb0ed6cdd139bd678d3ace8614" forKey:@"password"];
-    [dict setValue:@"866769021414134" forKey:@"mobileDeviceId"];
-    [dict setValue:@"true" forKey:@"_IS_DES_"];
-    [ALNetWorkApi loginWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
-        if (success) {
-            NSDictionary *dic = responseData;
-            testModel *test = [testModel getEntityFromDic:dic];
-            NSLog(@"responseData - %@",test._MSG_);
-        }else{
-            NSLog(@"responseData - %@ message%@",responseData,message);
-            
-        }
-    }];
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault setObject:@"866769021414134" forKey:@"mobileDeviceId"];
-    [userDefault setObject:@"1Xvd5e5X50O8J0Ir-0zlwd" forKey:@"mobileUserCode"];
-    [userDefault setObject:@"1Xvd5e5X50O8J0Ir-0zlwd" forKey:@"OWNER_CODE"];
-    [userDefault synchronize];
+    
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"login"]){
         LoginViewController *loginVC = [[LoginViewController alloc] init];

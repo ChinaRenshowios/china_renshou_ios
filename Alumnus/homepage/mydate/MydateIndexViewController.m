@@ -10,9 +10,11 @@
 #import "CalendarView.h"
 #import "DataIndexCollectionViewController.h"
 #import "AddDataViewController.h"
+#import "MyDataModel.h"
+#import "KSYWebViewController.h"
 
 @interface MydateIndexViewController ()<CalendarDelegate,CalendarDataSource>{
-    UIScrollView *mainView;
+    UIView *mainView;
     UIButton *myDataButton;
     UIButton *shareDataButton;
     DataIndexCollectionViewController *collectionVC;
@@ -37,7 +39,7 @@
     [addButton addTarget:self action:@selector(didClickAddData) forControlEvents:UIControlEventTouchUpInside];
     [self.nav addSubview:addView];
 #pragma mark 定义滑动页面
-    mainView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, SIZEWIDTH, SIZEHEIGHT)];
+    mainView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SIZEWIDTH, SIZEHEIGHT)];
     [self.view addSubview:mainView];
     [self.view bringSubviewToFront:self.nav];
 #pragma mark 日历
@@ -78,11 +80,10 @@
     [shareDataButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [shareDataButton setTitle:@"共享日程" forState:UIControlStateNormal];
     [shareDataButton addTarget:self action:@selector(didClickShareData) forControlEvents:UIControlEventTouchUpInside];
-    [chooseView addSubview:shareDataButton];
+    //[chooseView addSubview:shareDataButton];
     [mainView addSubview:chooseView];
     ////  展示数据
     _datasource = [[NSMutableArray alloc] init];
-    [_datasource addObject:@"da"];
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.itemSize = CGSizeMake(SIZEWIDTH,50);
@@ -92,8 +93,8 @@
     flowLayout.minimumLineSpacing = paddingY;
     collectionVC = [[DataIndexCollectionViewController alloc] initWithCollectionViewLayout:flowLayout source:_datasource];
     collectionVC.type = @"1";
-    collectionVC.collectionView.scrollEnabled = NO;
-    collectionVC.collectionView.frame = CGRectMake(0,chooseView.frame.origin.y+chooseView.frame.size.height,SIZEWIDTH,collectionVC.collectionView.frame.size.height);
+    //collectionVC.collectionView.scrollEnabled = NO;
+    collectionVC.collectionView.frame = CGRectMake(0,chooseView.frame.origin.y+chooseView.frame.size.height,SIZEWIDTH,SIZEHEIGHT-(chooseView.frame.origin.y+chooseView.frame.size.height));
     collectionVC.collectionView.backgroundColor = VIEW_BG_COLOR_Light;
     [self addChildViewController:collectionVC];
     [mainView addSubview:collectionVC.collectionView];
@@ -110,8 +111,9 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)didClickAddData{
-    AddDataViewController *vc = [[AddDataViewController alloc] init];
+    KSYWebViewController *vc = [[KSYWebViewController alloc] init];
     vc.titleString = @"添加日程";
+    vc.url = [ZCNSStringUtil getMainUrl:@"/sy/base/view/stdCardView.jsp?sId=SY_COMM_CAL"];
     [self presentViewController:vc animated:YES completion:nil];
 }
 -(void)didClickMyData{
@@ -139,7 +141,38 @@
 
 -(void)dayChangedToDate:(NSDate *)selectedDate
 {
-    NSLog(@"dayChangedToDate %@(GMT)",selectedDate);
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    NSString *dataCreat = [formatter stringFromDate:selectedDate];
+    NSLog(@"dayChangedToDate %@",dataCreat);
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"mobileDeviceId"] forKey:@"mobileDeviceId"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [dict setValue:@"true" forKey:@"_IS_DES_"];
+    [dict setValue:[NSString stringWithFormat:@"and cal_start_time like '%@%%'",dataCreat] forKey:@"_WHERE_"];
+    [ALNetWorkApi myCalendarWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message){
+        if (success) {
+            
+            NSArray *dic = (NSArray *)responseData;
+            NSLog(@"%d",dic.count);
+            for (int i = 0;i<dic.count;i++) {
+                MyDataModel *model = [MyDataModel getEntityFromDic:dic[i]];
+                NSLog(@"mode; == %@",model.CAL_TITLE);
+                [_datasource addObject:model];
+                
+            }
+            [collectionVC.collectionView reloadData];
+            
+
+            
+        }else{
+            NSLog(@"responseData - %@ message%@",responseData,message);
+            
+        }
+    }];
+
 }
 
 #pragma mark - CalendarDataSource protocol conformance

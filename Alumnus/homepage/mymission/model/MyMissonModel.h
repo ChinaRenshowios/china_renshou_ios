@@ -17,4 +17,5 @@
 @property(copy,nonatomic)NSString *INFO_ID__NAME;
 @property(copy,nonatomic)NSString *CREATER__NAME;
 @property(copy,nonatomic)NSString *REWUSTATE;
+@property(copy,nonatomic)NSString *_PK_;
 @end

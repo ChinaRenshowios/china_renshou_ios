@@ -9,6 +9,7 @@
 #import "KSYWaitCollectionViewController.h"
 #import "KSYWaitCollectionViewCell.h"
 #import "MyWaitModel.h"
+#import "KSYWebViewController.h"
 
 @interface KSYWaitCollectionViewController ()
 
@@ -68,34 +69,21 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+#pragma mark <UICollectionViewDelegate>
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+        MyWaitModel *model = [_dataSource objectAtIndex:indexPath.row];
+        KSYWebViewController *webVC =[[KSYWebViewController alloc] init];
+        if ([model.TODO_URL containsString:@".byid.do"]) {
+            webVC.url = [ZCNSStringUtil getMainUrl:[NSString stringWithFormat:@"/sy/base/view/stdCardView.jsp?sId=%@%%26pkCode=%@",model.SERV_ID,model.TODO_OBJECT_ID1]];
+            NSLog(@"%@",webVC.url);
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
+        else{
+            webVC.url = [ZCNSStringUtil getMainUrl:model.TODO_URL];
+            [self presentViewController:webVC animated:NO completion:nil];
+        }
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

@@ -9,7 +9,7 @@
 #import "DataIndexCollectionViewCell.h"
 
 @implementation DataIndexCollectionViewCell
-- (id)initWithFrame:(CGRect)frame
+/*- (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     self.backgroundColor = [UIColor whiteColor];
@@ -30,6 +30,23 @@
     [self addSubview:_TitleLabel];
     
     
+    return self;
+}
+*/
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    self.backgroundColor = [UIColor whiteColor];
+    _TitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(LEFTEDGE/2,0,frame.size.width, frame.size.height/2)];
+    _TitleLabel.font = [UIFont systemFontOfSize:15];
+    _TitleLabel.textAlignment = NSTextAlignmentLeft;
+    [self addSubview:_TitleLabel];
+    _startTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(LEFTEDGE/2,frame.size.height/2,frame.size.width, frame.size.height/2)];
+    _startTimeLabel.textAlignment = NSTextAlignmentLeft;
+    _startTimeLabel.font = [UIFont systemFontOfSize:12];
+    [self addSubview:_startTimeLabel];
+    
+
     return self;
 }
 

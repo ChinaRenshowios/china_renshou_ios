@@ -20,4 +20,5 @@
 @property(copy,nonatomic)NSString *MARK_ID;
 @property(copy,nonatomic)NSString *DATA_OWNER__IMG;
 @property(copy,nonatomic)NSString *TAGS;
+@property(copy,nonatomic)NSString *_PK_;
 @end

@@ -14,6 +14,8 @@
 #import "YLSwipeLockView.h"
 #import "YLInitSwipePasswordController.h"
 #import "YLCheckToUnlockViewController.h"
+#import "UserResponseModel.h"
+#import "UserModel.h"
 
 @interface LoginViewController (){
     UILabel *titleLabel;
@@ -105,12 +107,48 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)didClickLoginButton{
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault setBool:YES forKey:@"login"];
-    [userDefault setObject:@"1" forKey:@"uid"];
-    [userDefault synchronize];
-    YLInitSwipePasswordController *controller = [[YLInitSwipePasswordController alloc] init];
-    [[[UIApplication sharedApplication] delegate] window].rootViewController = controller;
+    if (nameTextField.text.length==0||pswTextField.text.length == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名或密码不能为空" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    else{
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setValue:nameTextField.text forKey:@"loginName"];
+        [dict setValue:[ZCNSStringUtil md5:pswTextField.text] forKey:@"password"];
+        [dict setValue:@"866769021414134" forKey:@"mobileDeviceId"];
+        [dict setValue:@"true" forKey:@"_IS_DES_"];
+        [ALNetWorkApi loginWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                NSDictionary *dic = responseData;
+                UserResponseModel *responseModel = [UserResponseModel getEntityFromDic:dic];
+                if ([responseModel._MOBILE_RES_CODE_ isEqual:@"_SUCC_"]) {
+                    UserModel *usermodel = [UserModel getEntityFromDic:responseModel.USER_BEAN];
+                    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+                    [userDefault setObject:@"866769021414134" forKey:@"mobileDeviceId"];
+                    NSLog(@"%@",usermodel.USER_CODE);
+                    [userDefault setObject:usermodel.USER_CODE forKey:@"mobileUserCode"];
+                    [userDefault setObject:usermodel.OWNER_CODE forKey:@"OWNER_CODE"];
+                    [userDefault synchronize];
+                    YLInitSwipePasswordController *controller = [[YLInitSwipePasswordController alloc] init];
+                    [[[UIApplication sharedApplication] delegate] window].rootViewController = controller;
+                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"login"];
+                }
+                else{
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:responseModel._MSG_ delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+                    [alertView show];
+                }
+
+                
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+        }];
+
+    }
+    
+    
 }
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     

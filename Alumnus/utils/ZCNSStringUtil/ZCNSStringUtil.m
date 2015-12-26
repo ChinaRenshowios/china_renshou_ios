@@ -258,4 +258,9 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     html = [html stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""];
     return html;
 }
+
++(NSString *)getMainUrl:(NSString *)htmlurl{
+   htmlurl = [NSString stringWithFormat:@"%@login_sso_mobile.jsp?USER_CODE=%@&IS_FROM_MOBILE=true&mobileDeviceId=%@&GOTO_URL=%@",API,[[NSUserDefaults standardUserDefaults] valueForKey:@"mobileUserCode"],[[NSUserDefaults standardUserDefaults] valueForKey:@"mobileDeviceId"],htmlurl];
+    return htmlurl;
+}
 @end

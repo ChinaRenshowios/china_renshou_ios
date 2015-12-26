@@ -13,6 +13,8 @@
 #import "AskAndAnswerModel.h"
 #import "DocumentChooseSegView.h"
 #import "MyUploadDocumentModel.h"
+#import "MyAskModel.h"
+#import "KSYWebViewController.h"
 
 @interface KnowledgeCenterViewController ()<UISearchBarDelegate,AskAndAnswerChooseSegViewDelegate,DocumentChooseSegViewDelegate>{
     UIScrollView *mainScrollView;  //包装在scrollerview中
@@ -43,7 +45,7 @@
     [askButton setTitle:@"提问" forState:UIControlStateNormal];
     [askButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [askView addSubview:askButton];
-    
+    [askButton addTarget:self action:@selector(didClickBeAsk) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:askView];
    // UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"提问" style:UIBarButtonItemStylePlain target:self action:@selector(ask)];
     self.navigationItem.rightBarButtonItem = rightButton;
@@ -182,17 +184,26 @@
     currentPage = 1;
     if (index==1) {
         [_datasourse removeAllObjects];
+        currentPage = 1;
         _collectionVC.type = KSYRequestKnowCenterTypeOfMyAsk;
         [self requestKnowCenterOfType:KSYRequestKnowCenterTypeOfMyAsk page:@"1"];
     }
     else if (index == 2){
-        
+        [_datasourse removeAllObjects];
+        currentPage = 1;
+        _collectionVC.type = KSYRequestKnowCenterTypeOfMyAsk;
+        [self requestKnowCenterOfType:KSYRequestKnowCenterTypeOfMyConcern page:@"1"];
     }
     else if (index == 3){
-        
+        [_datasourse removeAllObjects];
+        currentPage = 1;
+        _collectionVC.type = KSYRequestKnowCenterTypeOfAllQuestion;
+        [self requestKnowCenterOfType:KSYRequestKnowCenterTypeOfAllQuestion page:@"1"];
     }
     else if (index == 4){
         [_datasourse removeAllObjects];
+        currentPage = 1;
+        _collectionVC.type = KSYRequestKnowCenterTypeOfWaitMeAnswer;
         [self requestKnowCenterOfType:KSYRequestKnowCenterTypeOfWaitMeAnswer page:@"1"];
     }
     
@@ -230,6 +241,8 @@
     //[dict setValue:page forKey:@"NOWPAGE"];
     [self setupProgressHUD];
     if (type == KSYRequestKnowCenterTypeOfMyAsk) {
+        [dict setValue:page forKey:@"NOWPAGE"];
+        [dict setValue:@"15" forKey:@"_ROWNUM_"];
         [ALNetWorkApi zhidaoUserWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
             if (success) {
                 //NSLog(@"array count = %@",responseData);
@@ -237,7 +250,7 @@
                 TeamWorkResponseModel *model = [TeamWorkResponseModel getEntityFromDic:dic];
                 NSLog(@"%ld",model._DATA_.count);
                 for (int i = 0;i<model._DATA_.count;i++) {
-                    AskAndAnswerModel *askModel = [AskAndAnswerModel getEntityFromDic:model._DATA_[i]];
+                    MyAskModel *askModel = [MyAskModel getEntityFromDic:model._DATA_[i]];
                     [_datasourse addObject:askModel];
                 }
                 [_collectionVC.collectionView reloadData];
@@ -250,14 +263,17 @@
         }];
     }
     else if (type == KSYRequestKnowCenterTypeOfMyConcern){
-        [ALNetWorkApi infoWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+        [ALNetWorkApi myConcernQuestionsWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
             if (success) {
                 //NSLog(@"array count = %@",responseData);
+                [dict setValue:page forKey:@"NOWPAGE"];
+                [dict setValue:@"15" forKey:@"_ROWNUM_"];
                 NSMutableDictionary *dic = responseData;
                 TeamWorkResponseModel *model = [TeamWorkResponseModel getEntityFromDic:dic];
                 NSLog(@"%ld",model._DATA_.count);
                 for (int i = 0;i<model._DATA_.count;i++) {
-                    
+                    MyAskModel *modeld = [MyAskModel getEntityFromDic:model._DATA_[i]];
+                    [_datasourse addObject:modeld];
                 }
                 [_collectionVC.collectionView reloadData];
                 
@@ -268,6 +284,51 @@
             [_progress hide:YES];
         }];
     }
+    else if (type == KSYRequestKnowCenterTypeOfAllQuestion){
+        [ALNetWorkApi allQuestionsWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                [dict setValue:page forKey:@"NOWPAGE"];
+                [dict setValue:@"15" forKey:@"_ROWNUM_"];
+                NSMutableDictionary *dic = responseData;
+                TeamWorkResponseModel *model = [TeamWorkResponseModel getEntityFromDic:dic];
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyAskModel *modeld = [MyAskModel getEntityFromDic:model._DATA_[i]];
+                    [_datasourse addObject:modeld];
+                }
+                [_collectionVC.collectionView reloadData];
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+            [_progress hide:YES];
+        }];
+    }
+    else if (type == KSYRequestKnowCenterTypeOfWaitMeAnswer){
+        [ALNetWorkApi inviteMeWithDict:dict withResponse:^(BOOL success, id responseData, NSString *message) {
+            if (success) {
+                //NSLog(@"array count = %@",responseData);
+                [dict setValue:page forKey:@"NOWPAGE"];
+                [dict setValue:@"15" forKey:@"_ROWNUM_"];
+                NSMutableDictionary *dic = responseData;
+                TeamWorkResponseModel *model = [TeamWorkResponseModel getEntityFromDic:dic];
+                NSLog(@"%ld",model._DATA_.count);
+                for (int i = 0;i<model._DATA_.count;i++) {
+                    MyAskModel *modeld = [MyAskModel getEntityFromDic:model._DATA_[i]];
+                    [_datasourse addObject:modeld];
+                }
+                [_collectionVC.collectionView reloadData];
+                
+            }else{
+                NSLog(@"responseData - %@ message%@",responseData,message);
+                
+            }
+            [_progress hide:YES];
+        }];
+    }
+
     else if (type == KSYRequestKnowCenterTypeOfMyUploadDocument){
         [dict setValue:@"DOCUMENT_READ_COUNTER desc" forKey:@"_ORDER_"];
         [dict setValue:page forKey:@"NOWPAGE"];
@@ -396,5 +457,10 @@
         
     }];
 }
-
+-(void)didClickBeAsk{
+    KSYWebViewController *vc = [[KSYWebViewController alloc] init];
+    vc.titleString = @"提问";
+    vc.url = [ZCNSStringUtil getMainUrl:@"/sy/base/view/stdCardView.jsp?sId=SY_COMM_ZHIDAO_QUESTION_HTML"];
+    [self presentViewController:vc animated:NO completion:nil];
+}
 @end

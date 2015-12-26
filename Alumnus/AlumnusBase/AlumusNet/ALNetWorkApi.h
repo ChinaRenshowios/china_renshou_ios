@@ -123,7 +123,7 @@
 /*
 我关注的问题：
  */
-//+ (void)allQuestionsWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
++ (void)myConcernQuestionsWithDict:(NSDictionary *)dic withResponse:(responseDataBlock)block;
 /*
  全部问题：
  */

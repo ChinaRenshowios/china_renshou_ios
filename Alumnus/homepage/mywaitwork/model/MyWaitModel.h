@@ -20,6 +20,7 @@
 @property(copy,nonatomic)NSString *TODO_ID;       //待办表主键
 @property(copy,nonatomic)NSString *OWNER_CODE__NAME;      //文件种类
 @property(copy,nonatomic)NSString *SERV_ID;       //服务id
+@property(copy,nonatomic)NSString *TODO_OBJECT_ID1;       //服务id
 @property(copy,nonatomic)NSString *TODO_TITLE;  //标题
 @property(copy,nonatomic)NSString *SEND_USER_CODE__NAME;       //发送者名字
 
