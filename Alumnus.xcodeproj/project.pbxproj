@@ -32,6 +32,7 @@
 		282F97E31BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E21BD0B7BE00D103C8 /* MyUnforgetIndexViewController.m */; };
 		282F97E91BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */; };
 		282F97EC1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */; };
+		28373A101C2E7D9200FD6F1E /* UserHomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28373A0F1C2E7D9200FD6F1E /* UserHomePageModel.m */; };
 		283E82EE1BEDF18700A15BCB /* MyUploadDocumentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */; };
 		2850E5EE1B84A7C500EAE87C /* dock_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EA1B84A7C500EAE87C /* dock_1.png */; };
 		2850E5EF1B84A7C500EAE87C /* dock_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5EB1B84A7C500EAE87C /* dock_2.png */; };
@@ -238,6 +239,8 @@
 		282F97E81BD0BE3700D103C8 /* MyUnforgotCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgotCollectionViewController.m; sourceTree = "<group>"; };
 		282F97EA1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnforgetCollectionViewCell.h; sourceTree = "<group>"; };
 		282F97EB1BD0BE4E00D103C8 /* MyUnforgetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnforgetCollectionViewCell.m; sourceTree = "<group>"; };
+		28373A0E1C2E7D9200FD6F1E /* UserHomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHomePageModel.h; sourceTree = "<group>"; };
+		28373A0F1C2E7D9200FD6F1E /* UserHomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHomePageModel.m; sourceTree = "<group>"; };
 		283E82EC1BEDF18700A15BCB /* MyUploadDocumentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUploadDocumentModel.h; sourceTree = "<group>"; };
 		283E82ED1BEDF18700A15BCB /* MyUploadDocumentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUploadDocumentModel.m; sourceTree = "<group>"; };
 		2850E5EA1B84A7C500EAE87C /* dock_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock_1.png; sourceTree = "<group>"; };
@@ -1237,6 +1240,8 @@
 				281963C61BAA4FE40069EC84 /* mywaitwork */,
 				596EB93D1B818C590043E62D /* HomepageMainViewController.h */,
 				596EB93E1B818C590043E62D /* HomepageMainViewController.m */,
+				28373A0E1C2E7D9200FD6F1E /* UserHomePageModel.h */,
+				28373A0F1C2E7D9200FD6F1E /* UserHomePageModel.m */,
 			);
 			path = homepage;
 			sourceTree = "<group>";
@@ -1639,6 +1644,7 @@
 				281040D21BABAF8B00C43352 /* KSYViewWithImageAndButton.m in Sources */,
 				596EB8FB1B8176280043E62D /* main.m in Sources */,
 				3573A78A1BEF58A100F9A1F8 /* MeetingBookVc.m in Sources */,
+				28373A101C2E7D9200FD6F1E /* UserHomePageModel.m in Sources */,
 				35D474C61BA9C87200F934A1 /* ALUserDefault.m in Sources */,
 				351C20671BA87C1800454CB2 /* UIWindow+Extension.m in Sources */,
 				289DF7241BECC919007A4C20 /* MyTeamWorkIndexViewController.m in Sources */,
