@@ -8,6 +8,7 @@
 
 #import "AddressBookVc.h"
 #import "AddressSecVc.h"
+#import "ALNetWorkApi.h"
 
 @interface AddressBookVc ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)UIView *top;
@@ -57,7 +58,10 @@
         _bookTable.delegate = self;
         _bookTable.dataSource = self;
         _bookTable.tableFooterView = [[UIView alloc]init];
-        [self.view addSubview:_bookTable];
+        _bookTable.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [self loadData];
+            NSLog(@"刷新数据");
+        }];
     }
     return _bookTable;
 }
@@ -122,7 +126,16 @@
 //获取数据
 - (void)loadData
 {
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@"866769021414134" forKey:@"mobileDeviceId"];
+    [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
+    [params setValue:@" AND DEPT_PCODE = '3rin6giCR9vUIv6kHIO3ex' and DEPT_CODE != ODEPT_CODE" forKey:@"_WHERE_"];
+
+    [ALNetWorkApi mobileDeptWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
+       
+        [self.bookTable reloadData];
+        [self.bookTable.header endRefreshing];
+    }];
 }
 
 //刷新视图

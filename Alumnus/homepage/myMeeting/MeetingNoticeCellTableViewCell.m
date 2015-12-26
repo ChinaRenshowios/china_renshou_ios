@@ -40,21 +40,15 @@ static const CGFloat  iconWidthHeight = 30;
 - (void)setModel:(MyMeetingModel *)model
 {
     _model = model;
-    self.meetingTitle = [UILabel new];
-    self.meetingSubTitle = [UILabel new];
-    self.timeLabel = [UILabel new];
     self.meetingTitle.text = model.REM_TITLE;
     self.meetingSubTitle.text = model.S_USER__NAME;
     self.timeLabel.text = model.EXECUTE_TIME;
-    [self.meetingSubTitle sizeToFit];
 }
 
 
 - (void)setNoticeType:(noticeType)noticeType
 {
     _noticeType = noticeType;
-    self.icon = [[UIImageView alloc]init];
-    self.title = [UILabel new];
     switch (_noticeType) {
         case noticeTypeInvite:
         {
@@ -82,7 +76,22 @@ static const CGFloat  iconWidthHeight = 30;
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        self.meetingTitle = [UILabel new];
+        self.meetingSubTitle = [UILabel new];
+        self.meetingSubTitle.font = [UIFont systemFontOfSize:12];
+        self.meetingSubTitle.textColor = [UIColor lightGrayColor];
+        self.timeLabel = [UILabel new];
+        self.icon = [[UIImageView alloc]init];
+        self.title = [UILabel new];
+        self.timeLabel.font = [UIFont systemFontOfSize:12];
+        self.timeLabel.textColor = [UIColor lightGrayColor];
+
+        [self addSubview:self.icon];
+        [self addSubview:self.title];
+        [self addSubview:self.meetingTitle];
+        [self addSubview:self.meetingSubTitle];
+        [self addSubview:self.timeLabel];
+
     }
     
     return self;
@@ -121,26 +130,23 @@ static const CGFloat  iconWidthHeight = 30;
     self.icon.y = topMargin;
     self.icon.width = iconWidthHeight;
     self.icon.height = iconWidthHeight;
-    
-    [self addSubview:self.icon];
-    
+    [self.meetingSubTitle sizeToFit];
+    [self.title sizeToFit];
+    [self.meetingSubTitle sizeToFit];
+    [self.meetingTitle sizeToFit];
+    [self.timeLabel sizeToFit];
     self.title.x = self.icon.x + self.icon.width + 15;
     self.title.y = self.icon.y;
-    [self.title sizeToFit];
-    [self addSubview:self.title];
     
     self.meetingTitle.x = CGRectGetMaxX(self.title.frame) + 5;
     self.meetingTitle.y = self.title.y;
      [self.meetingTitle sizeToFit];
-    [self addSubview:self.meetingTitle];
     
     self.meetingSubTitle.x = self.title.x;
-    self.meetingSubTitle.y = CGRectGetMaxY(self.title.frame) + 8;
-    [self addSubview:self.meetingSubTitle];
+    self.meetingSubTitle.y = CGRectGetMaxY(self.meetingTitle.frame) + 8;
     
     self.timeLabel.x = CGRectGetMaxX(self.meetingSubTitle.frame) + 20;
     self.timeLabel.y = self.meetingSubTitle.y;
-    [self addSubview:self.timeLabel];
 
 //    [self.rightIcon sizeToFit];
 //    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;

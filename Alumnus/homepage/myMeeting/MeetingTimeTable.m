@@ -73,7 +73,7 @@
     [MBProgressHUD showMessage:@"正在加载"];
 
     [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-        [self.manager.findModels removeAllObjects];
+        self.manager.findModels = [NSMutableArray array];
         for (id value in (NSArray *)responseData) {
             [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
         }

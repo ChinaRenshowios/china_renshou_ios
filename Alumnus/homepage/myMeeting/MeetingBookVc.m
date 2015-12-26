@@ -198,11 +198,13 @@
         [MBProgressHUD showMessage:@"正在加载"];
 
         [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-            [self.manager.findModels removeAllObjects];
+            self.manager.findModels = [NSMutableArray array];
             for (id value in (NSArray *)responseData) {
                 [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
             }
             [self.timeTable reloadData];
+            [self.timeTable.footer endRefreshing];
+            [self.timeTable.header endRefreshing];
             
             [MBProgressHUD hideHUD];
 
@@ -212,12 +214,14 @@
         [MBProgressHUD showMessage:@"正在加载"];
 
         [ALNetWorkApi findMeetingRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-            [self.manager.findModels removeAllObjects];
+            self.manager.findModels = [NSMutableArray array];
             for (id value in (NSArray *)responseData) {
                 [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
             }
             
             [self.roomTable reloadData];
+            [self.roomTable.footer endRefreshing];
+            [self.roomTable.header endRefreshing];
             
             [MBProgressHUD hideHUD];
 

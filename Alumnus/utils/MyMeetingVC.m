@@ -53,9 +53,9 @@
     if (!_top) {
         NSArray *arr = @[@"会议通知",@"会议管理",@"会议室预定"];
         _top = [[topScrollView alloc]initWithTitles:arr];
-//        self.top = top;
+        //        self.top = top;
         _top.delegate = self;
-
+        
     }
     return _top;
 }
@@ -94,7 +94,7 @@
             [self loadData];
             NSLog(@"刷新数据");
         }];
-    
+        
     }
     return _manageTabel;
 }
@@ -119,7 +119,7 @@
     [addView addSubview:addButton];
     [addButton addTarget:self action:@selector(didClickAddData:) forControlEvents:UIControlEventTouchUpInside];
     [self.nav addSubview:addView];
-
+    
     //初始化
     [self setup];
 }
@@ -137,7 +137,7 @@
     [super viewDidLayoutSubviews];
     //刷新视图
     [self resetSubViews];
-
+    
 }
 
 #pragma mark - private api
@@ -160,7 +160,7 @@
     
     self.top.content = self.noticeTabel;
     [self loadData];
-
+    
 }
 
 //获取数据
@@ -172,12 +172,13 @@
     [params setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"mobileUserCode"] forKey:@"mobileUserCode"];
     [params setValue:@"15" forKey:@"_ROWNUM_"];
     [params setValue:@"1" forKey:@"NOWPAGE"];
-
+    
     if (self.top.content == self.noticeTabel) {
         [MBProgressHUD showMessage:@"正在加载"];
         [ALNetWorkApi meetRemindWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
             if (success) {
-                [self.manager.noticeModels removeAllObjects];
+                
+                self.manager.noticeModels = [NSMutableArray array];
                 for (id value in (NSArray *)responseData) {
                     [self.manager.noticeModels addObject:[MyMeetingModel getEntityFromDic:value]];
                 }
@@ -186,29 +187,32 @@
                 
             }
             [self.noticeTabel reloadData];
+            [self.noticeTabel.header endRefreshing];
             [MBProgressHUD hideHUD];
-
+            
         }];
     }else if (self.top.content == self.manageTabel){
         [MBProgressHUD showMessage:@"正在加载"];
-
+        
         [ALNetWorkApi meetingManageWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-            [self.manager.manageModels removeAllObjects];
+            self.manager.manageModels = [NSMutableArray array];
             NSLog(@"count == %d",((NSArray *)responseData).count);
             for (id value in (NSArray *)responseData) {
-            [self.manager.manageModels addObject:[MyMeetingManagerModel getEntityFromDic:value]];
+                [self.manager.manageModels addObject:[MyMeetingManagerModel getEntityFromDic:value]];
             }
-
+            
             
             [self.manageTabel reloadData];
+            [self.manageTabel.header endRefreshing];
             [MBProgressHUD hideHUD];
-
+            
         }];
     }else{
         [MBProgressHUD showMessage:@"正在加载"];
-
+        
         [ALNetWorkApi findMeetingTimeRoomWithDict:params withResponse:^(BOOL success, id responseData, NSString *message) {
-            [self.manager.findModels removeAllObjects];
+            
+            self.manager.findModels = [NSMutableArray array];
             for (id value in (NSArray *)responseData) {
                 [self.manager.findModels addObject:[MyMeetingFinddingModel getEntityFromDic:value]];
                 
@@ -227,7 +231,7 @@
     self.noticeTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44 - 50);
     self.manageTabel.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44 - 50);
     
-//    self.bookVc.view.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
+    //    self.bookVc.view.frame = CGRectMake(0, 44, SIZEWIDTH, SIZEHEIGHT - 64 -44);
 }
 #pragma mark - public api
 
@@ -245,14 +249,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.noticeTabel) {
-       MeetingNoticeCellTableViewCell *cell = [MeetingNoticeCellTableViewCell cellWithTabelView:self.noticeTabel];
+        MeetingNoticeCellTableViewCell *cell = [MeetingNoticeCellTableViewCell cellWithTabelView:self.noticeTabel];
         cell.model = self.manager.noticeModels[indexPath.row];
-         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }else{
         MeetingManageCell *cell = [MeetingManageCell cellWithTabelView:self.manageTabel];
         cell.model = self.manager.manageModels[indexPath.row];
-         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
 }
@@ -282,7 +286,7 @@
             [self loadData];
         }
             break;
-
+            
         case 2:
         {
             self.top.contentVc = self.bookVc;
@@ -306,7 +310,7 @@
     MeetingAdd *vc = [[MeetingAdd alloc] init];
     vc.titleString = @"添加会议";
     [self presentViewController:vc animated:YES completion:nil];
-
+    
 }
 
 #pragma mark - property

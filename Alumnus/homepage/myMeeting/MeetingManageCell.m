@@ -28,6 +28,7 @@ static const CGFloat  iconWidthHeight = 30;
 @property (nonatomic, strong)UILabel *meetingSubTitle;
 @property (nonatomic, strong)UIImageView *rightIcon;
 @property (nonatomic, strong)UILabel *timeLabel;
+@property (nonatomic, strong)UILabel *manager;
 @end
 
 @implementation MeetingManageCell
@@ -44,12 +45,10 @@ static const CGFloat  iconWidthHeight = 30;
 - (void)setModel:(MyMeetingManagerModel *)model
 {
     _model = model;
-    self.meetingTitle = [UILabel new];
-    self.meetingSubTitle = [UILabel new];
-    self.timeLabel = [UILabel new];
     self.meetingTitle.text = model.MT_TITLE;
     self.meetingSubTitle.text = model.MT_ROOM;
     self.timeLabel.text = [self timeForMeeting];
+    self.manager.text = [NSString stringWithFormat:@"%@%@",model.MT_CREATER,model.MT_JOINERS__NAME];
     [self.timeLabel sizeToFit];
     [self.meetingSubTitle sizeToFit];
 //    if (model.mt) {
@@ -90,7 +89,22 @@ static const CGFloat  iconWidthHeight = 30;
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        self.meetingTitle = [UILabel new];
+        self.meetingSubTitle = [UILabel new];
+        self.timeLabel = [UILabel new];
+        self.timeLabel.font = [UIFont systemFontOfSize:12];
+        self.timeLabel.textColor = [UIColor lightGrayColor];
+        self.meetingSubTitle.font = [UIFont systemFontOfSize:12];
+        self.meetingSubTitle.textColor = [UIColor lightGrayColor];
+        self.manager = [UILabel new];
+        self.manager.font = [UIFont systemFontOfSize:12];
+        self.manager.textColor = [UIColor lightGrayColor];
+
+            [self addSubview:self.icon];
+            [self addSubview:self.title];
+            [self addSubview:self.meetingTitle];
+            [self addSubview:self.meetingSubTitle];
+            [self addSubview:self.timeLabel];
     }
     
     return self;
@@ -130,25 +144,28 @@ static const CGFloat  iconWidthHeight = 30;
     self.icon.width = iconWidthHeight;
     self.icon.height = iconWidthHeight;
     
-    [self addSubview:self.icon];
+
     
     self.title.x = self.icon.x + self.icon.width + 15;
     self.title.y = self.icon.y;
     [self.title sizeToFit];
-    [self addSubview:self.title];
+
     
     self.meetingTitle.x = CGRectGetMaxX(self.title.frame) + 5;
     self.meetingTitle.y = self.title.y;
     [self.meetingTitle sizeToFit];
-    [self addSubview:self.meetingTitle];
+
     
     self.meetingSubTitle.x = self.title.x;
-    self.meetingSubTitle.y = CGRectGetMaxY(self.title.frame) + 8;
-    [self addSubview:self.meetingSubTitle];
+    self.meetingSubTitle.y = CGRectGetMaxY(self.meetingTitle.frame) + 8;
+
     
-    self.timeLabel.x = CGRectGetMaxX(self.meetingSubTitle.frame) + 20;
-    self.timeLabel.y = self.meetingSubTitle.y;
-    [self addSubview:self.timeLabel];
+    self.timeLabel.x = self.meetingSubTitle.x;
+    self.timeLabel.y = CGRectGetMaxY(self.meetingSubTitle.frame)+10;
+
+    [self.manager sizeToFit];
+    self.manager.x = CGRectGetMaxX(self.meetingSubTitle.frame) + 20;
+    self.manager.y = self.meetingSubTitle.y;
     
 //    [self.rightIcon sizeToFit];
 //    self.rightIcon.x = SIZEWIDTH - 15 - self.rightIcon.width;
